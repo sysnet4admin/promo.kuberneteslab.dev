@@ -74,6 +74,10 @@ same discount.
 - Discount codes and periods are set by the Linux Foundation and can change
   without notice.
 - Questions about payment, refunds, or exam scheduling are not something I
-  can help with, so those need to go to the Linux Foundation directly.
+  can help with, so those go to the Linux Foundation
+  [support portal](https://trainingsupport.linuxfoundation.org), where you can
+  open a ticket with your Linux Foundation account. If something is wrong on
+  exam day, checking the [exam system status](https://trainingstatus.linuxfoundation.org/)
+  first is faster.
 - This page is updated whenever a new promotion arrives. It was last revised
   on September 18, 2026.
