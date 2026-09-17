@@ -1,0 +1,11 @@
+{{- $img := "" }}{{ with .Params.images }}{{ $img = index . 0 | absURL }}{{ end -}}
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:title" content="{{ .Title }}">
+{{ with .Description }}<meta property="og:description" content="{{ . }}">{{ end }}
+{{ with $img }}<meta property="og:image" content="{{ . }}">{{ end }}
+<meta property="og:locale" content="{{ site.Language.Locale | default site.Language.Lang }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ .Title }}">
+{{ with .Description }}<meta name="twitter:description" content="{{ . }}">{{ end }}
+{{ with $img }}<meta name="twitter:image" content="{{ . }}">{{ end }}

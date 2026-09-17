@@ -1,0 +1,46 @@
+{{- $d := hugo.Data.promo.history -}}
+{{- $ko := eq .Page.Language.Lang "ko" -}}
+{{- $sorted := sort $d.promos "start" -}}
+{{- $first := time.AsTime (index $sorted 0).start -}}
+{{- $y0 := $first.Year -}}
+{{- $m0 := int $first.Month -}}
+{{- $n := add (mul (sub now.Year $y0) 12) (sub (int now.Month) $m0) 1 -}}
+{{- $mon := slice "Jan" "Feb" "Mar" "Apr" "May" "Jun" "Jul" "Aug" "Sep" "Oct" "Nov" "Dec" -}}
+<figure class="promo-chart" data-label-s="{{ cond $ko "단일 자격증 최대 할인" "Max single-cert discount" }}" data-label-b="{{ cond $ko "번들 최대 할인" "Max bundle discount" }}" data-label-none="{{ cond $ko "프로모션 기록 없음" "No promotion recorded" }}">
+  <figcaption class="pc-caption">{{ if $ko }}월별 최대 할인율 ({{ $y0 }}년 {{ $m0 }}월부터){{ else }}Highest discount by month (since {{ index $mon (sub $m0 1) }} {{ $y0 }}){{ end }}</figcaption>
+  <div class="pc-legend">
+    <span class="pc-legend-item"><span class="pc-key pc-key--b"></span>{{ cond $ko "번들" "Bundle" }}</span>
+    <span class="pc-legend-item"><span class="pc-key pc-key--s"></span>{{ cond $ko "단일 자격증" "Single certification" }}</span>
+    <span class="pc-legend-item"><span class="pc-key pc-key--ref"></span>{{ cond $ko "이 페이지 상시 할인 30%" "Year-round code on this page, 30%" }}</span>
+  </div>
+  <div class="pc-body">
+    <div class="pc-yaxis" aria-hidden="true">
+      {{- range slice 70 60 50 40 30 }}<span style="{{ printf "--v:%d" . | safeCSS }}">{{ . }}%</span>{{ end }}
+    </div>
+    <div class="pc-scroll">
+      <div class="pc-plot" style="{{ printf "--cols:%d" $n | safeCSS }}">
+        {{- range slice 70 60 50 40 }}<span class="pc-grid" style="{{ printf "--v:%d" . | safeCSS }}"></span>{{ end }}
+        <span class="pc-ref" style="--v:30"></span>
+        {{- range $i := seq 0 (sub $n 1) }}
+          {{- $k := add (sub $m0 1) $i -}}
+          {{- $yy := add $y0 (div $k 12) -}}
+          {{- $mm := add (mod $k 12) 1 -}}
+          {{- $s := 0 }}{{ $b := 0 -}}
+          {{- range $d.promos }}{{ $t := time.AsTime .start }}{{ if and (eq $t.Year $yy) (eq (int $t.Month) $mm) }}{{ with .single }}{{ if gt . $s }}{{ $s = . }}{{ end }}{{ end }}{{ with .bundle }}{{ if gt . $b }}{{ $b = . }}{{ end }}{{ end }}{{ end }}{{ end -}}
+          {{- $sv := cond (gt $s 0) $s $b -}}
+          {{- $bv := cond (gt $b 0) $b $s -}}
+          {{- $when := cond $ko (printf "%d년 %d월" $yy $mm) (printf "%s %d" (index $mon (sub $mm 1)) $yy) -}}
+          {{- $aria := $when -}}
+          {{- if or $s $b }}{{ $aria = printf "%s: %s %s, %s %s" $when (cond $ko "단일 자격증" "single") (cond (gt $s 0) (printf "%d%%" $s) "-") (cond $ko "번들" "bundle") (cond (gt $b 0) (printf "%d%%" $b) "-") }}{{ end }}
+          <div class="pc-col{{ if eq $mm 1 }} pc-col--jan{{ end }}{{ if and $s $b (eq $s $b) }} pc-col--same{{ end }}" tabindex="0" role="group" aria-label="{{ $aria }}" data-when="{{ $when }}" data-s="{{ with $s }}{{ . }}{{ end }}" data-b="{{ with $b }}{{ . }}{{ end }}" style="{{ printf "--s:%d;--b:%d" $sv $bv | safeCSS }}">
+            {{- if and $s $b (ne $s $b) }}<span class="pc-stick"></span>{{ end -}}
+            {{- if $b }}<span class="pc-dot pc-dot--b"></span>{{ end -}}
+            {{- if $s }}<span class="pc-dot pc-dot--s"></span>{{ end -}}
+            {{- if or (eq $i 0) (eq $mm 1) }}<span class="pc-year">{{ $yy }}</span>{{ end -}}
+          </div>
+        {{- end }}
+      </div>
+    </div>
+    <div class="pc-tip" hidden></div>
+  </div>
+</figure>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.Locale | default site.Language.Lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ .Title }}</title>
+  {{ with .Description }}<meta name="description" content="{{ . }}">{{ end }}
+  <link rel="canonical" href="{{ .Permalink }}">
+  <link rel="icon" href="/favicon.svg">
+  {{ partial "opengraph.html" . }}
+  {{ $css := resources.Get "css/main.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+  <script>
+    (function () {
+      var saved = localStorage.getItem('promo-theme');
+      var dark = saved ? saved === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+    })();
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-brand" href="{{ "/" | relLangURL }}">{{ site.Params.brand }}</a>
+    <nav class="site-nav">
+      <button type="button" class="theme-toggle" aria-label="theme">◐</button>
+      <a href="{{ site.Params.altURL }}">{{ site.Params.altLabel }}</a>
+      <a href="{{ site.Params.blogURL }}">{{ site.Params.blogLabel }}</a>
+    </nav>
+  </header>
+  <main class="page">
+    {{ block "main" . }}{{ end }}
+  </main>
+  <footer class="site-footer">
+    <a href="{{ site.Params.blogURL }}">{{ site.Params.blogLabel }}</a>
+  </footer>
+  <script>
+    document.querySelector('.theme-toggle').addEventListener('click', function () {
+      var next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+      document.documentElement.dataset.theme = next;
+      localStorage.setItem('promo-theme', next);
+    });
+  </script>
+  {{ partial "promo-scripts.html" . }}
+</body>
+</html>

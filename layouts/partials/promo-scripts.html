@@ -1,0 +1,116 @@
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.promo-copy-btn[data-copy-target]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var target = document.getElementById(btn.getAttribute('data-copy-target'));
+      if (!target) return;
+      navigator.clipboard.writeText(target.textContent.trim()).then(function () {
+        var original = btn.textContent;
+        btn.textContent = btn.getAttribute('data-copied-label') || 'Copied';
+        btn.classList.add('is-copied');
+        setTimeout(function () {
+          btn.textContent = original;
+          btn.classList.remove('is-copied');
+        }, 1500);
+      });
+    });
+  });
+
+  document.querySelectorAll('[data-promo-end]').forEach(function (el) {
+    var end = Date.parse(el.getAttribute('data-promo-end'));
+    if (!isNaN(end) && Date.now() > end) {
+      el.hidden = true;
+      var none = document.querySelector('.promo-banner--none');
+      if (none) none.hidden = false;
+    }
+  });
+
+  var search = document.getElementById('promo-search');
+  if (search) {
+    var rows = Array.prototype.slice.call(document.querySelectorAll('.promo-history tbody tr'));
+    var years = Array.prototype.slice.call(document.querySelectorAll('.promo-year'));
+    var empty = document.getElementById('promo-search-empty');
+    search.addEventListener('input', function () {
+      var q = search.value.trim().toLowerCase();
+      var total = 0;
+      rows.forEach(function (row) {
+        var match = !q || row.textContent.toLowerCase().indexOf(q) !== -1;
+        row.classList.toggle('promo-row-hidden', !match);
+        if (match) total++;
+      });
+      years.forEach(function (y) {
+        var visible = y.querySelectorAll('tbody tr:not(.promo-row-hidden)').length;
+        if (q) {
+          y.hidden = visible === 0;
+          y.open = visible > 0;
+        } else {
+          y.hidden = false;
+          y.open = y.hasAttribute('data-default-open');
+        }
+      });
+      if (empty) empty.style.display = (q && total === 0) ? 'block' : 'none';
+    });
+  }
+
+  document.querySelectorAll('.promo-chart').forEach(function (chart) {
+    var scroller = chart.querySelector('.pc-scroll');
+    if (scroller) scroller.scrollLeft = scroller.scrollWidth;
+    var tip = chart.querySelector('.pc-tip');
+    if (!tip) return;
+    var names = {
+      s: chart.getAttribute('data-label-s'),
+      b: chart.getAttribute('data-label-b'),
+      none: chart.getAttribute('data-label-none')
+    };
+    function clearActive() {
+      chart.querySelectorAll('.pc-col.is-active').forEach(function (c) { c.classList.remove('is-active'); });
+    }
+    function show(col) {
+      tip.textContent = '';
+      var when = document.createElement('div');
+      when.className = 'pc-tip-when';
+      when.textContent = col.getAttribute('data-when');
+      tip.appendChild(when);
+      var vals = [['b', col.getAttribute('data-b')], ['s', col.getAttribute('data-s')]];
+      if (!vals[0][1] && !vals[1][1]) {
+        var none = document.createElement('div');
+        none.className = 'pc-tip-row';
+        none.textContent = names.none;
+        tip.appendChild(none);
+      }
+      vals.forEach(function (v) {
+        if (!v[1]) return;
+        var row = document.createElement('div');
+        row.className = 'pc-tip-row';
+        var key = document.createElement('span');
+        key.className = 'pc-key pc-key--' + v[0];
+        var num = document.createElement('strong');
+        num.textContent = v[1] + '%';
+        var label = document.createElement('span');
+        label.textContent = names[v[0]];
+        row.appendChild(key);
+        row.appendChild(num);
+        row.appendChild(label);
+        tip.appendChild(row);
+      });
+      tip.hidden = false;
+      var base = tip.offsetParent ? tip.offsetParent.getBoundingClientRect() : chart.getBoundingClientRect();
+      var cr = col.getBoundingClientRect();
+      var x = cr.left - base.left + cr.width / 2 - tip.offsetWidth / 2;
+      tip.style.left = Math.max(0, Math.min(x, base.width - tip.offsetWidth)) + 'px';
+      clearActive();
+      col.classList.add('is-active');
+    }
+    function hide() {
+      tip.hidden = true;
+      clearActive();
+    }
+    chart.querySelectorAll('.pc-col').forEach(function (col) {
+      col.addEventListener('pointerenter', function () { show(col); });
+      col.addEventListener('focus', function () { show(col); });
+      col.addEventListener('blur', hide);
+    });
+    chart.addEventListener('pointerleave', hide);
+  });
+});
+</script>

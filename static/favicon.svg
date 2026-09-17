@@ -1,0 +1,19 @@
+<svg width="32" height="32" viewBox="-42 -42 84 84" xmlns="http://www.w3.org/2000/svg">
+  <title>KubernetesLab Favicon Light</title>
+  <circle cx="0" cy="0" r="42" fill="#2F6FE8"/>
+  <g stroke="white" stroke-linecap="round" stroke-width="5.56" opacity="0.97">
+    <line x1="4.3" y1="-6.8" x2="14.8" y2="-17.3"/>
+    <line x1="6.8" y1="-2.5" x2="21.0" y2="-7.1"/>
+    <line x1="6.8" y1="2.5" x2="21.0" y2="7.1"/>
+    <line x1="4.3" y1="6.8" x2="14.8" y2="17.3"/>
+    <line x1="-4.3" y1="6.8" x2="-14.8" y2="17.3"/>
+    <line x1="-6.8" y1="2.5" x2="-21.0" y2="7.1"/>
+    <line x1="-6.8" y1="-2.5" x2="-21.0" y2="-7.1"/>
+    <line x1="-4.3" y1="-6.8" x2="-14.8" y2="-17.3"/>
+    <line x1="0" y1="-8.6" x2="0" y2="-16.1"/>
+    <line x1="0" y1="8.6" x2="0" y2="16.1"/>
+  </g>
+  <circle cx="0" cy="0" r="13.0" fill="white"/>
+  <circle cx="0" cy="0" r="9.3" fill="#2F6FE8"/>
+  <circle cx="0" cy="0" r="5.6" fill="white"/>
+</svg>

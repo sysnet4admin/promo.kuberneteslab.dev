@@ -1,0 +1,57 @@
+{{- $d := hugo.Data.promo.history -}}
+{{- $ko := eq .Page.Language.Lang "ko" -}}
+{{- $prices := sort $d.cka_list_price "from" -}}
+{{- $sorted := sort $d.promos "start" -}}
+{{- $years := slice -}}
+{{- range $sorted }}{{ $y := (time.AsTime .start).Year }}{{ if not (in $years $y) }}{{ $years = $years | append $y }}{{ end }}{{ end -}}
+{{- $last := index $years (sub (len $years) 1) -}}
+<div class="promo-history">
+  <input type="text" class="promo-search" id="promo-search" placeholder="{{ cond $ko "기간, 이름, 코드, 할인율로 검색" "Search by period, name, code, or discount" }}" aria-label="{{ cond $ko "할인 히스토리 검색" "Search promotion history" }}">
+  {{- range $y := $years }}
+  {{- $rows := slice }}{{ $ms := 0 }}{{ $mb := 0 -}}
+  {{- range $sorted }}{{ if eq (time.AsTime .start).Year $y }}{{ $rows = $rows | append . }}{{ with .single }}{{ if gt . $ms }}{{ $ms = . }}{{ end }}{{ end }}{{ with .bundle }}{{ if gt . $mb }}{{ $mb = . }}{{ end }}{{ end }}{{ end }}{{ end }}
+  <details class="promo-year"{{ if eq $y $last }} open data-default-open{{ end }}>
+    <summary>
+      <strong>{{ if $ko }}{{ $y }}년{{ else }}{{ $y }}{{ end }}</strong>
+      <span class="promo-year-meta">{{ if $ko }}{{ len $rows }}회, 최대 단일 {{ with $ms }}{{ . }}%{{ else }}-{{ end }} / 번들 {{ with $mb }}{{ . }}%{{ else }}-{{ end }}{{ else }}{{ len $rows }} promotions, max single {{ with $ms }}{{ . }}%{{ else }}-{{ end }} / bundle {{ with $mb }}{{ . }}%{{ else }}-{{ end }}{{ end }}</span>
+    </summary>
+    <div class="promo-table-wrap">
+    <table class="promo-history-table">
+      <thead>
+        <tr>
+          <th>{{ cond $ko "기간" "Period" }}</th>
+          <th>{{ cond $ko "프로모션" "Promotion" }}</th>
+          <th>{{ cond $ko "단일" "Single" }}</th>
+          <th>{{ cond $ko "번들" "Bundle" }}</th>
+          <th>{{ cond $ko "CKA 결제액" "CKA price" }}</th>
+          <th>{{ cond $ko "코드" "Code" }}</th>
+        </tr>
+      </thead>
+      <tbody>
+      {{- range $rows }}
+        {{- $start := time.AsTime .start -}}
+        {{- $end := time.AsTime .end -}}
+        {{- $list := 0 -}}
+        {{- range $prices }}{{ if ge $start.Unix (time.AsTime .from).Unix }}{{ $list = .usd }}{{ end }}{{ end }}
+        <tr>
+          <td class="promo-nowrap">{{ $start.Format "01-02" }} ~ {{ $end.Format "01-02" }}</td>
+          <td>{{ with .source }}<a href="{{ . }}" rel="noopener" target="_blank">{{ end }}{{ .name }}{{ with .source }}</a>{{ end }}</td>
+          <td>{{ with .single }}{{ . }}%{{ else }}-{{ end }}</td>
+          <td>{{ with .bundle }}{{ . }}%{{ else }}-{{ end }}</td>
+          <td class="promo-nowrap">
+            {{- if and .single $list .usd_krw -}}
+              {{- $usd := math.Round (mul (float $list) (sub 1.0 (div (float .single) 100.0))) -}}
+              {{- $krw := mul (math.Round (div (mul $usd .usd_krw) 100.0)) 100 -}}
+              {{- if $ko }}{{ lang.FormatNumber 0 $krw }}원 (${{ int $usd }}){{ else }}KRW {{ lang.FormatNumber 0 $krw }} (${{ int $usd }}){{ end -}}
+            {{- else }}-{{ end -}}
+          </td>
+          <td><code>{{ .codes }}</code></td>
+        </tr>
+      {{- end }}
+      </tbody>
+    </table>
+    </div>
+  </details>
+  {{- end }}
+  <p class="promo-search-empty" id="promo-search-empty">{{ cond $ko "검색 결과가 없습니다." "No matching rows." }}</p>
+</div>

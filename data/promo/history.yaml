@@ -1,0 +1,709 @@
+# 리눅스 재단 교육 프로모션 기록. content/{ko,en}/promo 의 숏코드가 읽는다.
+# single: CKA 같은 단일 자격증 할인율, bundle: 시험, 강의 번들 할인율 (없으면 null)
+# usd_krw: 시작일 환율 (Frankfurter, ECB 기준). 새 프로모션은 맨 아래에 추가한다.
+cka_list_price:
+  - from: "2021-07-01"
+    usd: 375
+  - from: "2022-08-01"
+    usd: 395
+  - from: "2025-02-04"
+    usd: 445
+promos:
+  - start: "2021-11-29"
+    end: "2021-12-06T23:59:00Z"
+    name: "Cyber Monday 2021"
+    single: 50
+    bundle: 65
+    codes: "CYBER21CC / CYBER21BUN"
+    usd_krw: 1192.56
+    fx_date: "2021-11-29"
+    source: "https://web.archive.org/web/20211128/https://training.linuxfoundation.org/cyber-monday-2021/"
+  - start: "2021-12-15"
+    end: "2021-12-22T23:59:00Z"
+    name: "December 2021 Promo"
+    single: 35
+    bundle: 35
+    codes: "GIVELEARNING21"
+    usd_krw: 1185.76
+    fx_date: "2021-12-15"
+    source: "https://web.archive.org/web/20211216/https://training.linuxfoundation.org/december-2021-promo/"
+    note:
+      ko: "시작일은 아카이브 저장일 기준"
+      en: "Start date taken from the archive capture"
+  - start: "2022-01-18"
+    end: "2022-01-25T23:59:00Z"
+    name: "January 2022 Promo"
+    single: null
+    bundle: 33
+    codes: "KCNA22"
+    usd_krw: 1192.34
+    fx_date: "2022-01-18"
+    source: "https://web.archive.org/web/20220118/https://training.linuxfoundation.org/january-2022-promo-b2c/"
+    note:
+      ko: "KCNA 강의 + 시험 번들만 해당"
+      en: "KCNA course + exam bundle only"
+  - start: "2022-02-15"
+    end: "2022-02-22T23:59:00Z"
+    name: "February 2022 Promo"
+    single: null
+    bundle: null
+    codes: "LINUX22 / EXAM35"
+    usd_krw: 1196.56
+    fx_date: "2022-02-15"
+    source: "https://web.archive.org/web/20220215/https://training.linuxfoundation.org/february-2022-promo-b2c/"
+    note:
+      ko: "리눅스 계열 번들 50%, LFCA·LFCS 시험 35%. 쿠버네티스 자격증은 대상 아님"
+      en: "Linux bundles 50%, LFCA and LFCS exams 35%. Kubernetes certs not included"
+  - start: "2022-05-10"
+    end: "2022-05-17T23:59:00Z"
+    name: "May 2022 Promo: Better Together"
+    single: null
+    bundle: 35
+    codes: "BETTER22"
+    usd_krw: 1275.88
+    fx_date: "2022-05-10"
+    source: "https://web.archive.org/web/20220510/https://training.linuxfoundation.org/may-2022-promo/"
+    note:
+      ko: "번들과 부트캠프만 해당"
+      en: "Bundles and bootcamps only"
+  - start: "2022-06-14"
+    end: "2022-06-21T23:59:00Z"
+    name: "June 2022 Promo: Level Up"
+    single: 30
+    bundle: 40
+    codes: "LEVELUP30 / LEVELUP40"
+    usd_krw: 1288.48
+    fx_date: "2022-06-14"
+    source: "https://web.archive.org/web/20220620/https://training.linuxfoundation.org/june-2022-promo/"
+  - start: "2022-07-19"
+    end: "2022-07-29T23:59:00Z"
+    name: "SysAdmin Day 2022"
+    single: 27
+    bundle: 35
+    codes: "SYSADMINDAY100 / SYSADMINDAY200"
+    usd_krw: 1308.28
+    fx_date: "2022-07-19"
+    source: "https://web.archive.org/web/20220721/https://training.linuxfoundation.org/july-2022-promo/"
+    note:
+      ko: "금액 할인(CKA $100, 번들 $200)을 정가 대비 비율로 환산"
+      en: "Dollar discounts (CKA $100, bundles $200) shown as a percentage of list price"
+  - start: "2022-08-16"
+    end: "2022-08-30T23:59:00Z"
+    name: "August 2022 Promo: Back to School"
+    single: null
+    bundle: 34
+    codes: "BACK2SCHOOL"
+    usd_krw: 1312.47
+    fx_date: "2022-08-16"
+    source: "https://web.archive.org/web/20220816/https://training.linuxfoundation.org/august-2022-promo-b2c/"
+    note:
+      ko: "CKA 강의 + 시험 번들 $200 할인($595 → $395)을 비율로 환산"
+      en: "$200 off the CKA course + exam bundle ($595 to $395), shown as a percentage"
+  - start: "2022-09-20"
+    end: "2022-09-27T23:59:00Z"
+    name: "September 2022 Promo"
+    single: 35
+    bundle: 35
+    codes: "SEPTEMBER35"
+    usd_krw: 1392.66
+    fx_date: "2022-09-20"
+    source: "https://web.archive.org/web/20220920/https://training.linuxfoundation.org/september-2022-promo-b2c/"
+  - start: "2022-10-18"
+    end: "2022-10-25T23:59:00Z"
+    name: "October 2022 Offer"
+    single: null
+    bundle: 40
+    codes: "BOO22"
+    usd_krw: 1424.42
+    fx_date: "2022-10-18"
+    source: "https://web.archive.org/web/20221018/https://training.linuxfoundation.org/oct-2022-offer/"
+    note:
+      ko: "번들과 부트캠프만 해당"
+      en: "Bundles and bootcamps only"
+  - start: "2022-11-28"
+    end: "2022-12-07T23:59:00Z"
+    name: "Cyber Monday 2022"
+    single: 50
+    bundle: 65
+    codes: "CYBER22CC / CYBER22BUN"
+    usd_krw: 1334.76
+    fx_date: "2022-11-28"
+    source: "https://training.linuxfoundation.org/blog/cybermonday22/"
+    note:
+      ko: "12월 5일 종료 예정이었다가 7일까지 연장"
+      en: "Extended from Dec 5 to Dec 7"
+  - start: "2022-12-14"
+    end: "2022-12-20T23:59:00Z"
+    name: "Give Yourself the Gift of Learning"
+    single: 35
+    bundle: 35
+    codes: "HOLIDAY22"
+    usd_krw: 1295.89
+    fx_date: "2022-12-14"
+    source: "https://training.linuxfoundation.org/blog/give-yourself-the-gift-of-learning/"
+  - start: "2023-01-24"
+    end: "2023-01-31T23:59:00Z"
+    name: "New Year, New Goals"
+    single: 25
+    bundle: 35
+    codes: "-"
+    usd_krw: 1235.59
+    fx_date: "2023-01-24"
+    source: "https://training.linuxfoundation.org/blog/new-year-new-goals/"
+  - start: "2023-02-20"
+    end: "2023-02-28T23:59:00Z"
+    name: "February 2023 Promo"
+    single: 30
+    bundle: 50
+    codes: "AWARDCERT23 / AWARDS23"
+    usd_krw: 1296.96
+    fx_date: "2023-02-20"
+    source: "https://web.archive.org/web/20230222/https://training.linuxfoundation.org/februarylove-2023/"
+  - start: "2023-03-16"
+    end: "2023-03-27T23:59:00Z"
+    name: "March 2023 Promo: Pot of Gold"
+    single: 25
+    bundle: 35
+    codes: "MARCH23 / MARCHBUN23"
+    usd_krw: 1310.43
+    fx_date: "2023-03-16"
+    source: "https://web.archive.org/web/20230316/https://training.linuxfoundation.org/march-2023-potgold/"
+  - start: "2023-04-11"
+    end: "2023-04-18T23:59:00Z"
+    name: "April 2023 Promo"
+    single: 30
+    bundle: 30
+    codes: "APRIL23"
+    usd_krw: 1322.16
+    fx_date: "2023-04-11"
+    source: "https://web.archive.org/web/20230412/https://training.linuxfoundation.org/april-1-2023/"
+  - start: "2023-05-16"
+    end: "2023-05-23T23:59:00Z"
+    name: "May 2023 Promo: Spring Forward"
+    single: null
+    bundle: 50
+    codes: "MAYSPRING50"
+    usd_krw: 1340.67
+    fx_date: "2023-05-16"
+    source: "https://web.archive.org/web/20230517/https://training.linuxfoundation.org/may-spring-2023/"
+    note:
+      ko: "단일 자격증 할인 표기 없음"
+      en: "No single-cert discount listed"
+  - start: "2023-06-13"
+    end: "2023-06-20T23:59:00Z"
+    name: "June 2023 Promo"
+    single: 30
+    bundle: 40
+    codes: "JUNEBBQ30 / JUNEBBQ40"
+    usd_krw: 1272.8
+    fx_date: "2023-06-13"
+    source: "https://training.linuxfoundation.org/blog/let-linux-foundation-training-certification-fire-up-your-career/"
+  - start: "2023-07-11"
+    end: "2023-07-12T23:59:00Z"
+    name: "Prime Day 2023"
+    single: 40
+    bundle: 40
+    codes: "PRIME23"
+    usd_krw: 1294.26
+    fx_date: "2023-07-11"
+    source: "https://web.archive.org/web/20230711/https://training.linuxfoundation.org/july-prime-day-2023-promo/"
+    note:
+      ko: "이틀 한정"
+      en: "2 days only"
+  - start: "2023-07-18"
+    end: "2023-07-30T23:59:00Z"
+    name: "SysAdmin Day 2023"
+    single: 25
+    bundle: 34
+    codes: "JULY23100 / JULY23200"
+    usd_krw: 1261.24
+    fx_date: "2023-07-18"
+    source: "https://web.archive.org/web/20230718/https://training.linuxfoundation.org/july-2023/"
+    note:
+      ko: "금액 할인(CKA $100, 번들 $200)을 정가 대비 비율로 환산"
+      en: "Dollar discounts (CKA $100, bundles $200) shown as a percentage of list price"
+  - start: "2023-09-12"
+    end: "2023-09-19T23:59:00Z"
+    name: "Get Back to School with Tux!"
+    single: 35
+    bundle: 35
+    codes: "BACKTOSCHOOL35"
+    usd_krw: 1327.94
+    fx_date: "2023-09-12"
+    source: "https://training.linuxfoundation.org/blog/get-back-to-school-with-tux/"
+  - start: "2023-10-10"
+    end: "2023-10-11T23:59:00Z"
+    name: "QUICK! 2-days ONLY to $ave 40% Sitewide"
+    single: 40
+    bundle: 40
+    codes: "PRIME2023"
+    usd_krw: 1349.08
+    fx_date: "2023-10-10"
+    source: "https://training.linuxfoundation.org/blog/quick-2-days-only-to-ave-40-sitewide/"
+    note:
+      ko: "이틀 한정"
+      en: "2 days only"
+  - start: "2023-10-17"
+    end: "2023-10-24T23:59:00Z"
+    name: "$ave on Security Courses, Certification & More"
+    single: 35
+    bundle: 35
+    codes: "-"
+    usd_krw: 1352.62
+    fx_date: "2023-10-17"
+    source: "https://training.linuxfoundation.org/blog/ave-on-security-courses-certification-more-thru-24-october/"
+  - start: "2023-11-27"
+    end: "2023-12-06T23:59:00Z"
+    name: "Cyber Monday Savings Are Here!"
+    single: 50
+    bundle: 65
+    codes: "-"
+    usd_krw: 1299.07
+    fx_date: "2023-11-27"
+    source: "https://training.linuxfoundation.org/blog/cyber-monday-savings-are-here/"
+    note:
+      ko: "12월 4일 종료 예정이었다가 6일까지 연장"
+      en: "Extended from Dec 4 to Dec 6"
+  - start: "2023-12-14"
+    end: "2023-12-21T23:59:00Z"
+    name: "We're Saying Thanks with 35% Sitewide Savings!"
+    single: 35
+    bundle: 35
+    codes: "-"
+    usd_krw: 1293.76
+    fx_date: "2023-12-14"
+    source: "https://training.linuxfoundation.org/blog/were-saying-thanks-with-35-sitewide-savings/"
+  - start: "2024-01-16"
+    end: "2024-01-23T23:59:00Z"
+    name: "Learn More in '24 & Save up to 35%"
+    single: 25
+    bundle: 35
+    codes: "NEWYEAR24 / NEWYEAR24PLUS"
+    usd_krw: 1337.0
+    fx_date: "2024-01-16"
+    source: "https://training.linuxfoundation.org/blog/learn-more-in-24-save-up-to-35/"
+  - start: "2024-02-20"
+    end: "2024-02-29T23:59:00Z"
+    name: "Leap Into Learning with Large Savings!"
+    single: 29
+    bundle: 50
+    codes: "LEAP24 / LEAPMORE24"
+    usd_krw: 1333.79
+    fx_date: "2024-02-20"
+    source: "https://training.linuxfoundation.org/blog/february-2024-promo/"
+  - start: "2024-03-12"
+    end: "2024-03-19T23:59:00Z"
+    name: "Find Your Pot of Career Gold!"
+    single: 25
+    bundle: 40
+    codes: "LUCK24CC / LUCK24"
+    usd_krw: 1312.9
+    fx_date: "2024-03-12"
+    source: "https://training.linuxfoundation.org/blog/march-promo-2024/"
+    note:
+      ko: "40%는 IT 전문 과정 대상"
+      en: "40% applies to IT Professional Programs"
+  - start: "2024-04-09"
+    end: "2024-04-16T23:59:00Z"
+    name: "Seed Your Career Profile's Garden"
+    single: 30
+    bundle: 30
+    codes: "EARTHDAY24"
+    usd_krw: 1353.62
+    fx_date: "2024-04-09"
+    source: "https://training.linuxfoundation.org/blog/april-promo-2024/"
+  - start: "2024-05-14"
+    end: "2024-05-21T23:59:00Z"
+    name: "Further YOUR Education with Courses & Certifications"
+    single: 40
+    bundle: 50
+    codes: "MAY24 / MAY24PLUS"
+    usd_krw: 1367.69
+    fx_date: "2024-05-14"
+    source: "https://training.linuxfoundation.org/blog/may-2024-promo/"
+  - start: "2024-06-06"
+    end: "2024-06-07T23:59:00Z"
+    name: "Big Savings to Celebrate Kubernetes 10th Birthday!"
+    single: 40
+    bundle: 40
+    codes: "K8STURNS10"
+    usd_krw: 1368.1
+    fx_date: "2024-06-06"
+    source: "https://training.linuxfoundation.org/blog/june-24-flash-1/"
+    note:
+      ko: "클라우드 계열 자격증 대상, 이틀 한정"
+      en: "Cloud certifications only, 2 days"
+  - start: "2024-06-11"
+    end: "2024-06-18T23:59:00Z"
+    name: "Kickstart Your Career with IT Training & Certifications"
+    single: null
+    bundle: 40
+    codes: "-"
+    usd_krw: 1378.59
+    fx_date: "2024-06-11"
+    source: "https://training.linuxfoundation.org/blog/june-2024-promo/"
+    note:
+      ko: "최대 40%, 항목별 비율은 공개되지 않음"
+      en: "Up to 40%, split not published"
+  - start: "2024-07-16"
+    end: "2024-07-17T23:59:00Z"
+    name: "Delivering Prime Training Deals Just for You!"
+    single: 40
+    bundle: 40
+    codes: "PRIME24"
+    usd_krw: 1382.8
+    fx_date: "2024-07-16"
+    source: "https://training.linuxfoundation.org/blog/july-prime-2024/"
+    note:
+      ko: "이틀 한정"
+      en: "2 days only"
+  - start: "2024-08-13"
+    end: "2024-08-20T23:59:00Z"
+    name: "Blockbuster 35% Savings Sitewide"
+    single: 35
+    bundle: 35
+    codes: "AUGUST24"
+    usd_krw: 1371.27
+    fx_date: "2024-08-13"
+    source: "https://training.linuxfoundation.org/blog/blockbuster-35-savings-sitewide/"
+  - start: "2024-09-10"
+    end: "2024-09-17T23:59:00Z"
+    name: "Sharpen Your IT Skills with 35% Savings"
+    single: 35
+    bundle: 35
+    codes: "SEPTEMBER24"
+    usd_krw: 1342.21
+    fx_date: "2024-09-10"
+    source: "https://training.linuxfoundation.org/blog/sharpen-your-it-skills-with-35-savings/"
+  - start: "2024-10-08"
+    end: "2024-10-09T23:59:00Z"
+    name: "Save 40% on All e-Learning & Certifications"
+    single: 40
+    bundle: 40
+    codes: "OCTPRIME24"
+    usd_krw: 1346.04
+    fx_date: "2024-10-08"
+    source: "https://training.linuxfoundation.org/blog/october-prime-2024/"
+    note:
+      ko: "이틀 한정"
+      en: "2 days only"
+  - start: "2024-10-15"
+    end: "2024-10-22T23:59:00Z"
+    name: "Save 40% on Cybersecurity Courses & Certifications!"
+    single: 30
+    bundle: 30
+    codes: "OCT24 / OCT24CYBER"
+    usd_krw: 1359.93
+    fx_date: "2024-10-15"
+    source: "https://training.linuxfoundation.org/blog/save-40-on-cybersecurity-courses-certifications/"
+    note:
+      ko: "CKS, KCSA 등 보안 자격증은 40%"
+      en: "Security certs such as CKS and KCSA at 40%"
+  - start: "2024-12-02"
+    end: "2024-12-11T23:59:00Z"
+    name: "Cyber Monday Savings Are Here!"
+    single: 50
+    bundle: 60
+    codes: "-"
+    usd_krw: 1404.33
+    fx_date: "2024-12-02"
+    source: "https://training.linuxfoundation.org/blog/cyber-monday-savings-are-here-2/"
+  - start: "2024-12-17"
+    end: "2024-12-19T23:59:00Z"
+    name: "Save 35% When You Give the Gift of IT Skills!"
+    single: 35
+    bundle: 35
+    codes: "HOLIDAY24"
+    usd_krw: 1436.72
+    fx_date: "2024-12-17"
+    source: "https://training.linuxfoundation.org/blog/save-35-when-you-give-the-gift-of-it-skills/"
+  - start: "2025-01-21"
+    end: "2025-01-31T23:59:00Z"
+    name: "Save 35% on Certifications, Individual Courses & More!"
+    single: 35
+    bundle: 35
+    codes: "JANUARY25"
+    usd_krw: 1441.93
+    fx_date: "2025-01-21"
+    source: "https://training.linuxfoundation.org/blog/save-35-on-certifications-individual-courses-more/"
+    note:
+      ko: "2월 4일 정가 인상 전 마지막 할인"
+      en: "Last sale before the Feb 4 price increase"
+  - start: "2025-02-04"
+    end: "2025-02-07T23:59:00Z"
+    name: "Save 40% Sitewide for Lunar New Year"
+    single: 40
+    bundle: 40
+    codes: "LUNAR25"
+    usd_krw: 1455.45
+    fx_date: "2025-02-04"
+    source: "https://training.linuxfoundation.org/blog/save-40-sitewide-for-lunar-new-year/"
+  - start: "2025-02-18"
+    end: "2025-02-25T23:59:00Z"
+    name: "Save Up to 75% for Open Source Software Month"
+    single: null
+    bundle: 50
+    codes: "FEB25BUN"
+    usd_krw: 1441.87
+    fx_date: "2025-02-18"
+    source: "https://training.linuxfoundation.org/blog/save-up-to-75-for-open-source-software-month/"
+    note:
+      ko: "단일 자격증 할인 없음, 슈퍼 번들 75%"
+      en: "No single-cert discount, Super Bundles 75%"
+  - start: "2025-03-18"
+    end: "2025-03-25T23:59:00Z"
+    name: "Put Your Career Pedal to the Metal"
+    single: 40
+    bundle: 40
+    codes: "MAR25"
+    usd_krw: 1453.26
+    fx_date: "2025-03-18"
+    source: "https://training.linuxfoundation.org/blog/put-your-career-pedal-to-the-metal/"
+  - start: "2025-04-24"
+    end: "2025-04-28T23:59:00Z"
+    name: "Secure Your Skills & Your Career"
+    single: null
+    bundle: null
+    codes: "APRIL25CYBER"
+    usd_krw: 1435.29
+    fx_date: "2025-04-24"
+    source: "https://training.linuxfoundation.org/blog/secure-your-skills-your-career/"
+    note:
+      ko: "CKS, KCSA 등 보안 자격증과 번들만 40%"
+      en: "Security certs and bundles only, 40%"
+  - start: "2025-05-13"
+    end: "2025-05-20T23:59:00Z"
+    name: "What New Skills Will You Mine Today?"
+    single: 40
+    bundle: 50
+    codes: "MAY25BUN"
+    usd_krw: 1424.45
+    fx_date: "2025-05-13"
+    source: "https://training.linuxfoundation.org/blog/what-new-skills-will-you-mine-today/"
+  - start: "2025-06-10"
+    end: "2025-06-17T23:59:00Z"
+    name: "Making Progress on Your 2025 Career Goals?"
+    single: 30
+    bundle: 40
+    codes: "JUNE25 / JUNE25PLUS"
+    usd_krw: 1366.55
+    fx_date: "2025-06-10"
+    source: "https://training.linuxfoundation.org/blog/making-progress-on-your-2025-career-goals/"
+  - start: "2025-06-25"
+    end: "2025-06-27T23:59:00Z"
+    name: "Just Released: 2025 State of Tech Talent Report"
+    single: 50
+    bundle: 50
+    codes: "TECHTALENT25"
+    usd_krw: 1363.55
+    fx_date: "2025-06-25"
+    source: "https://training.linuxfoundation.org/blog/just-released-2025-state-of-tech-talent-report/"
+    note:
+      ko: "사흘 한정"
+      en: "3 days only"
+  - start: "2025-07-08"
+    end: "2025-07-11T23:59:00Z"
+    name: "Four Days Only – Delivering Prime Career Deals"
+    single: 40
+    bundle: 40
+    codes: "PRIME25"
+    usd_krw: 1370.46
+    fx_date: "2025-07-08"
+    source: "https://training.linuxfoundation.org/blog/four-days-only-delivering-prime-career-deals-just-for-you/"
+  - start: "2025-08-12"
+    end: "2025-08-19T23:59:00Z"
+    name: "Get Your All-Access Pass to Career Greatness!"
+    single: 35
+    bundle: 35
+    codes: "AUG25"
+    usd_krw: 1390.17
+    fx_date: "2025-08-12"
+    source: "https://training.linuxfoundation.org/blog/get-your-all-access-pass-to-career-greatness/"
+    note:
+      ko: "슈퍼 번들 75%"
+      en: "Super Bundles 75%"
+  - start: "2025-08-26"
+    end: "2025-08-28T23:59:00Z"
+    name: "3 Days Only – End of Summer Clearance Deal!"
+    single: 40
+    bundle: 40
+    codes: "AUG25SUN"
+    usd_krw: 1394.36
+    fx_date: "2025-08-26"
+    source: "https://training.linuxfoundation.org/blog/august-2025-flash-2/"
+  - start: "2025-09-16"
+    end: "2025-09-23T23:59:00Z"
+    name: "Back to School. Back to Skills."
+    single: 40
+    bundle: 40
+    codes: "SEPT25"
+    usd_krw: 1381.93
+    fx_date: "2025-09-16"
+    source: "https://training.linuxfoundation.org/blog/back-to-school-back-to-skills/"
+  - start: "2025-09-24"
+    end: "2025-09-26T23:59:00Z"
+    name: "3 Days Only – Save Up to 75% on Bundles"
+    single: null
+    bundle: 50
+    codes: "-"
+    usd_krw: 1399.28
+    fx_date: "2025-09-24"
+    source: "https://training.linuxfoundation.org/blog/3-days-only-save-up-to-75-on-bundles/"
+    note:
+      ko: "번들 전용, 슈퍼 번들 75%"
+      en: "Bundles only, Super Bundles 75%"
+  - start: "2025-10-07"
+    end: "2025-10-08T23:59:00Z"
+    name: "Two Days Only – Prime IT Skills Savings!"
+    single: 50
+    bundle: 50
+    codes: "OCTPRIME25"
+    usd_krw: 1413.2
+    fx_date: "2025-10-07"
+    source: "https://training.linuxfoundation.org/blog/two-days-only-prime-it-skills-savings/"
+    note:
+      ko: "이틀 한정"
+      en: "2 days only"
+  - start: "2025-10-14"
+    end: "2025-10-21T23:59:00Z"
+    name: "Save 40% on Cybersecurity + 30% On All Other e-Learning & Certs"
+    single: 30
+    bundle: 30
+    codes: "OCT25 / OCT25CYBER"
+    usd_krw: 1434.71
+    fx_date: "2025-10-14"
+    source: "https://training.linuxfoundation.org/blog/save-40-on-cybersecurity-courses-certifications-30-on-all-other-e-learning-certs/"
+    note:
+      ko: "CKS, KCSA 등 보안 자격증은 40%"
+      en: "Security certs such as CKS and KCSA at 40%"
+  - start: "2025-12-01"
+    end: "2025-12-09T23:59:00Z"
+    name: "Cyber Week Savings Are Here!"
+    single: 50
+    bundle: 60
+    codes: "-"
+    usd_krw: 1465.15
+    fx_date: "2025-12-01"
+    source: "https://training.linuxfoundation.org/blog/cyber-week-savings-are-here/"
+    note:
+      ko: "쿠버스트로넛 번들은 50%"
+      en: "Kubestronaut bundles at 50%"
+  - start: "2025-12-16"
+    end: "2025-12-19T23:59:00Z"
+    name: "Unwrap New Skills This Season!"
+    single: 40
+    bundle: 40
+    codes: "HOLIDAY25"
+    usd_krw: 1473.24
+    fx_date: "2025-12-16"
+    source: "https://training.linuxfoundation.org/blog/unwrap-new-skills-this-season/"
+  - start: "2026-01-20"
+    end: "2026-01-27T23:59:00Z"
+    name: "Do You Have the Right Mix for 2026?"
+    single: 35
+    bundle: 35
+    codes: "SKILLSMIX26"
+    usd_krw: 1476.8
+    fx_date: "2026-01-20"
+    source: "https://training.linuxfoundation.org/blog/do-you-have-the-right-mix-for-2026/"
+  - start: "2026-02-17"
+    end: "2026-02-24T23:59:00Z"
+    name: "Ignite Your Next Career Move"
+    single: 35
+    bundle: 50
+    codes: "LUNAR26CC / LUNAR26BUN"
+    usd_krw: 1445.82
+    fx_date: "2026-02-17"
+    source: "https://training.linuxfoundation.org/blog/ignite-your-next-career-move/"
+    note:
+      ko: "슈퍼 번들 75%"
+      en: "Super Bundles 75%"
+  - start: "2026-03-13"
+    end: "2026-03-18T23:59:00Z"
+    name: "Bundles Create The Perfect Formula for Career Momentum"
+    single: 35
+    bundle: 40
+    codes: "PI26CC / PI26BUN"
+    usd_krw: 1491.7
+    fx_date: "2026-03-13"
+    source: "https://training.linuxfoundation.org/blog/bundles-create-the-perfect-formula-for-career-momentum/"
+  - start: "2026-04-14"
+    end: "2026-04-21T23:59:00Z"
+    name: "Build Skills That Last: Save 35% Sitewide"
+    single: 35
+    bundle: 35
+    codes: "EARTH26"
+    usd_krw: 1470.52
+    fx_date: "2026-04-14"
+    source: "https://training.linuxfoundation.org/blog/build-skills-that-last-save-35-sitewide/"
+  - start: "2026-05-12"
+    end: "2026-05-20T23:59:00Z"
+    name: "Mega May: Power-Up Cyber Deals"
+    single: 50
+    bundle: 60
+    codes: "-"
+    usd_krw: 1488.87
+    fx_date: "2026-05-12"
+    source: "https://training.linuxfoundation.org/blog/mega-may-power-up-cyber-deals/"
+    note:
+      ko: "쿠버스트로넛 번들은 50%"
+      en: "Kubestronaut bundles at 50%"
+  - start: "2026-06-23"
+    end: "2026-06-26T23:59:00Z"
+    name: "Four Days Only – Prime Time to Level Up Your IT Career!"
+    single: 40
+    bundle: 50
+    codes: "JPRIME26CC / JPRIME26B"
+    usd_krw: 1536.15
+    fx_date: "2026-06-23"
+    source: "https://training.linuxfoundation.org/blog/four-days-only-prime-time-to-level-up-your-it-career/"
+    note:
+      ko: "슈퍼 번들 75%"
+      en: "Super Bundles 75%"
+  - start: "2026-07-14"
+    end: "2026-07-21T23:59:00Z"
+    name: "Score Big on Your Tech Career & Save Up to 40%"
+    single: 35
+    bundle: 40
+    codes: "JULY26CC / JULY26BUN"
+    usd_krw: 1495.49
+    fx_date: "2026-07-14"
+    source: "https://training.linuxfoundation.org/blog/score-big-on-your-tech-career-save-up-to-40/"
+  - start: "2026-08-11"
+    end: "2026-08-18T23:59:00Z"
+    name: "Built by a Community That Never Stops Learning."
+    single: 35
+    bundle: 35
+    codes: "TUX35"
+    usd_krw: 1412.17
+    fx_date: "2026-08-11"
+    source: "https://training.linuxfoundation.org/blog/built-by-a-community-that-never-stops-learning/"
+  - start: "2026-09-09"
+    end: "2026-09-11T23:59:00Z"
+    name: "Switch & Save: Learn It. Prove It."
+    single: null
+    bundle: null
+    codes: "-"
+    usd_krw: 1336.2
+    fx_date: "2026-09-09"
+    source: "https://training.linuxfoundation.org/september-2026-flash/"
+    note:
+      ko: "THRIVE-ONE 연간 구독 + 자격증 묶음만 해당"
+      en: "THRIVE-ONE Annual + certification bundles only"
+    announced: false
+  - start: "2026-09-15"
+    end: "2026-09-22T23:59:00Z"
+    name: "Pack Your Future With New Skills"
+    single: 35
+    bundle: 40
+    codes: "SEPT26BTS35 / SEPT26BTS40"
+    usd_krw: 1346.24
+    fx_date: "2026-09-14"
+    source: "https://training.linuxfoundation.org/september-2026-promo/"
+    announced: true
+    code_single: "SEPT26BTS35"
+    code_bundle: "SEPT26BTS40"
+    link: "/go/lf-sept26"
+    target:
+      ko: "번들(시험 묶음) | 강사 진행 교육(Instructor-Led Training)"
+      en: "Bundles | Instructor-Led Training"

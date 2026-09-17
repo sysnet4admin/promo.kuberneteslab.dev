@@ -1,0 +1,51 @@
+{{- $d := hugo.Data.promo.history -}}
+{{- $ko := eq .Page.Language.Lang "ko" -}}
+{{- $nowU := now.Unix -}}
+{{- $best := false -}}
+{{- $bestRate := 0 -}}
+{{- range $d.promos -}}
+  {{- if and (le (time.AsTime .start).Unix $nowU) (gt (time.AsTime .end).Unix $nowU) -}}
+    {{- $r := math.Max (or .single 0) (or .bundle 0) -}}
+    {{- if gt $r $bestRate }}{{ $best = . }}{{ $bestRate = $r }}{{ end -}}
+  {{- end -}}
+{{- end -}}
+{{- with $best }}
+{{- $start := time.AsTime .start -}}
+{{- $end := time.AsTime .end -}}
+{{- $kst := $end.Add (time.ParseDuration "9h") -}}
+{{- $useBundle := ge (or .bundle 0) (or .single 0) -}}
+{{- $rate := cond $useBundle .bundle .single -}}
+{{- $code := cond $useBundle .code_bundle .code_single -}}
+<div class="promo-banner promo-banner--current" data-promo-end="{{ $end.Format "2006-01-02T15:04:05Z07:00" }}">
+  <div class="promo-banner-rate-col">
+    <div class="promo-banner-label">{{ cond $ko "지금 가장 높은 할인" "Highest right now" }}</div>
+    <div class="promo-banner-rate">{{ $rate }}%</div>
+  </div>
+  <div class="promo-banner-body">
+    {{- with .target }}
+    <div class="promo-banner-target">{{ index . (cond $ko "ko" "en") }}</div>
+    {{- end }}
+    {{- if $ko }}
+    <div class="promo-banner-period">기간: {{ $start.Format "2006-01-02" }} ~ {{ $end.Format "01-02" }} (마감 {{ $end.Format "1월 2일 15:04" }} UTC, 한국 시간 {{ $kst.Format "1월 2일 15:04" }})</div>
+    {{- else }}
+    <div class="promo-banner-period">Period: {{ $start.Format "Jan 2" }} - {{ $end.Format "Jan 2, 2006" }} (ends {{ $end.Format "Jan 2, 15:04" }} UTC, which is {{ $kst.Format "Jan 2, 15:04" }} KST)</div>
+    {{- end }}
+    <div class="promo-code-row">
+      <code class="promo-code" id="promo-code-current">{{ $code }}</code>
+      <button class="promo-copy-btn" data-copy-target="promo-code-current" data-copied-label="{{ cond $ko "복사됨" "Copied" }}">{{ cond $ko "복사" "Copy" }}</button>
+    </div>
+    {{- with .link }}
+    <a class="promo-banner-link" href="{{ . }}">{{ cond $ko "리눅스 재단 프로모션 페이지로 이동 →" "Go to the Linux Foundation promotion page →" }}</a>
+    {{- end }}
+    {{- if and $useBundle .single .code_single }}
+    <div class="promo-banner-note">{{ if $ko }}이러닝 강의와 자격증 시험만 구매하실 때는 {{ .single }}% 할인이 적용됩니다(코드 <code>{{ .code_single }}</code>).{{ else }}Buying an e-learning course or certification exam alone gets {{ .single }}% (code <code>{{ .code_single }}</code>).{{ end }}</div>
+    {{- end }}
+  </div>
+</div>
+{{- end }}
+<div class="promo-banner promo-banner--none"{{ if $best }} hidden{{ end }}>
+  <div class="promo-banner-body">
+    <div class="promo-banner-target">{{ cond $ko "지금 진행 중인 프로모션은 없습니다." "No promotion is running right now." }}</div>
+    <div class="promo-banner-note">{{ cond $ko "위의 상시 할인 30%를 쓰시거나 아래 월별 기록에서 다음 할인 시기를 확인해 보시기 바랍니다." "Use the year-round 30% code above, or check the monthly record below for the next sale window." }}</div>
+  </div>
+</div>

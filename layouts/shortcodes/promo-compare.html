@@ -1,0 +1,33 @@
+{{- $d := hugo.Data.promo.history -}}
+{{- $ko := eq .Page.Language.Lang "ko" -}}
+{{- $nowU := now.Unix -}}
+{{- $list := 0 -}}
+{{- range sort $d.cka_list_price "from" }}{{ if ge $nowU (time.AsTime .from).Unix }}{{ $list = .usd }}{{ end }}{{ end -}}
+{{- $active := false -}}
+{{- $rate := 30 -}}
+{{- range $d.promos -}}
+  {{- if and .single (le (time.AsTime .start).Unix $nowU) (gt (time.AsTime .end).Unix $nowU) -}}
+    {{- if gt .single $rate }}{{ $active = true }}{{ $rate = .single }}{{ end -}}
+  {{- end -}}
+{{- end -}}
+{{- $fx := 0.0 -}}
+{{- range sort $d.promos "start" }}{{ if le (time.AsTime .start).Unix $nowU }}{{ $fx = .usd_krw }}{{ end }}{{ end -}}
+{{- $cyber := 0 -}}
+{{- $cyYear := 0 -}}
+{{- range $d.promos -}}
+  {{- $t := time.AsTime .start -}}
+  {{- $inWeek := or (eq (int $t.Month) 12) (and (eq (int $t.Month) 11) (ge $t.Day 20)) -}}
+  {{- if and .single $inWeek (ge .single 50) (lt $t.Unix $nowU) (ge $t.Year $cyYear) }}{{ $cyYear = $t.Year }}{{ $cyber = .single }}{{ end -}}
+{{- end -}}
+{{- $usdNow := int (math.Round (mul (float $list) (sub 1.0 (div (float $rate) 100.0)))) -}}
+{{- $krwNow := mul (math.Round (div (mul $usdNow $fx) 100.0)) 100 -}}
+{{- if $cyber -}}
+{{- $usdCy := int (math.Round (mul (float $list) (sub 1.0 (div (float $cyber) 100.0)))) -}}
+{{- $krwCy := mul (math.Round (div (mul $usdCy $fx) 100.0)) 100 -}}
+{{- $diff := sub $krwNow $krwCy -}}
+{{- if $ko -}}
+{{ if $active }}지금 진행 중인 프로모션의 {{ $rate }}% 할인을 적용하면 CKA 결제액은 {{ lang.FormatNumber 0 $krwNow }}원(${{ $usdNow }})입니다.{{ else }}지금은 진행 중인 프로모션이 없으므로 상시 할인 30%를 적용하면 CKA 결제액은 {{ lang.FormatNumber 0 $krwNow }}원(${{ $usdNow }})입니다.{{ end }} 같은 CKA를 {{ $cyYear }}년 사이버 위크 할인율인 {{ $cyber }}%로 계산하면 {{ lang.FormatNumber 0 $krwCy }}원(${{ $usdCy }})이 되어 최근 확인한 환율({{ lang.FormatNumber 0 $fx }}원) 기준으로 지금 결제액과 {{ lang.FormatNumber 0 $diff }}원 정도 차이가 납니다.
+{{- else -}}
+{{ if $active }}With the current promotion, CKA costs ${{ $usdNow }} (KRW {{ lang.FormatNumber 0 $krwNow }}) at {{ $rate }}% off.{{ else }}No promotion is running, so with the year-round 30% code CKA costs ${{ $usdNow }} (KRW {{ lang.FormatNumber 0 $krwNow }}).{{ end }} At the {{ $cyYear }} Cyber Week rate of {{ $cyber }}% it would be ${{ $usdCy }} (KRW {{ lang.FormatNumber 0 $krwCy }}), about KRW {{ lang.FormatNumber 0 $diff }} less than paying now at the most recently checked rate of {{ lang.FormatNumber 0 $fx }} won per dollar.
+{{- end -}}
+{{- end -}}

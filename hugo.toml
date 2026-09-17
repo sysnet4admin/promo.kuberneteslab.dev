@@ -1,0 +1,33 @@
+baseURL = 'https://promo.kuberneteslab.dev/'
+defaultContentLanguage = 'ko'
+defaultContentLanguageInSubdir = false
+enableRobotsTXT = true
+disableKinds = ['taxonomy', 'term', 'rss']
+title = '리눅스 재단 자격증 할인 코드'
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[languages.ko]
+  contentDir = 'content/ko'
+  languageCode = 'ko-KR'
+  weight = 1
+  title = '리눅스 재단 자격증 할인 코드'
+  [languages.ko.params]
+    brand = 'KubernetesLab'
+    blogURL = 'https://kuberneteslab.dev/ko/'
+    blogLabel = '블로그'
+    altLabel = 'English'
+    altURL = '/en/'
+
+[languages.en]
+  contentDir = 'content/en'
+  languageCode = 'en-US'
+  weight = 2
+  title = 'Linux Foundation Certification Discount Codes'
+  [languages.en.params]
+    brand = 'KubernetesLab'
+    blogURL = 'https://kuberneteslab.dev/en/'
+    blogLabel = 'Blog'
+    altLabel = '한국어'
+    altURL = '/'
