@@ -35,7 +35,7 @@
       <button class="promo-copy-btn" data-copy-target="promo-code-current" data-copied-label="{{ cond $ko "복사됨" "Copied" }}">{{ cond $ko "복사" "Copy" }}</button>
     </div>
     {{- with .link }}
-    <a class="promo-banner-link" href="{{ . }}">{{ cond $ko "리눅스 재단 프로모션 페이지로 이동 →" "Go to the Linux Foundation promotion page →" }}</a>
+    <a class="promo-banner-link" href="{{ . }}" target="_blank" rel="noopener sponsored">{{ cond $ko "리눅스 재단 프로모션 페이지로 이동 →" "Go to the Linux Foundation promotion page →" }}</a>
     {{- end }}
     {{- if and $useBundle .single .code_single }}
     <div class="promo-banner-note">{{ if $ko }}이러닝 강의와 자격증 시험만 구매하실 때는 {{ .single }}% 할인이 적용됩니다(코드 <code>{{ .code_single }}</code>).{{ else }}Buying an e-learning course or certification exam alone gets {{ .single }}% (code <code>{{ .code_single }}</code>).{{ end }}</div>
