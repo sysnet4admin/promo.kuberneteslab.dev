@@ -50,8 +50,14 @@ body {
 .site-footer {
     border-top: 1px solid var(--border);
     margin-top: 3em;
+    padding-top: 1.6em;
+    padding-bottom: 2.4em;
     font-size: 0.9em;
     color: var(--secondary);
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.9em;
+    text-align: center;
 }
 
 .site-brand {
@@ -87,16 +93,27 @@ body {
 .footer-social {
     display: flex;
     align-items: center;
-    gap: 0.9em;
+    justify-content: center;
+    gap: 1.6em;
 }
 
 .footer-social a {
     display: inline-flex;
+    padding: 0.2em;
 }
 
 .footer-social svg {
-    width: 18px;
-    height: 18px;
+    width: 24px;
+    height: 24px;
+}
+
+.footer-site {
+    font-size: 1.05em;
+}
+
+.footer-copy {
+    font-size: 0.85em;
+    opacity: 0.8;
 }
 
 .theme-toggle {
