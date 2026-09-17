@@ -1,6 +1,6 @@
 ---
 title: "리눅스 재단 자격증 할인 코드 (CKA, CKS 등)"
-description: "쿠버네티스 자격증 시험의 상시 할인 코드와 지금 진행 중인 프로모션을 정리했습니다."
+description: "리눅스 재단 자격증 시험의 상시 30% 할인 코드와 비정기 프로모션을 정리했습니다. CKA, CKAD, CKS, KCNA, KCSA와 MCPA 등 카탈로그 전체에 적용됩니다."
 images:
   - /images/og-promo-ko-logos.png
 lastmod: 2026-09-15

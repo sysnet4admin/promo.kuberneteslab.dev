@@ -39,7 +39,14 @@
       "isPartOf": { "@id": "{{ site.BaseURL }}#website" },
       "author": { "@id": "{{ site.BaseURL }}#person" },
       "dateModified": "{{ .Lastmod.Format "2006-01-02" }}",
-      "primaryImageOfPage": "{{ with .Params.images }}{{ index . 0 | absURL }}{{ end }}"
+      "primaryImageOfPage": "{{ with .Params.images }}{{ index . 0 | absURL }}{{ end }}",
+      {{- /* 상시 할인은 카탈로그 전체에 걸리므로 자격증 약어를 기계가 읽는 자리에 남긴다 */}}
+      "keywords": "CKA, CKAD, CKS, KCNA, KCSA, CKNE, PCA, ICA, CAPA, CCA, CBA, KCA, OTCA, CNPA, CNPE, CGOA, LFCS, LFCA, PTCA, MCPA, HFCP, BCP, RVFA, CODE, Linux Foundation, CNCF, Agentic AI Foundation, Kubestronaut",
+      "about": [
+        { "@type": "Thing", "name": "Linux Foundation certification exams" },
+        { "@type": "Thing", "name": "CNCF Kubernetes certifications (CKA, CKAD, CKS, KCNA, KCSA)" },
+        { "@type": "Thing", "name": "Agentic AI Foundation certification (MCPA, Model Context Protocol Associate)" }
+      ]
     }
   ]
 }
