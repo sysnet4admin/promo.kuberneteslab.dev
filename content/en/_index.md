@@ -21,6 +21,7 @@ lastmod: 2026-09-18T00:00:00+09:00
       <code class="promo-code" id="promo-code-standing">KUBELAB30</code>
       <button class="promo-copy-btn" data-copy-target="promo-code-standing" data-copied-label="Copied">Copy</button>
     </div>
+    <a class="promo-banner-link" href="/go/lf" target="_blank" rel="noopener sponsored">Go to the Linux Foundation catalog →</a>
   </div>
 </div>
 
