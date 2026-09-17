@@ -116,16 +116,20 @@ body {
     opacity: 0.85;
 }
 
-/* 좁은 화면에서는 저작권만 아래 줄로 내린다 */
+/* 좁은 화면에서도 한 줄을 유지한다 (블로그 푸터와 같은 규칙) */
 @media (max-width: 560px) {
-    .footer-copy {
-        order: 3;
-        flex: 0 0 100%;
+    .site-footer {
+        font-size: 11px;
+        gap: 0.3em 0.6em;
     }
 
-    .footer-link {
-        flex: 0 0 auto;
-        text-align: left;
+    .footer-social {
+        gap: 0.9em;
+    }
+
+    .footer-social svg {
+        width: 18px;
+        height: 18px;
     }
 }
 
