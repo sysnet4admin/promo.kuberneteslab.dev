@@ -3,6 +3,7 @@ title: "Linux Foundation Certification Discount Codes (CKA, CKS, and more)"
 description: "The year-round discount code and the promotion running right now for Kubernetes certification exams."
 images:
   - /images/og-promo-en-logos.png
+lastmod: 2026-09-15
 ---
 
 <div class="promo-page">
@@ -27,6 +28,8 @@ images:
 
 </div>
 
+<p class="promo-byline">Hoon Jo (CNCF Ambassador, AAIF (Agentic AI Foundation) Ambassador, Kubestronaut) · <a href="https://kuberneteslab.dev/en/about/">About</a></p>
+
 ## Is now a good time to buy?
 
 Short answer: **if your exam date is not urgent, wait for Cyber Week, which runs
@@ -45,36 +48,7 @@ The CKA price column uses the exchange rate on each promotion's start date.
 
 ## FAQ
 
-<div class="promo-faq">
-
-<details>
-<summary>How long do I have to take the exam after buying?</summary>
-<p>You have 12 months from purchase to schedule and take the exam, with two attempts included. That means you can buy during a sale and sit the exam once you are ready (<a href="https://training.linuxfoundation.org/certification/certified-kubernetes-administrator-cka/" target="_blank" rel="noopener">CKA page</a>).</p>
-</details>
-
-<details>
-<summary>How long is the certification valid?</summary>
-<p>CKA, CKAD, and CKS are valid for 2 years. CKA and CKAD earned before April 1, 2024 are valid for 3 years. You must pass CKA before you can take CKS (<a href="https://docs.linuxfoundation.org/tc-docs/certification/faq-cka-ckad-cks" target="_blank" rel="noopener">exam FAQ</a>).</p>
-</details>
-
-<details>
-<summary>Can I keep Kubestronaut by renewing only CKS and CKAD?</summary>
-<p>Yes. Under the Linux Foundation CARE (Certification Advancement &amp; Recertification Experience) program, since January 2026 renewing CKA or CKAD also renews KCNA, and renewing CKS also renews KCSA. Since June 18, 2026, renewing CKS also extends CKA.</p>
-<p>The Kubestronaut title lasts only until the end of the year in which the first of your five certifications expires. Renewing CKS and CKAD on time renews or extends the other three, so you keep the title. This applies only if you earned each lower-level certification before, and automatic renewals take a few business days to process (<a href="https://training.linuxfoundation.org/care-program/" target="_blank" rel="noopener">CARE program</a>, <a href="https://www.cncf.io/training/kubestronaut/kubestronaut-faq/" target="_blank" rel="noopener">Kubestronaut FAQ</a>).</p>
-</details>
-
-<details>
-<summary>Do I need to renew Golden Kubestronaut?</summary>
-<p>No. Once you earn Golden Kubestronaut, you keep the title without renewing, even when new CNCF certifications are released (<a href="https://www.cncf.io/training/kubestronaut/kubestronaut-faq/" target="_blank" rel="noopener">Kubestronaut FAQ</a>).</p>
-</details>
-
-<details>
-<summary>Can I cancel or get a refund after buying?</summary>
-<p>An exam can be refunded only within three business days of purchase and before you schedule or take it. Self-paced e-learning courses can be refunded within three days if you have not completed them, and instructor-led training (live classes on a set schedule) needs a request at least 14 days before the class, with a 3% processing fee deducted. Requests go through the <a href="https://trainingsupport.linuxfoundation.org" target="_blank" rel="noopener">training support portal</a> with your LF account.</p>
-<p>The official policies do not mention refunding the difference if a bigger discount appears after you buy (<a href="https://docs.linuxfoundation.org/tc-docs/certification/lf-handbook2/exam-refund-policy" target="_blank" rel="noopener">exam refund policy</a>, <a href="https://training.linuxfoundation.org/about/faqs/payments-faq/" target="_blank" rel="noopener">payments FAQ</a>).</p>
-</details>
-
-</div>
+{{< promo-faq >}}
 
 ## About the links and the commission
 

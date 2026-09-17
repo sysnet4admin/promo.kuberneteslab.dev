@@ -106,6 +106,16 @@ body {
     height: 20px;
 }
 
+.promo-byline {
+    margin: -0.6em 0 1.6em;
+    font-size: 0.85em;
+    color: var(--secondary);
+}
+
+.promo-byline a {
+    color: var(--secondary);
+}
+
 .footer-link {
     flex: 1;
     text-align: center;

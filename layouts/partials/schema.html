@@ -1,0 +1,46 @@
+{{- /* 구조화 데이터. 화면에 보이는 내용과 어긋나지 않게 제목, 설명, 갱신일, 작성자만 담는다. */ -}}
+{{- $author := "조훈 (Hoon Jo)" -}}
+{{- $authorDesc := "CNCF Ambassador, AAIF(Agentic AI Foundation) Ambassador, Kubestronaut" -}}
+{{- if eq site.Language.Lang "en" -}}
+  {{- $author = "Hoon Jo" -}}
+  {{- $authorDesc = "CNCF Ambassador, AAIF (Agentic AI Foundation) Ambassador, Kubestronaut" -}}
+{{- end -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "{{ site.BaseURL }}#website",
+      "url": "{{ site.BaseURL }}",
+      "name": {{ site.Title | jsonify }},
+      "inLanguage": "{{ site.Language.Lang }}",
+      "publisher": { "@id": "{{ site.BaseURL }}#person" }
+    },
+    {
+      "@type": "Person",
+      "@id": "{{ site.BaseURL }}#person",
+      "name": {{ $author | jsonify }},
+      "description": {{ $authorDesc | jsonify }},
+      "url": "{{ site.Params.blogURL }}",
+      "sameAs": [
+        "https://github.com/sysnet4admin",
+        "https://www.linkedin.com/in/hoonjo/",
+        "https://www.youtube.com/HoonJo"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "{{ .Permalink }}#webpage",
+      "url": "{{ .Permalink }}",
+      "name": {{ .Title | jsonify }},
+      "description": {{ .Description | jsonify }},
+      "inLanguage": "{{ site.Language.Lang }}",
+      "isPartOf": { "@id": "{{ site.BaseURL }}#website" },
+      "author": { "@id": "{{ site.BaseURL }}#person" },
+      "dateModified": "{{ .Lastmod.Format "2006-01-02" }}",
+      "primaryImageOfPage": "{{ with .Params.images }}{{ index . 0 | absURL }}{{ end }}"
+    }
+  ]
+}
+</script>
