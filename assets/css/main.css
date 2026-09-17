@@ -122,6 +122,11 @@ body {
         order: 3;
         flex: 0 0 100%;
     }
+
+    .footer-link {
+        flex: 0 0 auto;
+        text-align: left;
+    }
 }
 
 .theme-toggle {
