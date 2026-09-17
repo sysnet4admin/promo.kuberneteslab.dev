@@ -3,7 +3,8 @@ title: "리눅스 재단 자격증 할인 코드 (CKA, CKS 등)"
 description: "리눅스 재단 자격증 시험의 상시 30% 할인 코드와 비정기 프로모션을 정리했습니다. CKA, CKAD, CKS, KCNA, KCSA와 MCPA 등 카탈로그 전체에 적용됩니다."
 images:
   - /images/og-promo-ko-logos.png
-lastmod: 2026-09-15
+date: 2026-09-15T00:00:00+09:00
+lastmod: 2026-09-18T00:00:00+09:00
 ---
 
 <div class="promo-page">
@@ -17,10 +18,9 @@ lastmod: 2026-09-15
     <div class="promo-banner-target">리눅스 재단 교육 카탈로그 전체(이러닝 강의, 자격증 시험)</div>
     <div class="promo-banner-period">기간: 상시. 프로모션 기간이 아니어도 언제든 적용됩니다.</div>
     <div class="promo-code-row">
-      <code class="promo-code" id="promo-code-standing">코드 발급 중</code>
-      <button class="promo-copy-btn" data-copy-target="promo-code-standing" data-copied-label="복사됨" disabled>복사</button>
+      <code class="promo-code" id="promo-code-standing">KUBELAB30</code>
+      <button class="promo-copy-btn" data-copy-target="promo-code-standing" data-copied-label="복사됨">복사</button>
     </div>
-    <div class="promo-banner-note">전용 코드는 발급이 끝나는 대로 이 자리에 채워 넣습니다. 국내 다른 제휴 경로의 상시 할인은 20%입니다.</div>
   </div>
 </div>
 
@@ -70,4 +70,4 @@ CKA 결제액은 프로모션마다 시작일 환율로 환산했습니다.
 - 결제나 환불, 시험 일정처럼 구매와 관련된 문의는 제가 도와드릴 수 있는
   부분이 아니라서 리눅스 재단 쪽으로 문의하셔야 합니다.
 - 이 페이지는 프로모션이 새로 나올 때마다 갱신하고 있습니다. 마지막으로
-  업데이트한 날짜는 2026년 9월 15일입니다.
+  업데이트한 날짜는 2026년 9월 18일입니다.

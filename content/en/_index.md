@@ -3,7 +3,8 @@ title: "Linux Foundation Certification Discount Codes (CKA, CKS, and more)"
 description: "The year-round 30% discount code for Linux Foundation certification exams, plus the occasional promotions. Applies to the whole catalog including CKA, CKAD, CKS, KCNA, KCSA, and MCPA."
 images:
   - /images/og-promo-en-logos.png
-lastmod: 2026-09-15
+date: 2026-09-15T00:00:00+09:00
+lastmod: 2026-09-18T00:00:00+09:00
 ---
 
 <div class="promo-page">
@@ -17,10 +18,9 @@ lastmod: 2026-09-15
     <div class="promo-banner-target">Full Linux Foundation catalog (e-learning courses, certification exams)</div>
     <div class="promo-banner-period">Period: year-round. Applies with no promotion window required.</div>
     <div class="promo-code-row">
-      <code class="promo-code" id="promo-code-standing">Code pending</code>
-      <button class="promo-copy-btn" data-copy-target="promo-code-standing" data-copied-label="Copied" disabled>Copy</button>
+      <code class="promo-code" id="promo-code-standing">KUBELAB30</code>
+      <button class="promo-copy-btn" data-copy-target="promo-code-standing" data-copied-label="Copied">Copy</button>
     </div>
-    <div class="promo-banner-note">The dedicated code will land here once it is issued. Another affiliate route in Korea offers 20% year-round.</div>
   </div>
 </div>
 
@@ -76,4 +76,4 @@ same discount.
 - Questions about payment, refunds, or exam scheduling are not something I
   can help with, so those need to go to the Linux Foundation directly.
 - This page is updated whenever a new promotion arrives. It was last revised
-  on September 15, 2026.
+  on September 18, 2026.
