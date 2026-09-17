@@ -1,0 +1,11 @@
+{{ define "main" }}
+{{ if eq site.Language.Lang "en" }}
+<h1 class="page-title">Page not found</h1>
+<p>This address does not exist. The year-round code and the promotion running right now are on the main page.</p>
+<p><a href="{{ "/" | relLangURL }}">Go to the discount codes</a></p>
+{{ else }}
+<h1 class="page-title">페이지를 찾을 수 없습니다</h1>
+<p>없는 주소입니다. 상시 할인 코드와 지금 진행 중인 프로모션은 첫 화면에 있습니다.</p>
+<p><a href="{{ "/" | relLangURL }}">할인 코드 보러 가기</a></p>
+{{ end }}
+{{ end }}
