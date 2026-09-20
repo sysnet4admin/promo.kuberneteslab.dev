@@ -1,0 +1,22 @@
+{{- /* 현재 할인 상태. 블로그 글 하단 배너가 읽는다. 문구 없이 숫자와 날짜만 둔다. */ -}}
+{{- $d := hugo.Data.promo.history -}}
+{{- $nowU := now.Unix -}}
+{{- $best := false -}}
+{{- $bestRate := 0 -}}
+{{- range $d.promos -}}
+  {{- if and (le (time.AsTime .start).Unix $nowU) (gt (time.AsTime .end).Unix $nowU) -}}
+    {{- $r := math.Max (default 0 .single) (default 0 .bundle) -}}
+    {{- if gt $r $bestRate }}{{ $best = . }}{{ $bestRate = $r }}{{ end -}}
+  {{- end -}}
+{{- end -}}
+{{- $out := dict "standing" 30 "generated" (now.Format "2006-01-02T15:04:05Z07:00") -}}
+{{- if $best -}}
+  {{- $p := dict
+      "max" (int $bestRate)
+      "single" (default 0 $best.single)
+      "bundle" (default 0 $best.bundle)
+      "end" ((time.AsTime $best.end).Format "2006-01-02T15:04:05Z07:00")
+  -}}
+  {{- $out = merge $out (dict "promo" $p) -}}
+{{- end -}}
+{{ $out | jsonify (dict "indent" "  ") }}

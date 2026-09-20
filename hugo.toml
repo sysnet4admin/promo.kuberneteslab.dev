@@ -8,6 +8,16 @@ title = '리눅스 재단 자격증 할인 코드'
 [markup.goldmark.renderer]
   unsafe = true
 
+# 블로그 배너가 읽어 가는 현재 할인 상태. 숫자와 날짜만 담고 문구는 읽는 쪽에서 만든다.
+[outputs]
+  home = ['HTML', 'CTA']
+
+[outputFormats.CTA]
+  mediaType = 'application/json'
+  baseName = 'cta'
+  isPlainText = true
+  notAlternative = true
+
 [languages.ko]
   contentDir = 'content/ko'
   locale = 'ko-KR'
