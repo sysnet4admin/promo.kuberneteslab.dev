@@ -1,3 +1,7 @@
-/cta.json
+/ko/cta.json
+  Access-Control-Allow-Origin: https://kuberneteslab.dev
+  Cache-Control: public, max-age=900
+
+/en/cta.json
   Access-Control-Allow-Origin: https://kuberneteslab.dev
   Cache-Control: public, max-age=900

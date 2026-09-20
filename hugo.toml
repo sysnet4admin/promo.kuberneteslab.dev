@@ -1,6 +1,6 @@
 baseURL = 'https://promo.kuberneteslab.dev/'
 defaultContentLanguage = 'ko'
-defaultContentLanguageInSubdir = false
+defaultContentLanguageInSubdir = true
 enableRobotsTXT = true
 disableKinds = ['taxonomy', 'term', 'rss']
 title = '리눅스 재단 자격증 할인 코드'
@@ -40,4 +40,4 @@ title = '리눅스 재단 자격증 할인 코드'
     blogURL = 'https://kuberneteslab.dev/en/'
     blogLabel = 'Blog'
     altLabel = '한국어'
-    altURL = '/'
+    altURL = '/ko/'
