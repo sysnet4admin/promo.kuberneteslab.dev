@@ -80,5 +80,4 @@ same discount.
   open a ticket with your Linux Foundation account. If something is wrong on
   exam day, checking the [exam system status](https://trainingstatus.linuxfoundation.org/)
   first is faster.
-- This page is updated whenever a new promotion arrives. It was last revised
-  on September 18, 2026.
+- Updated whenever a new promotion arrives. Last revised September 18, 2026.

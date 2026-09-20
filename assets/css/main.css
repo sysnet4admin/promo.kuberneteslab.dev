@@ -156,6 +156,10 @@ body {
     max-width: 780px;
     margin: 0 auto;
     padding: 0 1.2em;
+    /* 한국어는 낱말 단위로만 끊는다. 기본값은 글자 단위라
+       "시험 시스템"의 시험이 쪼개지고 "입니다"가 갈라진다. */
+    word-break: keep-all;
+    overflow-wrap: break-word;
 }
 
 .page-title {
