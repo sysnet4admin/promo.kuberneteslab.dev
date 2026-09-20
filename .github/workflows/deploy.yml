@@ -35,5 +35,5 @@ jobs:
           KEY=4f74ffd8d1944f88edeeadb700aba2dc
           curl -sS -X POST https://api.indexnow.org/IndexNow \
             -H "Content-Type: application/json" \
-            -d "{\"host\":\"promo.kuberneteslab.dev\",\"key\":\"$KEY\",\"keyLocation\":\"https://promo.kuberneteslab.dev/$KEY.txt\",\"urlList\":[\"https://promo.kuberneteslab.dev/\",\"https://promo.kuberneteslab.dev/en/\"]}" \
+            -d "{\"host\":\"promo.kuberneteslab.dev\",\"key\":\"$KEY\",\"keyLocation\":\"https://promo.kuberneteslab.dev/$KEY.txt\",\"urlList\":[\"https://promo.kuberneteslab.dev/ko/\",\"https://promo.kuberneteslab.dev/en/\"]}" \
             -w "\nIndexNow 응답: %{http_code}\n"
