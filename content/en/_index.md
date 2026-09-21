@@ -34,7 +34,7 @@ lastmod: 2026-09-18T00:00:00+09:00
 ## Is now a good time to buy?
 
 Short answer: **if your exam date is not urgent, wait for Cyber Week, which runs
-from late November to early December.** Every year from 2021 to 2025 it brought
+from late November to early December.** Every year for the past five years it brought
 50% off single certifications and 60-65% off bundles, and you have 12 months
 after purchase to take the exam. {{< promo-compare >}} **If you need to sit the
 exam soon, use the running promotion or the year-round code now.**
