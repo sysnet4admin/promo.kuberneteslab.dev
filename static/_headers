@@ -5,3 +5,13 @@
 /en/cta.json
   Access-Control-Allow-Origin: https://kuberneteslab.dev
   Cache-Control: public, max-age=900
+
+# 제휴 링크는 넘김만 하는 경로라 검색 결과에 남을 이유가 없다
+/go/*
+  X-Robots-Tag: noindex, nofollow
+
+# 404 본문이 /404라는 정상 주소로도 열려서 색인될 수 있다
+/404
+  X-Robots-Tag: noindex
+/*/404
+  X-Robots-Tag: noindex
