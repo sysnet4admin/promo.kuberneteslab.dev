@@ -1,0 +1,6 @@
+{{- /* 사이트 내용이 마지막으로 바뀐 시각. 배포 때 content/와 data/를 마지막으로 고친 커밋 시각을
+       HUGO_PARAMS_LASTUPDATED로 넘긴다. 프로모션 이력과 FAQ는 data/에 있어서 페이지 파일의
+       날짜만으로는 갱신이 잡히지 않기 때문이다. 값이 없는 로컬 빌드에서는 페이지 날짜를 쓴다. */ -}}
+{{- $t := .Lastmod -}}
+{{- with site.Params.lastupdated }}{{ $t = time.AsTime . }}{{ end -}}
+{{- return $t -}}
