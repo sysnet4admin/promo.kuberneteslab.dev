@@ -11,17 +11,22 @@ ko:
       유효 기간이 3년입니다. 참고로 CKS는 CKA에 먼저 합격해야 응시할 수 있습니다(<a href="https://docs.linuxfoundation.org/tc-docs/certification/faq-cka-ckad-cks" target="_blank" rel="noopener">시험 FAQ</a>).
   - q: "CKS와 CKAD만 갱신해도 쿠버스트로넛(Kubestronaut)을 유지할 수 있나요?"
     a: >-
-      네, 가능합니다. 리눅스 재단의 CARE(Certification Advancement &amp; Recertification Experience)
-      프로그램에 따라 2026년 1월부터 CKA나 CKAD를 갱신하면 KCNA가, CKS를 갱신하면 KCSA가 함께 갱신됩니다.
-      2026년 6월 18일부터는 CKS를 갱신하면 CKA도 연장됩니다.
-      쿠버스트로넛 타이틀은 5개 자격증 중 하나가 처음 만료되면 그해 연말까지만 유지됩니다.
-      CKS와 CKAD를 제때 갱신하면 나머지 3개도 함께 갱신되거나 연장되므로 타이틀을 이어 갈 수 있습니다.
-      이 혜택은 하위 자격증을 한 번이라도 딴 적이 있어야 적용되고 자동 갱신이 반영되기까지 영업일 기준으로
-      며칠이 걸립니다(<a href="https://training.linuxfoundation.org/care-program/" target="_blank" rel="noopener">CARE 프로그램</a>, <a href="https://www.cncf.io/training/kubestronaut/kubestronaut-faq/" target="_blank" rel="noopener">쿠버스트로넛 FAQ</a>).
+      네, 가능합니다. 리눅스 재단의 CARE(Certification Advancement &amp; Recertification Experience) 프로그램에서는 상위 자격증을 따거나 갱신하면
+      예전에 딴 하위 자격증도 자동으로 유효한 상태가 되고 만료일도 상위 자격증에 맞춰집니다. 2026년 1월 1일부터 CKA나 CKAD에는 KCNA가, CKS에는 KCSA가 연결되어 있고 2026년
+      6월 18일부터는 CKS에 CKA도 연결되었습니다. 그래서 지금은 CKS 하나에 KCSA, CKA 그리고 CKA에 연결된 KCNA까지 최대 3개가 함께 적용됩니다. 쿠버스트로넛 타이틀은 5개 자격증
+      중 하나가 처음 만료되면 그해 연말까지만 유지되는데 CKS와 CKAD만 제때 갱신하면 나머지 3개도 만료되지 않으므로 타이틀을 이어 갈 수 있습니다. 이미 만료된 하위 자격증도 한 번이라도 딴 적이
+      있다면 다시 인정되지만 한 번도 딴 적이 없는 자격증을 새로 주지는 않습니다. 다만 CKA는 2026년 6월 18일 이후에 CKS를 따거나 갱신한 경우에만 대상이 됩니다. 또 자격증을 서로 다른
+      리눅스 재단 계정으로 땄다면 자동으로 처리되지 않으니 리눅스 재단 지원팀에 사용한 계정을 모두 알려 주고 연결을 요청하셔야 합니다. 자동 처리가 반영되기까지는 영업일 기준으로 며칠이 걸립니다(<a
+      href="https://training.linuxfoundation.org/care-program/" target="_blank" rel="noopener">CARE 프로그램</a>, <a
+      href="https://www.cncf.io/training/kubestronaut/kubestronaut-faq/" target="_blank" rel="noopener">쿠버스트로넛
+      FAQ</a>).
   - q: "골든 쿠버스트로넛(Golden Kubestronaut)도 갱신해야 하나요?"
     a: >-
-      골든 쿠버스트로넛 타이틀은 한 번 받으면 따로 갱신하지 않아도 계속 유지되고 새 CNCF 자격증이 나와도
-      다시 딸 필요가 없습니다(<a href="https://www.cncf.io/training/kubestronaut/kubestronaut-faq/" target="_blank" rel="noopener">쿠버스트로넛 FAQ</a>).
+      골든 쿠버스트로넛 타이틀은 한 번 받으면 따로 갱신하지 않아도 계속 유지되고 새 CNCF 자격증이 나와도 그 자격증을 따지 않아도 됩니다. 쿠버스트로넛 타이틀이 만료되더라도 골든 타이틀과 골든
+      혜택은 대부분 그대로 남습니다. 다만 골든 혜택 중 THRIVE-ONE 구독은 쿠버스트로넛 타이틀이 유효할 때만 쓸 수 있고 해마다 받는 50% 할인 쿠폰 같은 쿠버스트로넛 혜택도 없어집니다.
+      그래서 이런 혜택을 계속 받으시려면 앞의 질문처럼 CKS와 CKAD를 제때 갱신하시는 편이 좋습니다(<a
+      href="https://www.cncf.io/training/kubestronaut/kubestronaut-faq/" target="_blank" rel="noopener">쿠버스트로넛
+      FAQ</a>).
   - q: "결제한 뒤 취소하거나 환불받을 수 있나요?"
     a: >-
       자격증 시험은 결제 후 영업일 기준 3일이 지나지 않았고 시험 예약도 하지 않은 상태일 때만 환불을
@@ -41,17 +46,29 @@ en:
       for 3 years. You must pass CKA before you can take CKS (<a href="https://docs.linuxfoundation.org/tc-docs/certification/faq-cka-ckad-cks" target="_blank" rel="noopener">exam FAQ</a>).
   - q: "Can I keep Kubestronaut by renewing only CKS and CKAD?"
     a: >-
-      Yes. Under the Linux Foundation CARE (Certification Advancement &amp; Recertification Experience)
-      program, since January 2026 renewing CKA or CKAD also renews KCNA, and renewing CKS also renews KCSA.
-      Since June 18, 2026, renewing CKS also extends CKA.
-      The Kubestronaut title lasts only until the end of the year in which the first of your five
-      certifications expires. Renewing CKS and CKAD on time renews or extends the other three, so you keep
-      the title. This applies only if you earned each lower-level certification before, and automatic
-      renewals take a few business days to process (<a href="https://training.linuxfoundation.org/care-program/" target="_blank" rel="noopener">CARE program</a>, <a href="https://www.cncf.io/training/kubestronaut/kubestronaut-faq/" target="_blank" rel="noopener">Kubestronaut FAQ</a>).
+      Yes. Under the Linux Foundation CARE (Certification Advancement &amp; Recertification Experience) program,
+      earning or recertifying a higher-level certification automatically brings the lower-level certifications you
+      earned before back to current, with their expiration dates aligned to the higher one. Since January 1, 2026,
+      CKA or CKAD covers KCNA and CKS covers KCSA, and since June 18, 2026, CKS also covers CKA. So today CKS alone
+      covers up to three: KCSA, CKA, and KCNA through CKA. The Kubestronaut title lasts only until the end of the
+      year in which the first of your five certifications expires, so renewing CKS and CKAD on time keeps the other
+      three from expiring and keeps the title. An expired lower-level certification comes back as current as long as
+      you earned it before, but CARE never grants a certification you have never held. CKA is covered only when CKS
+      is earned or recertified on or after June 18, 2026. If you earned the certifications under different Linux
+      Foundation accounts, this is not automatic: send Linux Foundation Support all the accounts you used and ask
+      them to link them. Automatic updates take a few business days to show up (<a
+      href="https://training.linuxfoundation.org/care-program/" target="_blank" rel="noopener">CARE program</a>, <a
+      href="https://www.cncf.io/training/kubestronaut/kubestronaut-faq/" target="_blank" rel="noopener">Kubestronaut
+      FAQ</a>).
   - q: "Do I need to renew Golden Kubestronaut?"
     a: >-
-      No. Once you earn Golden Kubestronaut, you keep the title without renewing, even when new CNCF
-      certifications are released (<a href="https://www.cncf.io/training/kubestronaut/kubestronaut-faq/" target="_blank" rel="noopener">Kubestronaut FAQ</a>).
+      No. Once you earn Golden Kubestronaut, you keep the title without renewing, and you do not need to pass new
+      CNCF certifications when they are released. Even if your Kubestronaut title expires, the Golden title and most
+      Golden benefits stay. The exception is the THRIVE-ONE subscription, which requires a current Kubestronaut
+      title, and you also lose Kubestronaut benefits such as the yearly 50%-off certification coupons. To keep
+      those, renew CKS and CKAD on time as described above (<a
+      href="https://www.cncf.io/training/kubestronaut/kubestronaut-faq/" target="_blank" rel="noopener">Kubestronaut
+      FAQ</a>).
   - q: "Can I cancel or get a refund after buying?"
     a: >-
       An exam can be refunded only within three business days of purchase and before you schedule or take
