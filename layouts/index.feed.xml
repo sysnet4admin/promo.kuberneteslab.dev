@@ -1,0 +1,58 @@
+{{- /* 프로모션 알림 피드. history.yaml에서 시작 시각이 지난 항목만 최신순으로 담는다. */ -}}
+{{- $d := hugo.Data.promo.history -}}
+{{- $ko := eq site.Language.Lang "ko" -}}
+{{- $nowU := now.Unix -}}
+{{- $items := slice -}}
+{{- range sort $d.promos "start" "desc" -}}
+  {{- if and (le (time.AsTime .start).Unix $nowU) (or .single .bundle) -}}
+    {{- $items = $items | append . -}}
+  {{- end -}}
+{{- end -}}
+{{- $items = first 12 $items -}}
+{{- $home := site.Home.Permalink -}}
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ site.Title | htmlEscape }}</title>
+    <link>{{ $home }}</link>
+    <description>{{ cond $ko "리눅스 재단 자격증 할인 프로모션이 새로 시작되면 올라오는 피드입니다." "A new item appears here when a Linux Foundation certification promotion starts." }}</description>
+    <language>{{ cond $ko "ko-KR" "en-US" }}</language>
+    <atom:link href="{{ $home }}feed.xml" rel="self" type="application/rss+xml"/>
+    {{- with index $items 0 }}
+    <lastBuildDate>{{ (time.AsTime .start).Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</lastBuildDate>
+    {{- end }}
+    {{- range $items }}
+    {{- $start := time.AsTime .start -}}
+    {{- $end := time.AsTime .end -}}
+    {{- $kst := $end.Add (time.ParseDuration "9h") -}}
+    {{- $max := math.Max (or .single 0) (or .bundle 0) -}}
+    {{- $rates := slice -}}
+    {{- if $ko -}}
+      {{- with .bundle }}{{ $rates = $rates | append (printf "번들 %d%%" .) }}{{ end -}}
+      {{- with .single }}{{ $rates = $rates | append (printf "단일 자격증 %d%%" .) }}{{ end -}}
+    {{- else -}}
+      {{- with .bundle }}{{ $rates = $rates | append (printf "Bundles %d%%" .) }}{{ end -}}
+      {{- with .single }}{{ $rates = $rates | append (printf "single certifications %d%%" .) }}{{ end -}}
+    {{- end -}}
+    {{- $desc := "" -}}
+    {{- if $ko -}}
+      {{- $desc = printf "%s 할인입니다. 마감은 한국 시간 %s입니다." (delimit $rates ", ") ($kst.Format "1월 2일 15:04") -}}
+      {{- if and .codes (ne .codes "-") }}{{ $desc = printf "%s 코드: %s." $desc .codes }}{{ end -}}
+      {{- with .note }}{{ $desc = printf "%s 참고: %s." $desc .ko }}{{ end -}}
+      {{- $desc = printf "%s 평소에는 상시 30%% 코드 KUBELAB30을 쓸 수 있습니다." $desc -}}
+    {{- else -}}
+      {{- $desc = printf "%s off. Ends %s UTC." (delimit $rates ", ") ($end.Format "Jan 2, 15:04") -}}
+      {{- if and .codes (ne .codes "-") }}{{ $desc = printf "%s Codes: %s." $desc .codes }}{{ end -}}
+      {{- with .note }}{{ $desc = printf "%s Note: %s." $desc .en }}{{ end -}}
+      {{- $desc = printf "%s Outside promotions, the year-round code KUBELAB30 gives 30%% off." $desc -}}
+    {{- end }}
+    <item>
+      <title>{{ if $ko }}{{ printf "[최대 %d%%] %s (%s까지)" (int $max) .name ($kst.Format "1월 2일") | htmlEscape }}{{ else }}{{ printf "[Up to %d%%] %s (until %s)" (int $max) .name ($end.Format "Jan 2") | htmlEscape }}{{ end }}</title>
+      <link>{{ $home }}</link>
+      <guid isPermaLink="false">promo-{{ $start.Format "2006-01-02" }}</guid>
+      <pubDate>{{ $start.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</pubDate>
+      <description>{{ $desc | htmlEscape }}</description>
+    </item>
+    {{- end }}
+  </channel>
+</rss>
