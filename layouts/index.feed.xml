@@ -1,4 +1,5 @@
-{{- /* 프로모션 알림 피드. history.yaml에서 시작 시각이 지난 항목만 최신순으로 담는다. */ -}}
+{{- /* 프로모션 알림 피드. history.yaml에서 시작 시각이 지난 항목만 최신순으로 담는다.
+     끝난 항목은 배포 때마다 제목 앞에 [종료]가 붙는다. */ -}}
 {{- $d := hugo.Data.promo.history -}}
 {{- $ko := eq site.Language.Lang "ko" -}}
 {{- $nowU := now.Unix -}}
@@ -47,7 +48,8 @@
       {{- $desc = printf "%s Outside promotions, the year-round code KUBELAB30 gives 30%% off." $desc -}}
     {{- end }}
     <item>
-      <title>{{ if $ko }}{{ printf "[최대 %d%%] %s (%s까지)" (int $max) .name ($kst.Format "1월 2일") | htmlEscape }}{{ else }}{{ printf "[Up to %d%%] %s (until %s)" (int $max) .name ($end.Format "Jan 2") | htmlEscape }}{{ end }}</title>
+      {{- $ended := le $end.Unix $nowU }}
+      <title>{{ if $ended }}{{ cond $ko "[종료] " "[Ended] " }}{{ end }}{{ if $ko }}{{ printf "[최대 %d%%] %s (%s까지)" (int $max) .name ($kst.Format "1월 2일") | htmlEscape }}{{ else }}{{ printf "[Up to %d%%] %s (until %s)" (int $max) .name ($end.Format "Jan 2") | htmlEscape }}{{ end }}</title>
       <link>{{ $home }}</link>
       <guid isPermaLink="false">promo-{{ $start.Format "2006-01-02" }}</guid>
       <pubDate>{{ $start.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</pubDate>
