@@ -22,46 +22,53 @@
 <script>
 (function () {
   /* 구독을 페이지 안에서 처리한다. 성공하면 폼 자리에 완료 문구를 띄운다.
-     Kit이 확인 창(reCAPTCHA)을 요구하거나 요청이 실패하면 Kit 페이지로 넘긴다.
-     새 탭은 클릭 직후에만 열리므로 응답이 늦으면 같은 탭에서 연다. */
+     Kit이 스팸을 의심하면(quarantined) Kit 자체 폼처럼 확인 창(reCAPTCHA)을 폼 자리에 띄우고,
+     확인 완료 신호를 받으면 완료 문구로 바꾼다. 요청이 실패하면 폼을 원래대로 제출한다. */
+  var KIT = 'https://app.kit.com';
   document.querySelectorAll('form.newsletter-form').forEach(function (f) {
     if (f.dataset.bound) return;
     f.dataset.bound = '1';
+    function done(node) {
+      var p = document.createElement('p');
+      p.className = 'newsletter-done';
+      p.setAttribute('role', 'status');
+      p.textContent = f.dataset.done;
+      node.replaceWith(p);
+    }
+    function guard(url) {
+      var frame = document.createElement('iframe');
+      frame.className = 'newsletter-guard';
+      frame.title = 'Kit security check';
+      frame.src = url;
+      frame.style.cssText = 'display:block;width:100%;max-width:420px;height:500px;margin:0.4em auto 0;border:0;border-radius:8px;background:#fff';
+      var ok = false;
+      function onMsg(e) {
+        if (e.origin !== KIT || e.source !== frame.contentWindow || !e.data) return;
+        if (e.data.name === 'ckjs:guard:loaded') ok = true;
+        if (e.data.name === 'ckjs:guard:size' && e.data.height) frame.style.height = e.data.height + 'px';
+        if (e.data.name === 'ckjs:guard:confirmed') { window.removeEventListener('message', onMsg); done(frame); }
+      }
+      window.addEventListener('message', onMsg);
+      f.replaceWith(frame);
+      /* 확인 창이 10초 안에 뜨지 않으면 Kit 페이지로 넘긴다. */
+      setTimeout(function () { if (!ok) location.href = url; }, 10000);
+    }
     f.addEventListener('submit', function (e) {
-      if (!window.fetch || !window.URLSearchParams) return;
+      if (!window.fetch || !window.FormData) return;
       e.preventDefault();
       var btn = f.querySelector('button');
-      var t0 = Date.now();
       btn.disabled = true;
-      function fallback(url) {
-        btn.disabled = false;
-        var late = Date.now() - t0 > 4000;
-        if (url) {
-          var w = late ? null : window.open(url, '_blank');
-          if (w) w.opener = null; else location.href = url;
-          return;
-        }
-        if (late) f.target = '_self';
-        f.submit();
-      }
-      fetch(f.action, {
-        method: 'POST',
-        headers: { 'Accept': 'application/json' },
-        body: new URLSearchParams(new FormData(f))
-      })
+      var body = new FormData(f);
+      body.append('host', location.href);
+      body.append('referrer', document.referrer);
+      fetch(f.action, { method: 'POST', headers: { 'Accept': 'application/json' }, body: body })
         .then(function (r) { return r.json(); })
         .then(function (d) {
-          if (d && d.status === 'success') {
-            var done = document.createElement('p');
-            done.className = 'newsletter-done';
-            done.setAttribute('role', 'status');
-            done.textContent = f.dataset.done;
-            f.replaceWith(done);
-          } else {
-            fallback(d && d.url);
-          }
+          if (d && d.status === 'success') done(f);
+          else if (d && d.status === 'quarantined' && d.url) guard(d.url);
+          else throw new Error('kit');
         })
-        .catch(function () { fallback(); });
+        .catch(function () { btn.disabled = false; f.target = '_self'; f.submit(); });
     });
   });
 })();
