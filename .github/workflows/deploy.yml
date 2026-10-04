@@ -24,7 +24,7 @@ jobs:
 
       - name: 마지막 업데이트 날짜
         # 매일 도는 재배포로는 바뀌지 않고, 내용(content/, data/)을 고친 커밋이 있을 때만 바뀐다
-        run: echo "HUGO_PARAMS_LASTUPDATED=$(git log -1 --format=%cI -- content data ':(exclude)content/*/thanks')" >> "$GITHUB_ENV"
+        run: echo "HUGO_PARAMS_LASTUPDATED=$(git log -1 --format=%cI -- content data ':(exclude)content/*/thanks/*')" >> "$GITHUB_ENV"
 
       - name: Build
         run: hugo --minify
