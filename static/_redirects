@@ -1,7 +1,5 @@
-# 제휴 링크. 독자에게 보이는 주소는 /go/<이름>이고, 그 주소는 "이동 중" 안내 페이지를 보여 준 뒤
-# /out/<이름>으로 넘긴다. 실제 Awin 주소는 아래 /out/ 줄에만 둔다. 새 링크는 /out/ 줄과 아래 /go/ 줄을 함께 더한다. 만료된 슬러그는 두 줄 모두 지운다.
+# 제휴 링크. 독자에게 보이는 주소는 /go/<이름>이고, functions/go/[name].js가 "이동 중" 안내 페이지를
+# 보여 준 뒤 /out/<이름>으로 넘긴다. 실제 Awin 주소는 아래 /out/ 줄에만 둔다. 이 줄이 슬러그 목록의 정본이다.
+# 새 링크는 /out/ 줄 하나만 더하고, 만료된 슬러그는 그 줄을 지운다.
 /out/lf https://www.awin1.com/cread.php?awinmid=85919&awinaffid=3060003&campaign=&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Ffull-catalog%2F 302
 /out/lf-cka https://www.awin1.com/cread.php?awinmid=85919&awinaffid=3060003&campaign=&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-kubernetes-administrator-cka%2F 302
-# 등록된 슬러그만 안내 페이지로 보낸다. 없는 슬러그는 404가 난다. /out/ 줄을 더할 때 여기에도 한 줄 더한다.
-/go/lf /go-wait 200
-/go/lf-cka /go-wait 200

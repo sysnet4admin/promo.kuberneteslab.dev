@@ -11,8 +11,6 @@
   X-Robots-Tag: noindex, nofollow
 /out/*
   X-Robots-Tag: noindex, nofollow
-/go-wait
-  X-Robots-Tag: noindex, nofollow
 
 # 404 본문이 /404라는 정상 주소로도 열려서 색인될 수 있다
 /404
