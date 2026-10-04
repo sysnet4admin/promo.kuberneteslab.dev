@@ -34,7 +34,7 @@
         {{- $list := 0 -}}
         {{- range $prices }}{{ if ge $start.Unix (time.AsTime .from).Unix }}{{ $list = .usd }}{{ end }}{{ end }}
         <tr>
-          <td class="promo-nowrap ph-period">{{ $start.Format "01-02" }} ~ {{ $end.Format "01-02" }}</td>
+          <td class="promo-nowrap ph-period"><span class="ph-d">{{ $start.Format "01-02" }} ~</span> <span class="ph-d">{{ $end.Format "01-02" }}</span></td>
           <td class="ph-name">{{ with .source }}<a href="{{ . }}" rel="noopener" target="_blank">{{ end }}{{ .name }}{{ with .source }}</a>{{ end }}</td>
           <td class="ph-single" data-label="{{ cond $ko "단일" "Single" }}">{{ with .single }}{{ . }}%{{ else }}-{{ end }}</td>
           <td class="ph-bundle" data-label="{{ cond $ko "번들" "Bundle" }}">{{ with .bundle }}{{ . }}%{{ else }}-{{ end }}</td>

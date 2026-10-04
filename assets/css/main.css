@@ -419,29 +419,13 @@ body {
     white-space: nowrap;
 }
 
-/* 휴대폰에서는 표 대신 행마다 작은 카드로 보인다. 1줄: 기간과 할인율, 2줄: 프로모션 이름, 3줄: CKA 결제액과 코드 */
+/* 휴대폰에서는 표 모양을 그대로 두되 CKA 결제액과 코드 열을 숨기고, 기간을 두 줄로 접어 이름 칸을 넓힌다. */
 @media (max-width: 600px) {
-    .promo-table-wrap { overflow-x: visible; }
-    .promo-history-table thead { display: none; }
-    .promo-history-table, .promo-history-table tbody { display: block; width: 100%; }
-    .promo-history-table tr {
-        display: grid;
-        grid-template-columns: 1fr 5.6em 5.6em;
-        grid-template-areas: "period single bundle" "name name name" "price code code";
-        gap: 0.15em 0.8em;
-        padding: 0.7em 0;
-        border-bottom: 1px solid var(--border);
-    }
-    .promo-history-table td { display: block; padding: 0; border: 0; }
-    .promo-history-table .ph-period { grid-area: period; color: var(--secondary); }
-    .promo-history-table .ph-single { grid-area: single; text-align: right; white-space: nowrap; }
-    .promo-history-table .ph-bundle { grid-area: bundle; text-align: right; white-space: nowrap; }
-    .promo-history-table .ph-name { grid-area: name; }
-    .promo-history-table .ph-price { grid-area: price; color: var(--secondary); font-size: 0.9em; }
-    .promo-history-table .ph-code { grid-area: code; text-align: right; font-size: 0.9em; min-width: 0; overflow-wrap: anywhere; }
-    .promo-history-table .ph-single::before,
-    .promo-history-table .ph-bundle::before,
-    .promo-history-table .ph-price::before { content: attr(data-label) " "; color: var(--secondary); font-size: 0.85em; }
+    .promo-history-table .ph-price, .promo-history-table .ph-code,
+    .promo-history-table thead th:nth-child(5), .promo-history-table thead th:nth-child(6) { display: none; }
+    .promo-history-table .ph-period { white-space: normal; width: 3.8em; font-size: 0.9em; color: var(--secondary); }
+    .promo-history-table .ph-d { white-space: nowrap; }
+    .promo-history-table .ph-single, .promo-history-table .ph-bundle { white-space: nowrap; }
 }
 
 /* 할인율 범위 차트 (단일, 번들 월별 최대) */
