@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>리눅스 재단 페이지로 이동 중</title>
+<style>
+  :root { color-scheme: light dark; --bg: #fff; --fg: #1e1e1e; --sub: #6c6c6c; --accent: #326CE5; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #1d1e20; --fg: #dadadb; --sub: #9b9c9d; } }
+  html, body { margin: 0; height: 100%; background: var(--bg); color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Segoe UI", sans-serif; }
+  main { min-height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 14px; padding: 24px; box-sizing: border-box; text-align: center; word-break: keep-all; }
+  .spin { width: 28px; height: 28px; border: 3px solid color-mix(in srgb, var(--accent) 25%, transparent);
+    border-top-color: var(--accent); border-radius: 50%; animation: s 0.9s linear infinite; }
+  @keyframes s { to { transform: rotate(360deg); } }
+  h1 { font-size: 1.1rem; font-weight: 600; margin: 0; }
+  p { margin: 0; color: var(--sub); font-size: 0.9rem; line-height: 1.6; }
+  a.btn { display: inline-block; margin-top: 4px; padding: 0.55em 1.1em; border-radius: 6px; background: var(--accent);
+    color: #fff; font-weight: 600; text-decoration: none; }
+  .late { display: none; }
+  .is-late .late { display: block; }
+</style>
+</head>
+<body>
+<main>
+  <div class="spin" aria-hidden="true"></div>
+  <h1 id="t">리눅스 재단 페이지로 이동하고 있습니다</h1>
+  <p id="d">리눅스 재단 서버가 응답하는 데 몇 초 걸릴 수 있습니다.</p>
+  <div class="late">
+    <p id="l">넘어가지 않으면 아래 버튼을 눌러 주세요.</p>
+    <a class="btn" id="go" href="#">다시 시도</a>
+  </div>
+  <noscript><p>자바스크립트가 꺼져 있어 이동하지 못했습니다. JavaScript is required to continue.</p><p><a href="/ko/">promo.kuberneteslab.dev</a></p></noscript>
+</main>
+<script>
+(function () {
+  /* /go/<이름>으로 들어오면 /out/<이름>으로 넘긴다. /out/은 _redirects에서 Awin 제휴 주소로 302 넘김이다.
+     넘기는 동안 브라우저는 이 안내 화면을 띄운 채 리눅스 재단 응답을 기다린다. */
+  var name = location.pathname.replace(/^\/go\//, '').replace(/\/$/, '');
+  var en = /\/en\//.test(document.referrer) || /^en\b/i.test(navigator.language || '') && !/\/ko\//.test(document.referrer);
+  if (en) {
+    document.documentElement.lang = 'en';
+    document.title = 'Taking you to the Linux Foundation';
+    document.getElementById('t').textContent = 'Taking you to the Linux Foundation';
+    document.getElementById('d').textContent = 'Their server can take a few seconds to respond.';
+    document.getElementById('l').textContent = 'If nothing happens, press the button below.';
+    document.getElementById('go').textContent = 'Try again';
+  }
+  if (!/^[a-z0-9-]+$/.test(name)) { location.replace('/'); return; }
+  var target = '/out/' + name;
+  document.getElementById('go').href = target;
+  requestAnimationFrame(function () { setTimeout(function () { location.replace(target); }, 30); });
+  setTimeout(function () { document.body.classList.add('is-late'); }, 8000);
+})();
+</script>
+</body>
+</html>
