@@ -4,7 +4,7 @@
 {{- $nl := site.Params.newsletter -}}
 {{- with index $nl.forms site.Language.Lang }}
 <section class="newsletter-cta">
-  <form class="newsletter-form" action="{{ printf $nl.action . }}" method="post" target="_blank">
+  <form class="newsletter-form" action="{{ printf $nl.action . }}" method="post" target="_blank" data-done="{{ cond $ko "구독이 완료되었습니다. 새 글이 모이면 뉴스레터로 보내 드립니다." "You're subscribed. I'll send the next issue when new posts are ready." }}">
     <div class="newsletter-body">
       <div class="newsletter-title">{{ cond $ko "할인 행사 소식을 메일로 받기" "Get promotion alerts by email" }}</div>
       <p>{{ cond $ko "리눅스 재단 할인 행사가 열리면 쿠버네티스 랩 뉴스레터로 블로그 새 글과 함께 보내 드립니다." "When a Linux Foundation promotion starts, the KubernetesLab newsletter sends it along with new blog posts." }}</p>
@@ -19,4 +19,51 @@
     {{- else }}Linux Foundation exam discounts are included when a promotion runs. Unsubscribe anytime.<br>I use your email address only for this newsletter and keep it until you unsubscribe.{{ end -}}
   </p>
 </section>
+<script>
+(function () {
+  /* 구독을 페이지 안에서 처리한다. 성공하면 폼 자리에 완료 문구를 띄운다.
+     Kit이 확인 창(reCAPTCHA)을 요구하거나 요청이 실패하면 Kit 페이지로 넘긴다.
+     새 탭은 클릭 직후에만 열리므로 응답이 늦으면 같은 탭에서 연다. */
+  document.querySelectorAll('form.newsletter-form').forEach(function (f) {
+    if (f.dataset.bound) return;
+    f.dataset.bound = '1';
+    f.addEventListener('submit', function (e) {
+      if (!window.fetch || !window.URLSearchParams) return;
+      e.preventDefault();
+      var btn = f.querySelector('button');
+      var t0 = Date.now();
+      btn.disabled = true;
+      function fallback(url) {
+        btn.disabled = false;
+        var late = Date.now() - t0 > 4000;
+        if (url) {
+          var w = late ? null : window.open(url, '_blank');
+          if (w) w.opener = null; else location.href = url;
+          return;
+        }
+        if (late) f.target = '_self';
+        f.submit();
+      }
+      fetch(f.action, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new URLSearchParams(new FormData(f))
+      })
+        .then(function (r) { return r.json(); })
+        .then(function (d) {
+          if (d && d.status === 'success') {
+            var done = document.createElement('p');
+            done.className = 'newsletter-done';
+            done.setAttribute('role', 'status');
+            done.textContent = f.dataset.done;
+            f.replaceWith(done);
+          } else {
+            fallback(d && d.url);
+          }
+        })
+        .catch(function () { fallback(); });
+    });
+  });
+})();
+</script>
 {{- end }}

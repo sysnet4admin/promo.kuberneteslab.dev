@@ -712,3 +712,4 @@ body {
 .newsletter-fields button:hover { background: #2856b8; }
 .newsletter-consent { margin: 0.7em 0 0; font-size: 0.82em; line-height: 1.6; opacity: 0.85; }
 @media (max-width: 560px) { .newsletter-fields { flex-basis: 100%; margin-left: 0; } }
+.newsletter-done { margin: 0.3em 0 0; font-weight: 600; color: var(--primary); }
