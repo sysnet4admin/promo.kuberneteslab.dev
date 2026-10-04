@@ -57,6 +57,9 @@
       setTimeout(function () { if (!ok) location.href = url; }, 10000);
     }
     f.addEventListener('submit', function (e) {
+      /* 감사 페이지가 새 탭으로 열려도 원래 보던 페이지로 돌아갈 수 있게 주소를 30분만 남긴다.
+         블로그와 promo가 같이 읽도록 상위 도메인 쿠키를 쓴다. */
+      document.cookie = 'nl_return=' + encodeURIComponent(location.href) + '; domain=kuberneteslab.dev; path=/; max-age=1800; secure; samesite=lax';
       if (!window.fetch || !window.FormData) return;
       e.preventDefault();
       var btn = f.querySelector('button');
