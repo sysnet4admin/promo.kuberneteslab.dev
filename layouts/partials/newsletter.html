@@ -43,7 +43,10 @@
       frame.style.cssText = 'display:block;width:100%;max-width:420px;height:500px;margin:0.4em auto 0;border:0;border-radius:8px;background:#fff';
       var ok = false;
       function onMsg(e) {
-        if (e.origin !== KIT || e.source !== frame.contentWindow || !e.data) return;
+        if (e.source !== frame.contentWindow || !e.data) return;
+        /* 확인 뒤 Kit이 감사 페이지(kuberneteslab.dev/…/newsletter/thanks/)로 이동시키면 거기서 완료 신호가 온다. */
+        if (e.origin === 'https://kuberneteslab.dev' && e.data.name === 'kl:newsletter:done') { window.removeEventListener('message', onMsg); done(frame); return; }
+        if (e.origin !== KIT) return;
         if (e.data.name === 'ckjs:guard:loaded') ok = true;
         if (e.data.name === 'ckjs:guard:size' && e.data.height) frame.style.height = e.data.height + 'px';
         if (e.data.name === 'ckjs:guard:confirmed') { window.removeEventListener('message', onMsg); done(frame); }
