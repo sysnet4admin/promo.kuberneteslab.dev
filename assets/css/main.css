@@ -699,3 +699,16 @@ body {
         color: #57ab5a;
     }
 }
+
+/* 뉴스레터 구독 카드 (페이지 끝) */
+.newsletter-cta { margin: 2.5em 0 0; padding: 1em 1.2em 0.9em; border: 1px solid var(--border); border-radius: var(--radius); background: var(--code-bg); font-size: 0.92em; color: var(--secondary); }
+.newsletter-form { display: flex; align-items: center; flex-wrap: wrap; gap: 0.6em 1.1em; }
+.newsletter-body { flex: 1 1 260px; min-width: 0; }
+.newsletter-title { font-weight: 600; color: var(--primary); }
+.newsletter-body p { margin: 0.2em 0 0; }
+.newsletter-fields { display: flex; gap: 0.5em; flex: 0 1 340px; margin-left: auto; }
+.newsletter-fields input { flex: 1; min-width: 0; padding: 0.5em 0.75em; border: 1px solid var(--tertiary); border-radius: 6px; background: var(--theme); color: var(--primary); font-size: 1em; }
+.newsletter-fields button { flex: none; padding: 0.5em 1em; border: 0; border-radius: 6px; background: var(--accent); color: #fff; font-weight: 600; font-size: 1em; cursor: pointer; }
+.newsletter-fields button:hover { background: #2856b8; }
+.newsletter-consent { margin: 0.7em 0 0; font-size: 0.82em; line-height: 1.6; opacity: 0.85; }
+@media (max-width: 560px) { .newsletter-fields { flex-basis: 100%; margin-left: 0; } }

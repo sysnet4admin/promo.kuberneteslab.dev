@@ -25,6 +25,13 @@ title = '리눅스 재단 자격증 할인 코드'
   isPlainText = true
   notAlternative = true
 
+# 뉴스레터 구독(Kit). 블로그와 같은 폼 번호를 쓴다.
+[params.newsletter]
+  action = "https://app.kit.com/forms/%s/subscriptions"
+  [params.newsletter.forms]
+    ko = "9998986"
+    en = "9999108"
+
 [languages.ko]
   contentDir = 'content/ko'
   locale = 'ko-KR'
