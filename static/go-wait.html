@@ -54,7 +54,12 @@
   if (!/^[a-z0-9-]+$/.test(name)) { location.replace('/'); return; }
   var target = '/out/' + name;
   document.getElementById('go').href = target;
-  requestAnimationFrame(function () { setTimeout(function () { location.replace(target); }, 30); });
+  /* 앞쪽 탭에서는 안내 화면이 한 번 그려진 뒤 넘긴다(requestAnimationFrame).
+     배경 탭은 화면을 그리지 않아 그 신호가 오지 않으므로 0.3초 뒤에는 신호 없이 넘긴다. */
+  var moved = false;
+  function go() { if (!moved) { moved = true; location.replace(target); } }
+  requestAnimationFrame(function () { setTimeout(go, 30); });
+  setTimeout(go, 300);
   setTimeout(function () { document.body.classList.add('is-late'); }, 8000);
 })();
 </script>
