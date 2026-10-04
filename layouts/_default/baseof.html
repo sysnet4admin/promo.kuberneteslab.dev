@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ block "title" . }}{{ .Title | default site.Title }}{{ end }}</title>
   {{ with .Description }}<meta name="description" content="{{ . }}">{{ end }}
+  {{ with .Params.robots }}<meta name="robots" content="{{ . }}">{{ end }}
   <link rel="canonical" href="{{ .Permalink }}">
   {{ range site.Home.AllTranslations }}
   <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
