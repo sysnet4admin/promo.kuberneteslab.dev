@@ -332,6 +332,21 @@ body {
     color: var(--promo-accent);
 }
 
+.promo-banner-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.15em;
+    margin-top: 0.5em;
+}
+
+.promo-banner-links .promo-banner-link { margin-top: 0; }
+
+.page .promo-banner-link--sub {
+    font-weight: 500;
+    color: var(--secondary);
+}
+
 .page .promo-banner-link:hover {
     color: var(--promo-accent-hover);
 }
