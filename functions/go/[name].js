@@ -1,7 +1,7 @@
 // /go/<이름>: "이동 중" 안내 페이지를 이름을 넣어 내보낸다.
 // 등록 여부는 static/_redirects의 /out/<이름> 규칙으로 판단한다(302면 등록, 아니면 404).
 // 자동 meta refresh는 두지 않는다. 링크 미리보기 로봇이 따라가 Awin 클릭이 부풀기 때문이다.
-// 자바스크립트가 꺼져 있으면 사람이 누르는 버튼만 보인다.
+// 자바스크립트가 꺼져 있으면 "이동 중" 문구 대신 버튼을 누르라는 문구와 버튼만 보인다.
 const STYLE = `:root { color-scheme: light dark; --bg: #fff; --fg: #1e1e1e; --sub: #6c6c6c; --accent: #326CE5; }
   @media (prefers-color-scheme: dark) { :root { --bg: #1d1e20; --fg: #dadadb; --sub: #9b9c9d; } }
   html, body { margin: 0; height: 100%; background: var(--bg); color: var(--fg);
@@ -18,12 +18,13 @@ const STYLE = `:root { color-scheme: light dark; --bg: #fff; --fg: #1e1e1e; --su
   h1, p { text-wrap: balance; }
   /* 휴대폰에서는 제목이 한 줄에 들어가게 줄인다. 그래도 넘치면 두 줄 길이를 맞춘다. */
   @media (max-width: 480px) { h1 { font-size: 1.125rem; } .spin { width: 32px; height: 32px; } }
+  .nojs { display: none; }
   .late { display: none; }
   .is-late .late { display: block; }`;
 
 const TEXT = {
-  ko: { title: '리눅스 재단 페이지로 이동하고 있습니다', desc: '리눅스 재단 서버가 응답하는&nbsp;데 몇 초 걸릴 수 있습니다.', late: '넘어가지 않으면 아래 버튼을 눌러 주세요.', retry: '다시 시도', button: '리눅스 재단 페이지로 가기', doc: '리눅스 재단 페이지로 이동 중' },
-  en: { title: 'Taking you to the Linux Foundation', desc: 'Their server can take a few seconds to respond.', late: 'If nothing happens, press the button below.', retry: 'Try again', button: 'Go to the Linux Foundation', doc: 'Taking you to the Linux Foundation' },
+  ko: { title: '리눅스 재단 페이지로 이동하고 있습니다', desc: '리눅스 재단 서버가 응답하는&nbsp;데 몇 초 걸릴 수 있습니다.', late: '넘어가지 않으면 아래 버튼을 눌러 주세요.', retry: '다시 시도', button: '리눅스 재단 페이지로 가기', nojsTitle: '리눅스 재단 페이지로 이동합니다', nojsDesc: '아래 버튼을 눌러 주세요.', doc: '리눅스 재단 페이지로 이동 중' },
+  en: { title: 'Taking you to the Linux Foundation', desc: 'Their server can take a few seconds to respond.', late: 'If nothing happens, press the button below.', retry: 'Try again', button: 'Go to the Linux Foundation', nojsTitle: 'Continue to the Linux Foundation', nojsDesc: 'Press the button below.', doc: 'Taking you to the Linux Foundation' },
 };
 
 function pickLang(request) {
@@ -53,7 +54,7 @@ export async function onRequest({ request, params, env }) {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>${t.doc}</title>
-<noscript><style>.spin { display: none; }</style></noscript>
+<noscript><style>main .spin, main .js { display: none; } main .nojs { display: block; }</style></noscript>
 <style>
 ${STYLE}
 </style>
@@ -61,8 +62,10 @@ ${STYLE}
 <body>
 <main>
   <div class="spin" aria-hidden="true"></div>
-  <h1>${t.title}</h1>
-  <p>${t.desc}</p>
+  <h1 class="js">${t.title}</h1>
+  <p class="js">${t.desc}</p>
+  <h1 class="nojs">${t.nojsTitle}</h1>
+  <p class="nojs">${t.nojsDesc}</p>
   <div class="late">
     <p>${t.late}</p>
     <a class="btn" href="${target}">${t.retry}</a>
