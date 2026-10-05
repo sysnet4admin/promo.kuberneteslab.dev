@@ -10,7 +10,7 @@ title = '리눅스 재단 자격증 할인 코드'
 
 # 블로그 배너가 읽어 가는 현재 할인 상태. 숫자와 날짜만 담고 문구는 읽는 쪽에서 만든다.
 [outputs]
-  home = ['HTML', 'CTA', 'FEED']
+  home = ['HTML', 'CTA', 'FEED', 'GOLINKS']
 
 [outputFormats.CTA]
   mediaType = 'application/json'
@@ -31,6 +31,13 @@ title = '리눅스 재단 자격증 할인 코드'
   [params.newsletter.forms]
     ko = "9998986"
     en = "9999108"
+
+# /go/ 함수가 읽는 행사 링크 목록. 끝난 행사를 판단하는 데 쓴다.
+[outputFormats.GOLINKS]
+  mediaType = 'application/json'
+  baseName = 'golinks'
+  isPlainText = true
+  notAlternative = true
 
 [languages.ko]
   contentDir = 'content/ko'

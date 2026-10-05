@@ -17,3 +17,7 @@
   X-Robots-Tag: noindex
 /*/404
   X-Robots-Tag: noindex
+
+# 함수가 읽는 행사 링크 목록
+/*/golinks.json
+  X-Robots-Tag: noindex
