@@ -707,3 +707,22 @@ promos:
     target:
       ko: "번들(시험 묶음) | 강사 진행 교육(Instructor-Led Training)"
       en: "Bundles | Instructor-Led Training"
+  - start: "2026-10-06T00:00:00Z"
+    end: "2026-10-07T23:59:00Z"
+    name: "October Prime"
+    single: 40
+    bundle: 50
+    codes: "OCTPRIME26CC / OCTPRIME26B"
+    usd_krw: 1343.98
+    fx_date: "2026-10-05"
+    source: "https://training.linuxfoundation.org/october-prime-2026/"
+    announced: true
+    code_single: "OCTPRIME26CC"
+    code_bundle: "OCTPRIME26B"
+    link: "/go/lf-octprime26"
+    target:
+      ko: "번들(시험 묶음) | 자격증과 이러닝 강의"
+      en: "Bundles | Certifications and e-learning"
+    note:
+      ko: "슈퍼 번들 75%, 쿠버스트로넛 번들 50%"
+      en: "Super Bundles 75%, Kubestronaut bundles 50%"
