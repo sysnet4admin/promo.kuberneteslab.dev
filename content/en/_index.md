@@ -4,7 +4,7 @@ description: "The year-round 30% discount code for Linux Foundation certificatio
 images:
   - /images/og-promo-en-logos.png
 date: 2026-09-15T00:00:00+09:00
-lastmod: 2026-09-18T00:00:00+09:00
+lastmod: 2026-10-06T00:00:00+09:00
 ---
 
 <div class="promo-page">
@@ -41,6 +41,11 @@ from late November to early December.** Every year for the past five years it br
 50% off single certifications and 60-65% off bundles, and you have 12 months
 after purchase to take the exam. {{< promo-compare >}} **If you need to sit the
 exam soon, use the running promotion or the year-round code now.**
+
+The Kubestronaut bundle (KCNA, KCSA, CKA, CKAD, and CKS) has been an exception to the
+wait-for-Cyber-Week advice. In Cyber Week 2025 and the May 2026 sale, when bundles were
+60% off, it was only 50% off. So if you are aiming for Kubestronaut, buying during a
+50% bundle sale is probably fine.
 
 {{< promo-chart >}}
 
