@@ -726,3 +726,21 @@ promos:
     note:
       ko: "슈퍼 번들 75%, 쿠버스트로넛 번들 50%"
       en: "Super Bundles 75%, Kubestronaut bundles 50%"
+  - start: "2026-10-11T00:00:00Z"
+    end: "2026-10-16T21:59:00Z"
+    name: "Open Source Summit Europe 2026 Attendee Benefit"
+    single: 40
+    bundle: 40
+    codes: "OSSEU26"
+    usd_krw: 1341.49
+    fx_date: "2026-10-09"
+    source: "https://training.linuxfoundation.org/osseu-2026/"
+    announced: true
+    code_bundle: "OSSEU26"
+    link: "/go/lf-osseu26"
+    target:
+      ko: "카탈로그 전체(이러닝 강의, 자격증 시험, 번들)"
+      en: "Full catalog (e-learning, certification exams, bundles)"
+    note:
+      ko: "컨퍼런스 참석자 혜택 코드이지만 누구나 사용 가능. 종료 시각이 공지되지 않아 중부 유럽 시간 23:59로 잡음"
+      en: "Conference attendee benefit code, open to anyone. End time not stated, set to 23:59 CEST"
