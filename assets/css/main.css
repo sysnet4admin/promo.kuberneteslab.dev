@@ -741,3 +741,13 @@ body {
 .newsletter-consent { margin: 0.7em 0 0; font-size: 0.82em; line-height: 1.6; opacity: 0.85; }
 @media (max-width: 560px) { .newsletter-fields { flex-basis: 100%; margin-left: 0; } }
 .newsletter-done { margin: 0.3em 0 0; font-weight: 600; color: var(--primary); }
+
+.promo-404-links {
+    margin-top: 1em;
+}
+
+.promo-404 {
+    --promo-accent: #326CE5;
+    --promo-accent-hover: #2856b8;
+    --promo-on-accent: #fff;
+}
