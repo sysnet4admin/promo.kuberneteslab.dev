@@ -1,0 +1,43 @@
+name: 리눅스 재단 새 할인 코드 감지
+
+# 리눅스 재단 사이트맵에서 최근 바뀐 페이지를 읽어 history.yaml에 없는 할인 코드가 보이면 이슈를 연다.
+# 알림만 하고 사이트는 바꾸지 않는다. 같은 코드로 이미 연 이슈가 있으면(닫힌 것 포함) 다시 열지 않는다.
+on:
+  schedule:
+    - cron: '30 23 * * *'   # 한국 시간 매일 08:30
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 새 코드 찾기
+        run: python3 scripts/lf_promo_watch.py > found.json
+
+      - name: 이슈 열기
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh label create lf-promo --color 326CE5 --description "리눅스 재단 새 할인 코드 감지" --force >/dev/null
+          python3 - <<'PY' > issues.tsv
+          import json
+          for r in json.load(open("found.json")):
+              for code, pct in r["codes"].items():
+                  print("\t".join([code, "/".join(pct), r["url"], r["lastmod"]]))
+          PY
+          while IFS=$'\t' read -r code pct url mod; do
+            [ -z "$code" ] && continue
+            if [ -n "$(gh issue list --state all --label lf-promo --search "$code in:title" --json number -q '.[].number')" ]; then
+              echo "이미 있음: $code"; continue
+            fi
+            title="[LF 할인 감지] $code"
+            [ -n "$pct" ] && title="$title (페이지의 할인율: $pct%)"
+            body=$(printf '리눅스 재단 페이지에서 history.yaml에 없는 할인 코드를 찾았습니다.\n\n- 코드: `%s`\n- 페이지: %s\n- 페이지 수정일: %s\n\n확인할 것\n- [ ] 누구나 쓸 수 있는 코드인지(참석자 전용 등 조건)\n- [ ] 장바구니에서 할인율 확인\n- [ ] 종료 시각과 시간대\n- [ ] history.yaml에 넣을지 결정\n' "$code" "$url" "$mod")
+            gh issue create --title "$title" --label lf-promo --body "$body"
+          done < issues.tsv
