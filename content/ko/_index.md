@@ -1,10 +1,10 @@
 ---
 title: "리눅스 재단 자격증 할인 코드 (CKA, CKS 등)"
-description: "리눅스 재단 자격증 시험의 상시 30% 할인 코드와 비정기 프로모션을 정리했습니다. CKA, CKAD, CKS, KCNA, KCSA와 MCPA 등 카탈로그 전체에 적용됩니다."
+description: "리눅스 재단 자격증 시험의 상시 30% 할인 코드와 비정기 프로모션을 정리했습니다. 코드는 CKA, CKAD, CKS 등 카탈로그 전체에 적용됩니다. 자격증 번들에 쓰면 번들 자체 할인과 합쳐져 같은 자격증을 하나씩 정가로 살 때보다 최대 40% 정도 적게 듭니다."
 images:
   - /images/og-promo-ko-logos.png
 date: 2026-09-15T00:00:00+09:00
-lastmod: 2026-10-06T00:00:00+09:00
+lastmod: 2026-10-12T00:00:00+09:00
 ---
 
 <div class="promo-page">

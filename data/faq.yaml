@@ -1,6 +1,16 @@
 # 화면의 FAQ와 JSON-LD가 같은 곳에서 나오도록 여기에만 둔다.
 # 답변에 링크를 넣을 수 있고, JSON-LD에는 태그를 벗겨서 넣는다.
 ko:
+  - q: "쿠버스트로넛 번들 같은 번들 상품에도 30% 할인 코드가 적용되나요?"
+    a: >-
+      네, 적용됩니다. 자격증 여러 개를 묶은 번들 상품은 원래 같은 자격증을 하나씩 정가로 살 때보다 7~15% 정도
+      저렴하게 나와 있는데 이 번들 가격에서 상시 할인 코드로 30%를 한 번 더 할인받을 수 있습니다. 예를 들어
+      KCNA, KCSA, CKA, CKAD 그리고 CKS를 하나씩 정가로 사면 $1,835이지만 이 5개를 묶은 쿠버스트로넛 번들은
+      $1,645이고 여기에 코드를 쓰면 $1,151.50이 됩니다. 그래서 정가 합계와 비교하면 37% 정도 적게 드는 셈입니다.
+      자격증 16개를 묶은 골든 쿠버스트로넛(Golden Kubestronaut) 번들도 같은 방식으로 계산하면 40% 정도 아낄 수 있습니다.
+      다만 이 37%와 40%는 번들 자체의 할인이 더해진 결과이고 코드만의 할인율은 번들에서도 30% 그대로입니다. 또
+      프로모션 기간에는 코드와 할인율, 적용 대상이 행사마다 다르기 때문에 그때는 위쪽 배너의 코드를 먼저 확인해
+      보시는 게 좋을 것 같습니다(<a href="https://training.linuxfoundation.org/certification/kubestronaut-bundle/" target="_blank" rel="noopener">쿠버스트로넛 번들</a>).
   - q: "결제하고 나서 언제까지 시험을 봐야 하나요?"
     a: >-
       결제한 날부터 12개월 안에 시험을 예약하고 치르시면 되고 응시 기회는 2회 주어집니다.
@@ -20,7 +30,7 @@ ko:
       href="https://training.linuxfoundation.org/care-program/" target="_blank" rel="noopener">CARE 프로그램</a>, <a
       href="https://www.cncf.io/training/kubestronaut/kubestronaut-faq/" target="_blank" rel="noopener">쿠버스트로넛
       FAQ</a>).
-  - q: "골든 쿠버스트로넛(Golden Kubestronaut)도 갱신해야 하나요?"
+  - q: "골든 쿠버스트로넛도 갱신해야 하나요?"
     a: >-
       골든 쿠버스트로넛 타이틀은 한 번 받으면 따로 갱신하지 않아도 계속 유지되고 새 CNCF 자격증이 나와도 그 자격증을 따지 않아도 됩니다. 쿠버스트로넛 타이틀이 만료되더라도 골든 타이틀과 골든
       혜택은 대부분 그대로 남습니다. 다만 골든 혜택 중 THRIVE-ONE 구독은 쿠버스트로넛 타이틀이 유효할 때만 쓸 수 있고 해마다 받는 50% 할인 쿠폰 같은 쿠버스트로넛 혜택도 없어집니다.
@@ -36,6 +46,15 @@ ko:
       돌려받습니다. 요청은 리눅스 재단 계정으로 <a href="https://trainingsupport.linuxfoundation.org" target="_blank" rel="noopener">지원 포털</a>에 로그인해서 하시면 됩니다.
       나중에 더 큰 할인이 나오더라도 차액을 돌려준다는 내용은 공식 정책에 없습니다(<a href="https://docs.linuxfoundation.org/tc-docs/certification/lf-handbook2/exam-refund-policy" target="_blank" rel="noopener">시험 환불 정책</a>, <a href="https://training.linuxfoundation.org/about/faqs/payments-faq/" target="_blank" rel="noopener">결제 FAQ</a>).
 en:
+  - q: "Does the 30% code work on bundles such as the Kubestronaut bundle?"
+    a: >-
+      Yes. Certification bundles are already priced 7-15% below buying the same certifications one by one at
+      list price, and the code takes another 30% off the bundle price. For example, KCNA, KCSA, CKA, CKAD, and
+      CKS cost $1,835 if you buy each one separately at list price. The Kubestronaut bundle of those five is
+      $1,645, and with the code it comes to $1,151.50, about 37% less than the separate list prices. Calculated
+      the same way, the Golden Kubestronaut bundle of 16 certifications comes to about 40% less. Those savings
+      include the bundle's own discount, and the code itself is still 30% off. Promotions differ in code,
+      discount, and what they cover, so check the banner above during a promotion (<a href="https://training.linuxfoundation.org/certification/kubestronaut-bundle/" target="_blank" rel="noopener">Kubestronaut bundle</a>).
   - q: "How long do I have to take the exam after buying?"
     a: >-
       You have 12 months from purchase to schedule and take the exam, with two attempts included.

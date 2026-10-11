@@ -1,10 +1,10 @@
 ---
 title: "Linux Foundation Certification Discount Codes (CKA, CKS, and more)"
-description: "The year-round 30% discount code for Linux Foundation certification exams, plus the occasional promotions. Applies to the whole catalog including CKA, CKAD, CKS, KCNA, KCSA, and MCPA."
+description: "The year-round 30% discount code for Linux Foundation certification exams, plus occasional promotions. It covers the whole catalog, including CKA, CKAD, and CKS. Compared with buying each certification separately at list price, certification bundles cost up to about 40% less with the code."
 images:
   - /images/og-promo-en-logos.png
 date: 2026-09-15T00:00:00+09:00
-lastmod: 2026-10-06T00:00:00+09:00
+lastmod: 2026-10-12T00:00:00+09:00
 ---
 
 <div class="promo-page">
