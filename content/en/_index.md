@@ -44,8 +44,7 @@ exam soon, use the running promotion or the year-round code now.**
 
 The Kubestronaut bundle (KCNA, KCSA, CKA, CKAD, and CKS) has been an exception to the
 wait-for-Cyber-Week advice. In Cyber Week 2025 and the May 2026 sale, when bundles were
-60% off, it was only 50% off. So if you are aiming for Kubestronaut, buying during a
-50% bundle sale is probably fine.
+60% off, it was only 50% off. {{< promo-kubestronaut >}}
 
 {{< promo-chart >}}
 

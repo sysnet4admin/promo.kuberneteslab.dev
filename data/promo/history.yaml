@@ -8,6 +8,10 @@ cka_list_price:
     usd: 395
   - from: "2025-02-04"
     usd: 445
+# 쿠버스트로넛 번들(KCNA, KCSA, CKA, CKAD, CKS) 정가. 결제 시기 설명의 번들 문장이 읽는다.
+# 지난 60% 행사에서도 이 번들은 50%였으므로 비교 기준은 50%로 둔다. 기준이 바뀌면 kubestronaut_ref_rate를 고친다.
+kubestronaut_bundle_usd: 1645
+kubestronaut_ref_rate: 50
 promos:
   - start: "2021-11-29"
     end: "2021-12-06T23:59:00Z"

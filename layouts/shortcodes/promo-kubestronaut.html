@@ -1,0 +1,32 @@
+{{- /* 결제 시기 설명의 쿠버스트로넛 번들 문장. 진행 중인 행사의 번들 할인율을 읽어 기준(50%)과 비교한다. */ -}}
+{{- $d := hugo.Data.promo.history -}}
+{{- $ko := eq .Page.Language.Lang "ko" -}}
+{{- $nowU := now.Unix -}}
+{{- $price := float $d.kubestronaut_bundle_usd -}}
+{{- $ref := $d.kubestronaut_ref_rate -}}
+{{- $active := false -}}
+{{- $rate := 30 -}}
+{{- range $d.promos -}}
+  {{- if and .bundle (le (time.AsTime .start).Unix $nowU) (gt (time.AsTime .end).Unix $nowU) -}}
+    {{- if gt .bundle $rate }}{{ $active = true }}{{ $rate = .bundle }}{{ end -}}
+  {{- end -}}
+{{- end -}}
+{{- $now := mul $price (sub 1.0 (div (float $rate) 100.0)) -}}
+{{- $at := mul $price (sub 1.0 (div (float $ref) 100.0)) -}}
+{{- $diff := sub $now $at -}}
+{{- $nowS := replace (lang.FormatNumber 2 $now) ".00" "" -}}
+{{- $atS := replace (lang.FormatNumber 2 $at) ".00" "" -}}
+{{- $diffS := replace (lang.FormatNumber 2 $diff) ".00" "" -}}
+{{- if ge $rate $ref -}}
+{{- if $ko -}}
+그래서 쿠버스트로넛 번들 구매를 생각하신다면 지금처럼 번들 할인율이 {{ $ref }}% 이상인 프로모션이 진행 중일 때 결제하셔도 괜찮을 것 같습니다.{{ if gt $rate $ref }} 다만 지금 프로모션의 번들 할인율은 {{ $rate }}%이지만 이 번들에는 {{ $ref }}% 할인만 적용될 수 있으니 결제 화면에서 금액을 확인해 보시는 게 좋을 것 같습니다.{{ end }}
+{{- else -}}
+So if you plan to buy the Kubestronaut bundle, buying now, while bundles are {{ $ref }}% or more off, is probably fine.{{ if gt $rate $ref }} The current promotion takes {{ $rate }}% off bundles, but this bundle may get only {{ $ref }}% off, so check the price at checkout.{{ end }}
+{{- end -}}
+{{- else -}}
+{{- if $ko -}}
+그래서 쿠버스트로넛 번들 구매를 생각하신다면 사이버 위크가 아니더라도 번들 할인율이 {{ $ref }}% 이상인 프로모션을 기다리셨다가 결제하시는 게 좋을 것 같습니다. {{ if $active }}지금 진행 중인 프로모션은 번들 할인율이 {{ $rate }}%라서 이 번들을 ${{ $nowS }}에 결제하게 되는데{{ else }}지금은 진행 중인 프로모션이 없어 상시 할인 30%로 결제하면 이 번들이 ${{ $nowS }}인데{{ end }} {{ $ref }}% 할인이 적용되면 결제액이 ${{ $atS }}이 되어 ${{ $diffS }} 더 아낄 수 있습니다.
+{{- else -}}
+So if you plan to buy the Kubestronaut bundle, it is probably worth waiting for a sale with bundles at {{ $ref }}% or more off, which does not have to be Cyber Week. {{ if $active }}The current promotion takes {{ $rate }}% off bundles, so{{ else }}No promotion is running, so with the year-round 30% code{{ end }} the Kubestronaut bundle costs ${{ $nowS }}, against ${{ $atS }} at {{ $ref }}% off, a difference of ${{ $diffS }}.
+{{- end -}}
+{{- end -}}
