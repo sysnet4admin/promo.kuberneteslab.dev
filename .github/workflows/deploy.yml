@@ -4,7 +4,9 @@ on:
   push:
     branches: [main]
   schedule:
+    # 끝난 행사를 내리는 재배포. UTC 23:59 종료는 00:10에, 미국 동부 23:59 종료(03:59 또는 04:59 UTC)는 05:10에 반영된다
     - cron: '10 0 * * *'
+    - cron: '10 5 * * *'
   workflow_dispatch:
 
 jobs:
