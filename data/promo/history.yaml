@@ -748,3 +748,21 @@ promos:
     note:
       ko: "컨퍼런스 참석자 혜택 코드이지만 누구나 사용 가능. 종료 시각이 공지되지 않아 중부 유럽 시간 23:59로 잡음"
       en: "Conference attendee benefit code, open to anyone. End time not stated, set to 23:59 CEST"
+  - start: "2026-10-16T00:00:00Z"
+    end: "2026-10-23T23:59:00Z"
+    name: "October 2026 Promo"
+    single: 35
+    bundle: 35
+    codes: "OCT26NONCYBER / OCT26CYBER"
+    usd_krw: 1345.9
+    fx_date: "2026-10-15"
+    source: "https://training.linuxfoundation.org/october-2026-promo/"
+    announced: true
+    code_bundle: "OCT26NONCYBER"
+    link: "/go/lf-oct26"
+    target:
+      ko: "자격증, 강의, 강사 진행 교육 | 보안 상품(CKS, KCSA 등)은 40%, 코드 OCT26CYBER"
+      en: "Certifications, courses, instructor-led training | Security products (CKS, KCSA, etc.) 40% with OCT26CYBER"
+    note:
+      ko: "CKS, KCSA 등 보안 자격증과 KCSA+CKS 번들은 40%(OCT26CYBER), 쿠버스트로넛 등 다른 번들은 35%, THRIVE-ONE 30%"
+      en: "Security certifications such as CKS and KCSA, and the KCSA+CKS bundle at 40% (OCT26CYBER); other bundles such as Kubestronaut at 35%; THRIVE-ONE 30%"
