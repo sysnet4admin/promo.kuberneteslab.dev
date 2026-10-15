@@ -753,16 +753,16 @@ promos:
     name: "October 2026 Promo"
     single: 35
     bundle: 35
-    codes: "OCT26NONCYBER / OCT26CYBER"
+    codes: "OCT26NONCYBERKR / OCT26CYBERKR / OCT26THRIVEKR"
     usd_krw: 1345.9
     fx_date: "2026-10-15"
     source: "https://training.linuxfoundation.org/october-2026-promo/"
     announced: true
-    code_bundle: "OCT26NONCYBER"
+    code_bundle: "OCT26NONCYBERKR"
     link: "/go/lf-oct26"
     target:
-      ko: "자격증, 강의, 강사 진행 교육 | 보안 상품(CKS, KCSA 등)은 40%, 코드 OCT26CYBER"
-      en: "Certifications, courses, instructor-led training | Security products (CKS, KCSA, etc.) 40% with OCT26CYBER"
+      ko: "자격증, 강의, 강사 진행 교육 | 보안 상품(CKS, KCSA 등)은 40%, 코드 OCT26CYBERKR"
+      en: "Certifications, courses, instructor-led training | Security products (CKS, KCSA, etc.) 40% with OCT26CYBERKR"
     note:
-      ko: "CKS, KCSA 등 보안 자격증과 KCSA+CKS 번들은 40%(OCT26CYBER), 쿠버스트로넛 등 다른 번들은 35%, THRIVE-ONE 30%"
-      en: "Security certifications such as CKS and KCSA, and the KCSA+CKS bundle at 40% (OCT26CYBER); other bundles such as Kubestronaut at 35%; THRIVE-ONE 30%"
+      ko: "CKS, KCSA 등 보안 자격증과 KCSA+CKS 번들은 40%(OCT26CYBERKR), 쿠버스트로넛 등 다른 번들은 35%, THRIVE-ONE 30% (OCT26THRIVEKR)"
+      en: "Security certifications such as CKS and KCSA, and the KCSA+CKS bundle at 40% (OCT26CYBERKR); other bundles such as Kubestronaut at 35%; THRIVE-ONE 30% (OCT26THRIVEKR)"

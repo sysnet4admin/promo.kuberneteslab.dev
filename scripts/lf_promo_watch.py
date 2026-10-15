@@ -36,6 +36,9 @@ def is_known(code, known):
     # 기록한 행사의 다른 코드(OCTPRIME26CC를 기록했으면 OCTPRIME26SB)는 같은 행사로 본다
     if code in known:
         return True
+    # 전용 코드(공개 코드에 KR 같은 접미사를 붙인 것)를 기록했으면 페이지의 공개 코드도 같은 행사로 본다
+    if any(k.startswith(code) for k in known):
+        return True
     return any(len(k.rstrip("ABCDEFGHIJKLMNOPQRSTUVWXYZ")) >= 6 and code.startswith(k.rstrip("ABCDEFGHIJKLMNOPQRSTUVWXYZ")) for k in known)
 
 
