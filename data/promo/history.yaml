@@ -748,7 +748,7 @@ promos:
     note:
       ko: "컨퍼런스 참석자 혜택 코드이지만 누구나 사용 가능. 종료 시각이 공지되지 않아 중부 유럽 시간 23:59로 잡음"
       en: "Conference attendee benefit code, open to anyone. End time not stated, set to 23:59 CEST"
-  - start: "2026-10-16T00:00:00Z"
+  - start: "2026-10-15T20:47:00Z"
     end: "2026-10-23T23:59:00Z"
     name: "October 2026 Promo"
     single: 35
