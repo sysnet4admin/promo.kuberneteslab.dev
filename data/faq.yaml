@@ -6,11 +6,19 @@ ko:
       네, 적용됩니다. 자격증 여러 개를 묶은 번들 상품은 원래 같은 자격증을 하나씩 정가로 살 때보다 7~15% 정도
       저렴하게 나와 있는데 이 번들 가격에서 상시 할인 코드로 30%를 한 번 더 할인받을 수 있습니다. 예를 들어
       KCNA, KCSA, CKA, CKAD 그리고 CKS를 하나씩 정가로 사면 $1,835이지만 이 5개를 묶은 쿠버스트로넛 번들은
-      $1,645이고 여기에 코드를 쓰면 $1,151.50이 됩니다. 그래서 정가 합계와 비교하면 37% 정도 적게 드는 셈입니다.
+      $1,645이고 여기에 코드를 사용하면 $1,151.50이 됩니다. 그래서 정가 합계와 비교하면 37% 정도 적게 드는 셈입니다.
       자격증 16개를 묶은 골든 쿠버스트로넛(Golden Kubestronaut) 번들도 같은 방식으로 계산하면 40% 정도 아낄 수 있습니다.
       다만 이 37%와 40%는 번들 자체의 할인이 더해진 결과이고 코드만의 할인율은 번들에서도 30% 그대로입니다. 또
       프로모션 기간에는 코드와 할인율, 적용 대상이 행사마다 다르기 때문에 그때는 위쪽 배너의 코드를 먼저 확인해
       보시는 게 좋을 것 같습니다(<a href="https://training.linuxfoundation.org/certification/kubestronaut-bundle/" target="_blank" rel="noopener">쿠버스트로넛 번들</a>).
+  - q: "CNCF 외 재단 자격증인 MCPA에도 할인 코드가 적용되나요?"
+    a: >-
+      네, 적용됩니다. MCPA(Model Context Protocol Associate)는 에이전틱 AI 재단(AAIF, Agentic AI
+      Foundation)의 자격증인데 리눅스 재단이 쿠버네티스 자격증과 같은 교육 사이트에서 판매하고 있어서
+      상시 할인 코드 KUBELAB30을 사용하면 30%를 할인받을 수 있습니다. 시험만 구매하면 정가 $250이 코드를
+      적용해 $175가 되고 시험과 THRIVE-ONE 연간 구독을 묶은 번들 상품은 정가가 $495입니다. 시험은 온라인으로 감독을 받으며 90분 동안 객관식 문제를 푸는 방식이고
+      재응시 기회 1회가 포함되어 있습니다. 결제한 날부터 12개월 안에 응시하시면 되고 취득한 자격은 2년
+      동안 유효합니다(<a href="https://training.linuxfoundation.org/certification/model-context-protocol-associate-mcpa/" target="_blank" rel="noopener">MCPA 안내 페이지</a>).
   - q: "결제하고 나서 언제까지 시험을 봐야 하나요?"
     a: >-
       결제한 날부터 12개월 안에 시험을 예약하고 치르시면 되고 응시 기회는 2회 주어집니다.
@@ -33,7 +41,7 @@ ko:
   - q: "골든 쿠버스트로넛도 갱신해야 하나요?"
     a: >-
       골든 쿠버스트로넛 타이틀은 한 번 받으면 따로 갱신하지 않아도 계속 유지되고 새 CNCF 자격증이 나와도 그 자격증을 따지 않아도 됩니다. 쿠버스트로넛 타이틀이 만료되더라도 골든 타이틀과 골든
-      혜택은 대부분 그대로 남습니다. 다만 골든 혜택 중 THRIVE-ONE 구독은 쿠버스트로넛 타이틀이 유효할 때만 쓸 수 있고 해마다 받는 50% 할인 쿠폰 같은 쿠버스트로넛 혜택도 없어집니다.
+      혜택은 대부분 그대로 남습니다. 다만 골든 혜택 중 THRIVE-ONE 구독은 쿠버스트로넛 타이틀이 유효할 때만 사용할 수 있고 해마다 받는 50% 할인 쿠폰 같은 쿠버스트로넛 혜택도 없어집니다.
       그래서 이런 혜택을 계속 받으시려면 앞의 질문처럼 CKS와 CKAD를 제때 갱신하시는 편이 좋습니다(<a
       href="https://www.cncf.io/training/kubestronaut/kubestronaut-faq/" target="_blank" rel="noopener">쿠버스트로넛
       FAQ</a>).
@@ -55,6 +63,14 @@ en:
       the same way, the Golden Kubestronaut bundle of 16 certifications comes to about 40% less. Those savings
       include the bundle's own discount, and the code itself is still 30% off. Promotions differ in code,
       discount, and what they cover, so check the banner above during a promotion (<a href="https://training.linuxfoundation.org/certification/kubestronaut-bundle/" target="_blank" rel="noopener">Kubestronaut bundle</a>).
+  - q: "Does the discount code work on MCPA, a certification from a foundation other than CNCF?"
+    a: >-
+      Yes. MCPA (Model Context Protocol Associate) is an Agentic AI Foundation (AAIF) certification.
+      The Linux Foundation sells it in the same training catalog as its Kubernetes certifications, so the
+      year-round code KUBELAB30 takes 30% off. The exam alone lists at $250, or $175 with the code, and the
+      bundle with a THRIVE-ONE annual subscription lists at $495. The exam is online
+      proctored multiple choice, 90 minutes long, with one retake included. You have 12 months from purchase
+      to take it, and the certification is valid for 2 years (<a href="https://training.linuxfoundation.org/certification/model-context-protocol-associate-mcpa/" target="_blank" rel="noopener">MCPA page</a>).
   - q: "How long do I have to take the exam after buying?"
     a: >-
       You have 12 months from purchase to schedule and take the exam, with two attempts included.
