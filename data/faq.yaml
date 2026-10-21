@@ -22,7 +22,7 @@ ko:
   - q: "결제하고 나서 언제까지 시험을 봐야 하나요?"
     a: >-
       결제한 날부터 12개월 안에 시험을 예약하고 치르시면 되고 응시 기회는 2회 주어집니다.
-      그래서 할인 기간에 먼저 결제해 두고 준비가 끝난 뒤에 시험을 보셔도 됩니다(<a href="https://training.linuxfoundation.org/certification/certified-kubernetes-administrator-cka/" target="_blank" rel="noopener">CKA 안내 페이지</a>).
+      그래서 할인 기간에 먼저 결제해 두고 준비가 끝난 뒤에 시험을 보셔도 됩니다(<a href="/go/lf-cka" target="_blank" rel="noopener sponsored">CKA 안내 페이지</a>).
   - q: "자격증은 몇 년 동안 유효한가요?"
     a: >-
       CKA, CKAD, CKS는 합격한 날부터 2년 동안 유효합니다. 다만 2024년 4월 1일 전에 딴 CKA와 CKAD는
@@ -74,7 +74,7 @@ en:
   - q: "How long do I have to take the exam after buying?"
     a: >-
       You have 12 months from purchase to schedule and take the exam, with two attempts included.
-      That means you can buy during a sale and sit the exam once you are ready (<a href="https://training.linuxfoundation.org/certification/certified-kubernetes-administrator-cka/" target="_blank" rel="noopener">CKA page</a>).
+      That means you can buy during a sale and sit the exam once you are ready (<a href="/go/lf-cka" target="_blank" rel="noopener sponsored">CKA page</a>).
   - q: "How long is the certification valid?"
     a: >-
       CKA, CKAD, and CKS are valid for 2 years. CKA and CKAD earned before April 1, 2024 are valid
