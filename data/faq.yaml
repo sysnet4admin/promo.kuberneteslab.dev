@@ -10,7 +10,7 @@ ko:
       자격증 16개를 묶은 골든 쿠버스트로넛(Golden Kubestronaut) 번들도 같은 방식으로 계산하면 40% 정도 아낄 수 있습니다.
       다만 이 37%와 40%는 번들 자체의 할인이 더해진 결과이고 코드만의 할인율은 번들에서도 30% 그대로입니다. 또
       프로모션 기간에는 코드와 할인율, 적용 대상이 행사마다 다르기 때문에 그때는 위쪽 배너의 코드를 먼저 확인해
-      보시는 게 좋을 것 같습니다(<a href="https://training.linuxfoundation.org/certification/kubestronaut-bundle/" target="_blank" rel="noopener">쿠버스트로넛 번들</a>).
+      보시는 게 좋을 것 같습니다(<a href="/go/lf-kubestronaut" target="_blank" rel="noopener sponsored">쿠버스트로넛 번들</a>, <a href="/go/lf-golden-kubestronaut" target="_blank" rel="noopener sponsored">골든 쿠버스트로넛 번들</a>).
   - q: "CNCF 외 재단 자격증인 MCPA에도 할인 코드가 적용되나요?"
     a: >-
       네, 적용됩니다. MCPA(Model Context Protocol Associate)는 에이전틱 AI 재단(AAIF, Agentic AI
@@ -62,7 +62,7 @@ en:
       $1,645, and with the code it comes to $1,151.50, about 37% less than the separate list prices. Calculated
       the same way, the Golden Kubestronaut bundle of 16 certifications comes to about 40% less. Those savings
       include the bundle's own discount, and the code itself is still 30% off. Promotions differ in code,
-      discount, and what they cover, so check the banner above during a promotion (<a href="https://training.linuxfoundation.org/certification/kubestronaut-bundle/" target="_blank" rel="noopener">Kubestronaut bundle</a>).
+      discount, and what they cover, so check the banner above during a promotion (<a href="/go/lf-kubestronaut" target="_blank" rel="noopener sponsored">Kubestronaut bundle</a>, <a href="/go/lf-golden-kubestronaut" target="_blank" rel="noopener sponsored">Golden Kubestronaut bundle</a>).
   - q: "Does the discount code work on MCPA, a certification from a foundation other than CNCF?"
     a: >-
       Yes. MCPA (Model Context Protocol Associate) is an Agentic AI Foundation (AAIF) certification.
