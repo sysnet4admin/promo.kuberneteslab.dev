@@ -18,7 +18,7 @@ ko:
       상시 할인 코드 KUBELAB30을 사용하면 30%를 할인받을 수 있습니다. 시험만 구매하면 정가 $250이 코드를
       적용해 $175가 되고 시험과 THRIVE-ONE 연간 구독을 묶은 번들 상품은 정가가 $495입니다. 시험은 온라인으로 감독을 받으며 90분 동안 객관식 문제를 푸는 방식이고
       재응시 기회 1회가 포함되어 있습니다. 결제한 날부터 12개월 안에 응시하시면 되고 취득한 자격은 2년
-      동안 유효합니다(<a href="https://training.linuxfoundation.org/certification/model-context-protocol-associate-mcpa/" target="_blank" rel="noopener">MCPA 안내 페이지</a>).
+      동안 유효합니다(<a href="/go/lf-mcpa" target="_blank" rel="noopener sponsored">MCPA 안내 페이지</a>).
   - q: "결제하고 나서 언제까지 시험을 봐야 하나요?"
     a: >-
       결제한 날부터 12개월 안에 시험을 예약하고 치르시면 되고 응시 기회는 2회 주어집니다.
@@ -70,7 +70,7 @@ en:
       year-round code KUBELAB30 takes 30% off. The exam alone lists at $250, or $175 with the code, and the
       bundle with a THRIVE-ONE annual subscription lists at $495. The exam is online
       proctored multiple choice, 90 minutes long, with one retake included. You have 12 months from purchase
-      to take it, and the certification is valid for 2 years (<a href="https://training.linuxfoundation.org/certification/model-context-protocol-associate-mcpa/" target="_blank" rel="noopener">MCPA page</a>).
+      to take it, and the certification is valid for 2 years (<a href="/go/lf-mcpa" target="_blank" rel="noopener sponsored">MCPA page</a>).
   - q: "How long do I have to take the exam after buying?"
     a: >-
       You have 12 months from purchase to schedule and take the exam, with two attempts included.
