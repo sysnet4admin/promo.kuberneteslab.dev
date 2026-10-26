@@ -1,0 +1,30 @@
+name: 예약한 행사 적용
+
+# 공식 페이지가 열리기 전에 받은 행사를 시작 시각에 맞춰 적용한다. 변경분은 비밀값 PENDING_PROMO에 있다.
+# 시작 시각이 지난 항목이 있으면 커밋, 푸시하고 배포를 실행한다. 이 워크플로의 푸시로는 deploy.yml이 돌지 않아서 따로 실행한다.
+on:
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: promo-schedule
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 적용
+        env:
+          PENDING_PROMO: ${{ secrets.PENDING_PROMO }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          python3 scripts/scheduled_promo.py apply
