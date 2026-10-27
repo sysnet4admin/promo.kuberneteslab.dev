@@ -4,7 +4,7 @@
 {{- $best := false -}}
 {{- $bestRate := 0 -}}
 {{- range $d.promos -}}
-  {{- if and (le (time.AsTime .start).Unix $nowU) (gt (time.AsTime .end).Unix $nowU) -}}
+  {{- if and (le (time.AsTime (or .show_from .start)).Unix $nowU) (gt (time.AsTime .end).Unix $nowU) -}}
     {{- $r := math.Max (or .single 0) (or .bundle 0) -}}
     {{- if gt $r $bestRate }}{{ $best = . }}{{ $bestRate = $r }}{{ end -}}
   {{- end -}}

@@ -7,7 +7,7 @@
 {{- $active := false -}}
 {{- $rate := 30 -}}
 {{- range $d.promos -}}
-  {{- if and .bundle (le (time.AsTime .start).Unix $nowU) (gt (time.AsTime .end).Unix $nowU) -}}
+  {{- if and .bundle (le (time.AsTime (or .show_from .start)).Unix $nowU) (gt (time.AsTime .end).Unix $nowU) -}}
     {{- if gt .bundle $rate }}{{ $active = true }}{{ $rate = .bundle }}{{ end -}}
   {{- end -}}
 {{- end -}}

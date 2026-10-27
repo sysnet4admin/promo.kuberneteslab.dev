@@ -6,12 +6,12 @@
 {{- $active := false -}}
 {{- $rate := 30 -}}
 {{- range $d.promos -}}
-  {{- if and .single (le (time.AsTime .start).Unix $nowU) (gt (time.AsTime .end).Unix $nowU) -}}
+  {{- if and .single (le (time.AsTime (or .show_from .start)).Unix $nowU) (gt (time.AsTime .end).Unix $nowU) -}}
     {{- if gt .single $rate }}{{ $active = true }}{{ $rate = .single }}{{ end -}}
   {{- end -}}
 {{- end -}}
 {{- $fx := 0.0 -}}
-{{- range sort $d.promos "start" }}{{ if le (time.AsTime .start).Unix $nowU }}{{ $fx = .usd_krw }}{{ end }}{{ end -}}
+{{- range sort $d.promos "start" }}{{ if le (time.AsTime (or .show_from .start)).Unix $nowU }}{{ $fx = .usd_krw }}{{ end }}{{ end -}}
 {{- $cyber := 0 -}}
 {{- $cyYear := 0 -}}
 {{- range $d.promos -}}
