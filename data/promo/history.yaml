@@ -766,7 +766,7 @@ promos:
     note:
       ko: "CKS, KCSA 등 보안 자격증과 KCSA+CKS 번들은 40%(OCT26CYBERKR), 쿠버스트로넛 등 다른 번들은 35%, THRIVE-ONE 30% (OCT26THRIVEKR)"
       en: "Security certifications such as CKS and KCSA, and the KCSA+CKS bundle at 40% (OCT26CYBERKR); other bundles such as Kubestronaut at 35%; THRIVE-ONE 30% (OCT26THRIVEKR)"
-  - start: "2026-10-27T10:00:00Z"
+  - start: "2026-10-28T00:00:00Z"
     end: "2026-10-29T14:59:00Z"
     name: "October 2026 Flash Sale"
     single: 35
@@ -781,5 +781,5 @@ promos:
       ko: "사이트 전체(자격증, 강사 진행 교육, 기술별 강의)"
       en: "Sitewide (certifications, instructor-led training, courses by technology)"
     note:
-      ko: "현지 시간 기준 10월 28~29일 행사. 한국 시간 10월 27일 저녁부터 코드가 적용되고 마감은 한국 시간 10월 29일 23:59로 잡음"
-      en: "October 28 to 29 on local time. The code works from the evening of October 27 KST, and the end is set to 23:59 KST on October 29"
+      ko: "현지 시간 기준 이틀 행사라 마감을 한국 시간 10월 29일 23:59로 잡음"
+      en: "Two-day sale on local time, so the end is set to 23:59 KST on October 29"
