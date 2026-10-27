@@ -8,7 +8,8 @@
   apply  워크플로가 매시간 실행한다. 시작 시각이 지났고 history.yaml에 아직 없는 항목만 적용한다.
 
 변경분 안의 자리표시자는 적용할 때 채운다.
-  __LF_PAGE__, __LF_PAGE_ENC__  --page 목록에서 처음으로 200을 돌려준 주소(뒤의 것은 URL 인코딩)
+  __LF_PAGE__, __LF_PAGE_ENC__  --page 목록에서 처음으로 열린 주소(뒤의 것은 URL 인코딩)
+                                200이어도 암호 입력 화면이거나 다른 주소로 넘어가면 열리지 않은 것으로 본다
   __USD_KRW__, __FX_DATE__      적용 시점의 Frankfurter 환율. 받지 못하면 --fx 값
 
 실행 기록은 공개다. 적용 전에는 행사 이름, 시각, 내용을 출력하지 않는다.
@@ -58,7 +59,9 @@ def first_open(pages):
     for url in pages:
         try:
             with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=30) as r:
-                if r.status == 200:
+                body = r.read().decode("utf-8", "replace")
+                moved = urllib.parse.urlparse(r.url).path.rstrip("/") != urllib.parse.urlparse(url).path.rstrip("/")
+                if r.status == 200 and not moved and "post-password-form" not in body:
                     return url
         except Exception:
             pass
