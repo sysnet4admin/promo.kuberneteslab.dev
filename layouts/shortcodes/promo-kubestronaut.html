@@ -19,9 +19,9 @@
 {{- $diffS := replace (lang.FormatNumber 2 $diff) ".00" "" -}}
 {{- if ge $rate $ref -}}
 {{- if $ko -}}
-그래서 쿠버스트로넛 번들 구매를 생각하신다면 지금처럼 번들 할인율이 {{ $ref }}% 이상인 프로모션이 진행 중일 때 결제하셔도 괜찮을 것 같습니다.{{ if gt $rate $ref }} 다만 지금 프로모션의 번들 할인율은 {{ $rate }}%이지만 이 번들에는 {{ $ref }}% 할인만 적용될 수 있으니 결제 화면에서 금액을 확인해 보시는 게 좋을 것 같습니다.{{ end }}
+그래서 쿠버스트로넛 번들 구매를 생각하신다면 지금처럼 번들 할인율이 {{ $ref }}% 이상인 프로모션이 진행 중일 때 결제하셔도 괜찮을 것 같습니다.{{ if gt $rate $ref }} 덧붙여 이번 프로모션의 번들 할인율은 {{ $rate }}%이지만 이 번들의 할인은 {{ $ref }}%에 그칠 수 있으니 결제 화면에서 금액을 확인해 보시기 바랍니다.{{ end }}
 {{- else -}}
-So if you plan to buy the Kubestronaut bundle, buying now, while bundles are {{ $ref }}% or more off, is probably fine.{{ if gt $rate $ref }} The current promotion takes {{ $rate }}% off bundles, but this bundle may get only {{ $ref }}% off, so check the price at checkout.{{ end }}
+So if you plan to buy the Kubestronaut bundle, buying now, while bundles are {{ $ref }}% or more off, is probably fine.{{ if gt $rate $ref }} The current promotion takes {{ $rate }}% off bundles, but this bundle may stay at {{ $ref }}% off, so check the price at checkout.{{ end }}
 {{- end -}}
 {{- else -}}
 {{- if $ko -}}
