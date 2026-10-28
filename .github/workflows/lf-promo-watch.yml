@@ -2,10 +2,16 @@ name: 리눅스 재단 새 할인 코드 감지
 
 # 리눅스 재단 사이트맵에서 최근 바뀐 페이지를 읽어 history.yaml에 없는 할인 코드가 보이면 이슈를 연다.
 # 알림만 하고 사이트는 바꾸지 않는다. 같은 코드로 이미 연 이슈가 있으면(닫힌 것 포함) 다시 열지 않는다.
+# 소유자가 이 저장소를 Watch하지 않아 봇이 연 이슈는 알림이 가지 않는다. 그래서 소유자를 담당자로 지정한다.
 on:
   schedule:
     - cron: '30 23 * * *'   # 한국 시간 매일 08:30
   workflow_dispatch:
+    inputs:
+      notify_test:
+        description: '알림 시험: 감지 대신 시험 이슈를 하나 열고 바로 닫는다'
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -18,7 +24,13 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: 새 코드 찾기
+        if: ${{ !inputs.notify_test }}
         run: python3 scripts/lf_promo_watch.py > found.json
+
+      - name: 알림 시험용 코드
+        if: ${{ inputs.notify_test }}
+        run: |
+          echo '[{"url": "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}", "lastmod": "-", "codes": {"NOTIFYTEST${{ github.run_id }}": []}}]' > found.json
 
       - name: 이슈 열기
         env:
@@ -39,5 +51,14 @@ jobs:
             title="[LF 할인 감지] $code"
             [ -n "$pct" ] && title="$title (페이지의 할인율: $pct%)"
             body=$(printf '리눅스 재단 페이지에서 history.yaml에 없는 할인 코드를 찾았습니다.\n\n- 코드: `%s`\n- 페이지: %s\n- 페이지 수정일: %s\n\n확인할 것\n- [ ] 누구나 쓸 수 있는 코드인지(참석자 전용 등 조건)\n- [ ] 장바구니에서 할인율 확인\n- [ ] 종료 시각과 시간대\n- [ ] history.yaml에 넣을지 결정\n' "$code" "$url" "$mod")
-            gh issue create --title "$title" --label lf-promo --body "$body"
+            gh issue create --title "$title" --label lf-promo --assignee "$GITHUB_REPOSITORY_OWNER" --body "$body" | tee -a created.txt
           done < issues.tsv
+
+      - name: 알림 시험 이슈 닫기
+        if: ${{ inputs.notify_test }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          while read -r url; do
+            gh issue close "$url" --comment "알림 시험이라 닫습니다."
+          done < created.txt
