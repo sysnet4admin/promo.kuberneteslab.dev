@@ -809,12 +809,12 @@ promos:
     name: "Road to KubeCon NA 2026"
     single: 40
     bundle: 40
-    codes: "40KUBE26"
+    codes: "40KUBE26KR"
     usd_krw: 1344.59
     fx_date: "2026-11-03"
     source: ""
     announced: true
-    code_bundle: "40KUBE26"
+    code_bundle: "40KUBE26KR"
     link: "/go/lf-kubecon-na26"
     target:
       ko: "사이트 전체(자격증, 강사 진행 교육, 기술별 강의)"
