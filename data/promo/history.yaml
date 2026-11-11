@@ -9,9 +9,10 @@ cka_list_price:
     usd: 395
   - from: "2025-02-04"
     usd: 445
-# 쿠버스트로넛 번들(KCNA, KCSA, CKA, CKAD, CKS) 정가. 결제 시기 설명의 번들 문장이 읽는다.
-# 지난 60% 행사에서도 이 번들은 50%였으므로 비교 기준은 50%로 둔다. 기준이 바뀌면 kubestronaut_ref_rate를 고친다.
-kubestronaut_bundle_usd: 1645
+# 쿠버스트로넛 번들(KCNA, KCSA, CKA, CKAD, CKS, CKNE) 정가. 결제 시기 설명의 번들 문장이 읽는다.
+# 2026-11에 CKNE가 더해져 1645에서 1995가 됐다.
+# 지난 60% 행사에서도 이 번들(CKNE가 더해지기 전)은 50%였으므로 비교 기준은 50%로 둔다. 기준이 바뀌면 kubestronaut_ref_rate를 고친다.
+kubestronaut_bundle_usd: 1995
 kubestronaut_ref_rate: 50
 promos:
   - start: "2021-11-29"
@@ -822,3 +823,21 @@ promos:
     note:
       ko: "제휴 파트너 전용 행사라 공식 행사 페이지 없음"
       en: "Affiliate partner promotion with no dedicated official page"
+  - start: "2026-11-10T00:00:00Z"
+    end: "2026-11-20T23:59:00Z"
+    name: "KubeCon + CloudNativeCon North America 2026 Attendee Benefit"
+    single: 40
+    bundle: null
+    codes: "KCNA26"
+    usd_krw: 1339.0
+    fx_date: "2026-11-10"
+    source: "https://training.linuxfoundation.org/kcna26/"
+    announced: true
+    code_single: "KCNA26"
+    link: "/go/lf-kcna26"
+    target:
+      ko: "이러닝 강의와 자격증(THRIVE 구독과 FinOps 강의, 자격증 제외)"
+      en: "E-learning courses and certifications (excluding THRIVE subscriptions and FinOps courses and certifications)"
+    note:
+      ko: "컨퍼런스 참석자 혜택 코드이지만 누구나 사용 가능. 번들 50%와 쿠버스트로넛 계열 번들 5종 60%는 참석자에게 메일로 보낸 코드에만 적용"
+      en: "Conference attendee benefit code, open to anyone. The 50% bundle offer and the 60% offer on the five Kubestronaut-family bundles apply only to codes emailed to attendees"

@@ -5,10 +5,10 @@ ko:
     a: >-
       네, 적용됩니다. 자격증 여러 개를 묶은 번들 상품은 원래 같은 자격증을 하나씩 정가로 살 때보다 7~15% 정도
       저렴하게 나와 있는데 이 번들 가격에서 상시 할인 코드로 30%를 한 번 더 할인받을 수 있습니다. 예를 들어
-      KCNA, KCSA, CKA, CKAD 그리고 CKS를 하나씩 정가로 사면 $1,835이지만 이 5개를 묶은 쿠버스트로넛 번들은
-      $1,645이고 여기에 코드를 사용하면 $1,151.50이 됩니다. 그래서 정가 합계와 비교하면 37% 정도 적게 드는 셈입니다.
-      자격증 16개를 묶은 골든 쿠버스트로넛(Golden Kubestronaut) 번들도 같은 방식으로 계산하면 40% 정도 아낄 수 있습니다.
-      다만 이 37%와 40%는 번들 자체의 할인이 더해진 결과이고 코드만의 할인율은 번들에서도 30% 그대로입니다. 또
+      KCNA, KCSA, CKA, CKAD, CKS 그리고 CKNE를 하나씩 정가로 사면 $2,280이지만 이 6개를 묶은 쿠버스트로넛 번들은
+      $1,995이고 여기에 코드를 사용하면 $1,396.50이 됩니다. 그래서 정가 합계와 비교하면 39% 정도 적게 드는 셈입니다.
+      자격증 17개를 묶은 골든 쿠버스트로넛(Golden Kubestronaut) 번들도 같은 방식으로 계산하면 40% 정도 아낄 수 있습니다.
+      다만 이 39%와 40%는 번들 자체의 할인이 더해진 결과이고 코드만의 할인율은 번들에서도 30% 그대로입니다. 또
       프로모션 기간에는 코드와 할인율, 적용 대상이 행사마다 다르기 때문에 그때는 위쪽 배너의 코드를 먼저 확인해
       보시는 게 좋을 것 같습니다(<a href="/go/lf-kubestronaut" target="_blank" rel="noopener sponsored">쿠버스트로넛 번들</a>, <a href="/go/lf-golden-kubestronaut" target="_blank" rel="noopener sponsored">골든 쿠버스트로넛 번들</a>).
   - q: "CNCF 외 재단 자격증인 MCPA에도 할인 코드가 적용되나요?"
@@ -25,14 +25,16 @@ ko:
       그래서 할인 기간에 먼저 결제해 두고 준비가 끝난 뒤에 시험을 보셔도 됩니다(<a href="/go/lf-cka" target="_blank" rel="noopener sponsored">CKA 안내 페이지</a>).
   - q: "자격증은 몇 년 동안 유효한가요?"
     a: >-
-      CKA, CKAD, CKS는 합격한 날부터 2년 동안 유효합니다. 다만 2024년 4월 1일 전에 딴 CKA와 CKAD는
-      유효 기간이 3년입니다. 참고로 CKS는 CKA에 먼저 합격해야 응시할 수 있습니다(<a href="https://docs.linuxfoundation.org/tc-docs/certification/faq-cka-ckad-cks" target="_blank" rel="noopener">시험 FAQ</a>).
+      CKA, CKAD, CKS 그리고 CKNE는 합격한 날부터 2년 동안 유효합니다. 다만 2024년 4월 1일 전에 딴 CKA와 CKAD는
+      유효 기간이 3년입니다. 참고로 CKS는 CKA에 먼저 합격해야 응시할 수 있지만 2026년 11월에 나온 CKNE는 따로 필요한 자격증이 없습니다(<a href="https://docs.linuxfoundation.org/tc-docs/certification/faq-cka-ckad-cks" target="_blank" rel="noopener">시험 FAQ</a>, <a href="https://docs.linuxfoundation.org/tc-docs/certification/frequently-asked-questions-ckne" target="_blank" rel="noopener">CKNE 시험 FAQ</a>, <a href="https://training.linuxfoundation.org/certification/certified-kubernetes-network-engineer-ckne/" target="_blank" rel="noopener">CKNE 시험 안내</a>).
   - q: "CKS와 CKAD만 갱신해도 쿠버스트로넛(Kubestronaut)을 유지할 수 있나요?"
     a: >-
       네, 가능합니다. 리눅스 재단의 CARE(Certification Advancement &amp; Recertification Experience) 프로그램에서는 상위 자격증을 따거나 갱신하면
       예전에 딴 하위 자격증도 자동으로 유효한 상태가 되고 만료일도 상위 자격증에 맞춰집니다. 2026년 1월 1일부터 CKA나 CKAD에는 KCNA가, CKS에는 KCSA가 연결되어 있고 2026년
-      6월 18일부터는 CKS에 CKA도 연결되었습니다. 그래서 지금은 CKS 하나에 KCSA, CKA 그리고 CKA에 연결된 KCNA까지 최대 3개가 함께 적용됩니다. 쿠버스트로넛 타이틀은 5개 자격증
-      중 하나가 처음 만료되면 그해 연말까지만 유지되는데 CKS와 CKAD만 제때 갱신하면 나머지 3개도 만료되지 않으므로 타이틀을 이어 갈 수 있습니다. 이미 만료된 하위 자격증도 한 번이라도 딴 적이
+      6월 18일부터는 CKS에 CKA도 연결되었습니다. 그래서 지금은 CKS 하나에 KCSA, CKA 그리고 CKA에 연결된 KCNA까지 최대 3개가 함께 적용됩니다. 그리고 2026년 11월 1일부터는 CKNE도 CARE 대상이 되어 CKNE를 따거나 갱신하면 CKA와 KCNA도 유효한 상태가 됩니다. 쿠버스트로넛 타이틀은 5개 자격증
+      중 하나가 처음 만료되면 그해 연말까지만 유지되는데 CKS와 CKAD만 제때 갱신하면 나머지 3개도 만료되지 않으므로 타이틀을 이어 갈 수 있습니다. 하지만
+      2027년 2월 15일부터 새로 쿠버스트로넛이 되는 분은 CKNE도 따야 합니다. 지금 쿠버스트로넛인 분이 그 뒤에도 CKS와 CKAD 갱신만으로 타이틀을 유지할 수 있는지는
+      쿠버스트로넛 FAQ에 아직 적혀 있지 않습니다. CARE에서는 이미 만료된 하위 자격증도 한 번이라도 딴 적이
       있다면 다시 인정되지만 한 번도 딴 적이 없는 자격증을 새로 주지는 않습니다. 다만 CKA는 2026년 6월 18일 이후에 CKS를 따거나 갱신한 경우에만 대상이 됩니다. 또 자격증을 서로 다른
       리눅스 재단 계정으로 땄다면 자동으로 처리되지 않으니 리눅스 재단 지원팀에 사용한 계정을 모두 알려 주고 연결을 요청하셔야 합니다. 자동 처리가 반영되기까지는 영업일 기준으로 며칠이 걸립니다(<a
       href="https://training.linuxfoundation.org/care-program/" target="_blank" rel="noopener">CARE 프로그램</a>, <a
@@ -45,6 +47,21 @@ ko:
       그래서 이런 혜택을 계속 받으시려면 앞의 질문처럼 CKS와 CKAD를 제때 갱신하시는 편이 좋습니다(<a
       href="https://www.cncf.io/training/kubestronaut/kubestronaut-faq/" target="_blank" rel="noopener">쿠버스트로넛
       FAQ</a>).
+  - q: "앞으로 새로 나올 쿠버네티스 자격증이 있나요?"
+    a: >-
+      네, 있습니다. CNCF는 2026년 11월 10일에 CKNE(Certified Kubernetes Network Engineer)를 정식으로 출시하면서 2027년에
+      KAIA(Kubernetes AI Associate)와 CKIE(Certified Kubernetes Inference Engineer) 2개의 AI 자격증을 더 내놓을 계획이라고
+      발표했습니다. 출시일, 시험 방식 그리고 가격은 아직 공개되지 않았는데 리눅스 재단 교육 사이트의 안내 페이지에서 출시 알림을
+      신청할 수 있습니다. 같은 페이지에서 시험 문제를 함께 만들 전문가(SME, Subject Matter Expert)도 모집하고 있습니다. 새 시험이
+      나오면 쿠버스트로넛 조건이 바뀌는지도 확인하셔야 하는데, 쿠버스트로넛 FAQ에는 새 쿠버네티스 시험이 정식 출시되면 그 시험을
+      조건에 더하고 실제 적용은 출시일로부터 빨라야 90일 뒤라고 적혀 있습니다. 실제로 CKNE도 11월 10일에 나온 뒤 2027년 2월
+      15일부터 조건에 포함됩니다. 따라서 KAIA와 CKIE도 출시된 뒤에 같은 방식으로 조건에 더해질 수 있습니다(<a
+      href="https://www.cncf.io/announcements/2026/11/10/cncf-launches-certified-kubernetes-network-engineer-certification-ckne-to-advance-production-ready-networking-skills-for-ai-era/"
+      target="_blank" rel="noopener">CNCF 발표</a>, <a href="https://training.linuxfoundation.org/kaia-ckie-notify-me/"
+      target="_blank" rel="noopener">KAIA와 CKIE 출시 알림</a>, <a
+      href="https://www.cncf.io/training/kubestronaut/kubestronaut-faq/" target="_blank" rel="noopener">쿠버스트로넛
+      FAQ</a>, <a href="https://training.linuxfoundation.org/resources/kubestronaut-program/" target="_blank"
+      rel="noopener">쿠버스트로넛 프로그램</a>).
   - q: "결제한 뒤 취소하거나 환불받을 수 있나요?"
     a: >-
       자격증 시험은 결제 후 영업일 기준 3일이 지나지 않았고 시험 예약도 하지 않은 상태일 때만 환불을
@@ -57,10 +74,10 @@ en:
   - q: "Does the 30% code work on bundles such as the Kubestronaut bundle?"
     a: >-
       Yes. Certification bundles are already priced 7-15% below buying the same certifications one by one at
-      list price, and the code takes another 30% off the bundle price. For example, KCNA, KCSA, CKA, CKAD, and
-      CKS cost $1,835 if you buy each one separately at list price. The Kubestronaut bundle of those five is
-      $1,645, and with the code it comes to $1,151.50, about 37% less than the separate list prices. Calculated
-      the same way, the Golden Kubestronaut bundle of 16 certifications comes to about 40% less. Those savings
+      list price, and the code takes another 30% off the bundle price. For example, KCNA, KCSA, CKA, CKAD, CKS,
+      and CKNE cost $2,280 if you buy each one separately at list price. The Kubestronaut bundle of those six is
+      $1,995, and with the code it comes to $1,396.50, about 39% less than the separate list prices. Calculated
+      the same way, the Golden Kubestronaut bundle of 17 certifications comes to about 40% less. Those savings
       include the bundle's own discount, and the code itself is still 30% off. Promotions differ in code,
       discount, and what they cover, so check the banner above during a promotion (<a href="/go/lf-kubestronaut" target="_blank" rel="noopener sponsored">Kubestronaut bundle</a>, <a href="/go/lf-golden-kubestronaut" target="_blank" rel="noopener sponsored">Golden Kubestronaut bundle</a>).
   - q: "Does the discount code work on MCPA, a certification from a foundation other than CNCF?"
@@ -77,17 +94,20 @@ en:
       That means you can buy during a sale and sit the exam once you are ready (<a href="/go/lf-cka" target="_blank" rel="noopener sponsored">CKA page</a>).
   - q: "How long is the certification valid?"
     a: >-
-      CKA, CKAD, and CKS are valid for 2 years. CKA and CKAD earned before April 1, 2024 are valid
-      for 3 years. You must pass CKA before you can take CKS (<a href="https://docs.linuxfoundation.org/tc-docs/certification/faq-cka-ckad-cks" target="_blank" rel="noopener">exam FAQ</a>).
+      CKA, CKAD, CKS, and CKNE are valid for 2 years. CKA and CKAD earned before April 1, 2024 are valid
+      for 3 years. You must pass CKA before you can take CKS, while CKNE, released in November 2026, has no
+      prerequisite (<a href="https://docs.linuxfoundation.org/tc-docs/certification/faq-cka-ckad-cks" target="_blank" rel="noopener">exam FAQ</a>, <a href="https://docs.linuxfoundation.org/tc-docs/certification/frequently-asked-questions-ckne" target="_blank" rel="noopener">CKNE exam FAQ</a>, <a href="https://training.linuxfoundation.org/certification/certified-kubernetes-network-engineer-ckne/" target="_blank" rel="noopener">CKNE exam page</a>).
   - q: "Can I keep Kubestronaut by renewing only CKS and CKAD?"
     a: >-
       Yes. Under the Linux Foundation CARE (Certification Advancement &amp; Recertification Experience) program,
       earning or recertifying a higher-level certification automatically brings the lower-level certifications you
       earned before back to current, with their expiration dates aligned to the higher one. Since January 1, 2026,
       CKA or CKAD covers KCNA and CKS covers KCSA, and since June 18, 2026, CKS also covers CKA. So today CKS alone
-      covers up to three: KCSA, CKA, and KCNA through CKA. The Kubestronaut title lasts only until the end of the
+      covers up to three: KCSA, CKA, and KCNA through CKA. Since November 1, 2026, CKNE has also been part of CARE, and earning or recertifying CKNE brings CKA and KCNA back to current. The Kubestronaut title lasts only until the end of the
       year in which the first of your five certifications expires, so renewing CKS and CKAD on time keeps the other
-      three from expiring and keeps the title. An expired lower-level certification comes back as current as long as
+      three from expiring and keeps the title. From February 15, 2027, however, new Kubestronauts also need
+      CKNE, and the Kubestronaut FAQ does not yet say whether current Kubestronauts can keep the title after that
+      by renewing only CKS and CKAD. An expired lower-level certification comes back as current as long as
       you earned it before, but CARE never grants a certification you have never held. CKA is covered only when CKS
       is earned or recertified on or after June 18, 2026. If you earned the certifications under different Linux
       Foundation accounts, this is not automatic: send Linux Foundation Support all the accounts you used and ask
@@ -104,6 +124,22 @@ en:
       those, renew CKS and CKAD on time as described above (<a
       href="https://www.cncf.io/training/kubestronaut/kubestronaut-faq/" target="_blank" rel="noopener">Kubestronaut
       FAQ</a>).
+  - q: "Are more Kubernetes certifications on the way?"
+    a: >-
+      Yes. When CNCF released CKNE (Certified Kubernetes Network Engineer) on November 10, 2026, it also announced
+      plans for two AI certifications in 2027: KAIA (Kubernetes AI Associate) and CKIE (Certified Kubernetes Inference
+      Engineer). Release dates, exam format, and prices are not public yet, but you can sign up for a launch notice on
+      the Linux Foundation Education page for them. The same page is also recruiting subject matter experts (SMEs) to
+      help write the exams. New exams can also change the Kubestronaut requirements. The Kubestronaut FAQ says a new
+      Kubernetes exam is added to the Kubestronaut requirements once it reaches general availability (GA), and the
+      requirement takes effect no earlier than 90 days after GA. CKNE, released on November 10, becomes a requirement
+      on February 15, 2027, so KAIA and CKIE may be added the same way after they are released (<a
+      href="https://www.cncf.io/announcements/2026/11/10/cncf-launches-certified-kubernetes-network-engineer-certification-ckne-to-advance-production-ready-networking-skills-for-ai-era/"
+      target="_blank" rel="noopener">CNCF announcement</a>, <a href="https://training.linuxfoundation.org/kaia-ckie-notify-me/"
+      target="_blank" rel="noopener">KAIA and CKIE launch notice</a>, <a
+      href="https://www.cncf.io/training/kubestronaut/kubestronaut-faq/" target="_blank" rel="noopener">Kubestronaut
+      FAQ</a>, <a href="https://training.linuxfoundation.org/resources/kubestronaut-program/" target="_blank"
+      rel="noopener">Kubestronaut program</a>).
   - q: "Can I cancel or get a refund after buying?"
     a: >-
       An exam can be refunded only within three business days of purchase and before you schedule or take
