@@ -47,7 +47,7 @@ wait-for-Cyber-Week advice. In Cyber Week 2025 and the May 2026 sale, when bundl
 60% off, it was only 50% off. Even in the two-day October Prime sale on October 6
 and 7, 2026, it was 50% off. {{< promo-kubestronaut >}}
 
-However, in November 2026 the Kubestronaut bundle grew from five certifications (KCNA, KCSA,
+However, on November 9, 2026 the Kubestronaut bundle grew from five certifications (KCNA, KCSA,
 CKA, CKAD, and CKS) to six by adding CKNE (Certified Kubernetes Network Engineer), and its list
 price went from $1,645 to $1,995. The prices above use the six-certification list price, but the
 50% record comes from the earlier five-certification bundle, so whether the new bundle gets the
@@ -56,8 +56,11 @@ same rate remains to be seen at the next sale.
 Separately, from February 15, 2027, new Kubestronauts also need CKNE. If you want to become a
 Kubestronaut with the current five before then, you can buy the CKA, CKAD, and CKS bundle ($1,245)
 and the KCNA and KCSA bundle ($425) instead of the Kubestronaut bundle. Their list prices add up to
-$1,670, $325 less than the six-certification bundle's list price. Even if you become a Kubestronaut before February 15 this way, the Kubestronaut FAQ does not
-yet say whether you can keep the title after that without CKNE.
+$1,670, $325 less than the six-certification bundle's list price. However, according to a notice the Linux Foundation Education team sent to affiliate partners on
+November 12, a title earned this way still needs CKNE when you renew on or after February 15, 2027.
+Even if you buy the CKNE exam ($445) separately then, one of the 50%-off coupons Kubestronauts receive
+every year brings it to $222.50, for a total of $1,892.50, $102.50 less than the six-certification
+bundle.
 
 {{< promo-chart >}}
 

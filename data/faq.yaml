@@ -29,12 +29,12 @@ ko:
       유효 기간이 3년입니다. 참고로 CKS는 CKA에 먼저 합격해야 응시할 수 있지만 2026년 11월에 나온 CKNE는 따로 필요한 자격증이 없습니다(<a href="https://docs.linuxfoundation.org/tc-docs/certification/faq-cka-ckad-cks" target="_blank" rel="noopener">시험 FAQ</a>, <a href="https://docs.linuxfoundation.org/tc-docs/certification/frequently-asked-questions-ckne" target="_blank" rel="noopener">CKNE 시험 FAQ</a>, <a href="https://training.linuxfoundation.org/certification/certified-kubernetes-network-engineer-ckne/" target="_blank" rel="noopener">CKNE 시험 안내</a>).
   - q: "CKS와 CKAD만 갱신해도 쿠버스트로넛(Kubestronaut)을 유지할 수 있나요?"
     a: >-
-      네, 가능합니다. 리눅스 재단의 CARE(Certification Advancement &amp; Recertification Experience) 프로그램에서는 상위 자격증을 따거나 갱신하면
+      2027년 2월 15일 전에 갱신하신다면 가능합니다. 리눅스 재단의 CARE(Certification Advancement &amp; Recertification Experience) 프로그램에서는 상위 자격증을 따거나 갱신하면
       예전에 딴 하위 자격증도 자동으로 유효한 상태가 되고 만료일도 상위 자격증에 맞춰집니다. 2026년 1월 1일부터 CKA나 CKAD에는 KCNA가, CKS에는 KCSA가 연결되어 있고 2026년
       6월 18일부터는 CKS에 CKA도 연결되었습니다. 그래서 지금은 CKS 하나에 KCSA, CKA 그리고 CKA에 연결된 KCNA까지 최대 3개가 함께 적용됩니다. 그리고 2026년 11월 1일부터는 CKNE도 CARE 대상이 되어 CKNE를 따거나 갱신하면 CKA와 KCNA도 유효한 상태가 됩니다. 쿠버스트로넛 타이틀은 5개 자격증
       중 하나가 처음 만료되면 그해 연말까지만 유지되는데 CKS와 CKAD만 제때 갱신하면 나머지 3개도 만료되지 않으므로 타이틀을 이어 갈 수 있습니다. 하지만
-      2027년 2월 15일부터 새로 쿠버스트로넛이 되는 분은 CKNE도 따야 합니다. 지금 쿠버스트로넛인 분이 그 뒤에도 CKS와 CKAD 갱신만으로 타이틀을 유지할 수 있는지는
-      쿠버스트로넛 FAQ에 아직 적혀 있지 않습니다. CARE에서는 이미 만료된 하위 자격증도 한 번이라도 딴 적이
+      2027년 2월 15일부터 새로 쿠버스트로넛이 되는 분은 CKNE도 따야 합니다. 리눅스 재단 교육팀이 11월 12일에 제휴 파트너에게 보낸 안내에 따르면 지금
+      쿠버스트로넛인 분도 그날 이후에 갱신할 때는 CKNE가 있어야 한다고 합니다. 이 내용은 아직 쿠버스트로넛 FAQ에 적혀 있지 않습니다. CARE에서는 이미 만료된 하위 자격증도 한 번이라도 딴 적이
       있다면 다시 인정되지만 한 번도 딴 적이 없는 자격증을 새로 주지는 않습니다. 다만 CKA는 2026년 6월 18일 이후에 CKS를 따거나 갱신한 경우에만 대상이 됩니다. 또 자격증을 서로 다른
       리눅스 재단 계정으로 땄다면 자동으로 처리되지 않으니 리눅스 재단 지원팀에 사용한 계정을 모두 알려 주고 연결을 요청하셔야 합니다. 자동 처리가 반영되기까지는 영업일 기준으로 며칠이 걸립니다(<a
       href="https://training.linuxfoundation.org/care-program/" target="_blank" rel="noopener">CARE 프로그램</a>, <a
@@ -99,15 +99,16 @@ en:
       prerequisite (<a href="https://docs.linuxfoundation.org/tc-docs/certification/faq-cka-ckad-cks" target="_blank" rel="noopener">exam FAQ</a>, <a href="https://docs.linuxfoundation.org/tc-docs/certification/frequently-asked-questions-ckne" target="_blank" rel="noopener">CKNE exam FAQ</a>, <a href="https://training.linuxfoundation.org/certification/certified-kubernetes-network-engineer-ckne/" target="_blank" rel="noopener">CKNE exam page</a>).
   - q: "Can I keep Kubestronaut by renewing only CKS and CKAD?"
     a: >-
-      Yes. Under the Linux Foundation CARE (Certification Advancement &amp; Recertification Experience) program,
+      Yes, if you renew before February 15, 2027. Under the Linux Foundation CARE (Certification Advancement &amp; Recertification Experience) program,
       earning or recertifying a higher-level certification automatically brings the lower-level certifications you
       earned before back to current, with their expiration dates aligned to the higher one. Since January 1, 2026,
       CKA or CKAD covers KCNA and CKS covers KCSA, and since June 18, 2026, CKS also covers CKA. So today CKS alone
       covers up to three: KCSA, CKA, and KCNA through CKA. Since November 1, 2026, CKNE has also been part of CARE, and earning or recertifying CKNE brings CKA and KCNA back to current. The Kubestronaut title lasts only until the end of the
       year in which the first of your five certifications expires, so renewing CKS and CKAD on time keeps the other
       three from expiring and keeps the title. From February 15, 2027, however, new Kubestronauts also need
-      CKNE, and the Kubestronaut FAQ does not yet say whether current Kubestronauts can keep the title after that
-      by renewing only CKS and CKAD. An expired lower-level certification comes back as current as long as
+      CKNE. According to a notice the Linux Foundation Education team sent to affiliate partners on November 12,
+      current Kubestronauts also need to pass CKNE when they renew on or after that date. The Kubestronaut FAQ does
+      not say this yet. An expired lower-level certification comes back as current as long as
       you earned it before, but CARE never grants a certification you have never held. CKA is covered only when CKS
       is earned or recertified on or after June 18, 2026. If you earned the certifications under different Linux
       Foundation accounts, this is not automatic: send Linux Foundation Support all the accounts you used and ask
