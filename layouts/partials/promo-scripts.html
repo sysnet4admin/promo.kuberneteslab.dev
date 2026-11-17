@@ -52,6 +52,19 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // FAQ 항목 주소(#exam-deadline 등)로 들어오면 그 항목을 펼치고 그 위치로 이동한다.
+  function openFaqFromHash() {
+    var id = decodeURIComponent(location.hash.slice(1));
+    if (!id) return;
+    var item = document.getElementById(id);
+    if (item && item.tagName === 'DETAILS' && item.closest('.promo-faq')) {
+      item.open = true;
+      item.scrollIntoView();
+    }
+  }
+  openFaqFromHash();
+  window.addEventListener('hashchange', openFaqFromHash);
+
   document.querySelectorAll('.promo-chart').forEach(function (chart) {
     var scroller = chart.querySelector('.pc-scroll');
     if (scroller) scroller.scrollLeft = scroller.scrollWidth;

@@ -2,7 +2,7 @@
 {{- $items := index hugo.Data.faq site.Language.Lang -}}
 <div class="promo-faq">
 {{- range $items }}
-<details>
+<details{{ with .id }} id="{{ . }}"{{ end }}>
 <summary>{{ .q }}</summary>
 <p>{{ .a | safeHTML }}</p>
 </details>
