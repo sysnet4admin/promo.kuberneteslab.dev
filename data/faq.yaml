@@ -53,20 +53,23 @@ ko:
       FAQ</a>).
   - q: "골든 쿠버스트로넛도 갱신해야 하나요?"
     a: >-
-      골든 쿠버스트로넛 타이틀은 한 번 받으면 따로 갱신하지 않아도 계속 유지되고 새 CNCF 자격증이 나와도 그 자격증을 따지 않아도 됩니다. 쿠버스트로넛 타이틀이 만료되더라도 골든 타이틀과 골든
+      골든 쿠버스트로넛 타이틀은 한 번 받으면 따로 갱신하지 않아도 계속 유지되고 새 CNCF 자격증이 나와도 그 자격증을 따지 않아도 됩니다. CKNE도 2027년 2월 15일부터 골든
+      타이틀을 새로 받을 때는 필요하지만 이미 골든 타이틀을 받은 분에게는 해당하지 않습니다. 쿠버스트로넛 타이틀이 만료되더라도 골든 타이틀과 골든
       혜택은 대부분 그대로 남습니다. 다만 골든 혜택 중 THRIVE-ONE 구독은 쿠버스트로넛 타이틀이 유효할 때만 사용할 수 있고 해마다 받는 50% 할인 쿠폰 같은 쿠버스트로넛 혜택도 없어집니다.
-      그래서 이런 혜택을 계속 받으시려면 앞의 질문처럼 CKS와 CKAD를 제때 갱신하시는 편이 좋습니다(<a
+      그래서 이런 혜택을 계속 받으시려면 앞의 질문처럼 쿠버스트로넛 타이틀을 제때 갱신하시는 편이 좋겠습니다. 이때 앞의 질문에 적은 리눅스 재단 교육팀 안내에 따르면
+      2027년 2월 15일 이후의 갱신에는 CKNE도 필요하다고 합니다(<a
       href="https://www.cncf.io/training/kubestronaut/kubestronaut-faq/" target="_blank" rel="noopener">쿠버스트로넛
-      FAQ</a>).
+      FAQ</a>, <a href="https://training.linuxfoundation.org/resources/kubestronaut-program/" target="_blank"
+      rel="noopener">쿠버스트로넛 프로그램</a>).
   - q: "앞으로 새로 나올 쿠버네티스 자격증이 있나요?"
     a: >-
       네, 있습니다. CNCF는 2026년 11월 10일에 CKNE(Certified Kubernetes Network Engineer)를 정식으로 출시하면서 2027년에
       KAIA(Kubernetes AI Associate)와 CKIE(Certified Kubernetes Inference Engineer) 2개의 AI 자격증을 더 내놓을 계획이라고
       발표했습니다. 출시일, 시험 방식 그리고 가격은 아직 공개되지 않았는데 리눅스 재단 교육 사이트의 안내 페이지에서 출시 알림을
       신청할 수 있습니다. 같은 페이지에서 시험 문제를 함께 만들 전문가(SME, Subject Matter Expert)도 모집하고 있습니다. 새 시험이
-      나오면 쿠버스트로넛 조건이 바뀌는지도 확인하셔야 하는데, 쿠버스트로넛 FAQ에는 새 쿠버네티스 시험이 정식 출시되면 그 시험을
-      조건에 더하고 실제 적용은 출시일로부터 빨라야 90일 뒤라고 적혀 있습니다. 실제로 CKNE도 11월 10일에 나온 뒤 2027년 2월
-      15일부터 조건에 포함됩니다. 따라서 KAIA와 CKIE도 출시된 뒤에 같은 방식으로 조건에 더해질 수 있습니다(<a
+      나오면 쿠버스트로넛과 골든 쿠버스트로넛 조건이 바뀌는지도 확인하셔야 하는데, 쿠버스트로넛 FAQ에는 새 시험이 정식
+      출시되면 골든 조건에 더하고 그 시험이 쿠버네티스 시험이면 쿠버스트로넛 조건에도 더한다고 적혀 있습니다. 어느 쪽이든 실제
+      적용은 출시일로부터 빨라야 90일 뒤라고 합니다. CKNE도 11월 10일에 나온 뒤 2027년 2월 15일부터 쿠버스트로넛과 골든 조건에 모두 포함됩니다. 따라서 KAIA와 CKIE도 출시된 뒤에 같은 방식으로 조건에 더해질 수 있습니다(<a
       href="https://www.cncf.io/announcements/2026/11/10/cncf-launches-certified-kubernetes-network-engineer-certification-ckne-to-advance-production-ready-networking-skills-for-ai-era/"
       target="_blank" rel="noopener">CNCF 발표</a>, <a href="https://training.linuxfoundation.org/kaia-ckie-notify-me/"
       target="_blank" rel="noopener">KAIA와 CKIE 출시 알림</a>, <a
@@ -142,22 +145,25 @@ en:
   - q: "Do I need to renew Golden Kubestronaut?"
     a: >-
       No. Once you earn Golden Kubestronaut, you keep the title without renewing, and you do not need to pass new
-      CNCF certifications when they are released. Even if your Kubestronaut title expires, the Golden title and most
+      CNCF certifications when they are released. From February 15, 2027, CKNE is also required to earn Golden, but
+      this does not apply to people who already hold the Golden title. Even if your Kubestronaut title expires, the Golden title and most
       Golden benefits stay. The exception is the THRIVE-ONE subscription, which requires a current Kubestronaut
       title, and you also lose Kubestronaut benefits such as the yearly 50%-off certification coupons. To keep
-      those, renew CKS and CKAD on time as described above (<a
+      those, renew your Kubestronaut title on time as described above. According to the Linux Foundation notice
+      mentioned above, renewals on or after February 15, 2027 also need CKNE (<a
       href="https://www.cncf.io/training/kubestronaut/kubestronaut-faq/" target="_blank" rel="noopener">Kubestronaut
-      FAQ</a>).
+      FAQ</a>, <a href="https://training.linuxfoundation.org/resources/kubestronaut-program/" target="_blank"
+      rel="noopener">Kubestronaut program</a>).
   - q: "Are more Kubernetes certifications on the way?"
     a: >-
       Yes. When CNCF released CKNE (Certified Kubernetes Network Engineer) on November 10, 2026, it also announced
       plans for two AI certifications in 2027: KAIA (Kubernetes AI Associate) and CKIE (Certified Kubernetes Inference
       Engineer). Release dates, exam format, and prices are not public yet, but you can sign up for a launch notice on
       the Linux Foundation Education page for them. The same page is also recruiting subject matter experts (SMEs) to
-      help write the exams. New exams can also change the Kubestronaut requirements. The Kubestronaut FAQ says a new
-      Kubernetes exam is added to the Kubestronaut requirements once it reaches general availability (GA), and the
-      requirement takes effect no earlier than 90 days after GA. CKNE, released on November 10, becomes a requirement
-      on February 15, 2027, so KAIA and CKIE may be added the same way after they are released (<a
+      help write the exams. New exams can also change the Kubestronaut and Golden Kubestronaut requirements. The
+      Kubestronaut FAQ says a new exam is added to the Golden requirements once it reaches general availability
+      (GA), and a new Kubernetes exam is also added to the Kubestronaut requirements. In both cases, the requirement
+      takes effect no earlier than 90 days after GA. CKNE, released on November 10, becomes a requirement for both on February 15, 2027, so KAIA and CKIE may be added the same way after they are released (<a
       href="https://www.cncf.io/announcements/2026/11/10/cncf-launches-certified-kubernetes-network-engineer-certification-ckne-to-advance-production-ready-networking-skills-for-ai-era/"
       target="_blank" rel="noopener">CNCF announcement</a>, <a href="https://training.linuxfoundation.org/kaia-ckie-notify-me/"
       target="_blank" rel="noopener">KAIA and CKIE launch notice</a>, <a
